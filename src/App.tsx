@@ -1,44 +1,33 @@
 import './App.scss';
-
-import React, { useContext } from 'react';
-import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
-
-import AddressList from './components/AddressList';
-import Home from './components/Home';
-import Login from './components/Login';
-import TestContext from './components/TestContext';
-import { CurrentTestContextProvider } from './contexts/CurrentTest';
-import CurrentUserContext from './contexts/CurrentUser';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import News from './pages/News';
+import Club from './pages/Club';
+import Dealers from './pages/Dealers';
+import WallOfDwich from './pages/WallOfDwich';
+import Shop from './pages/Shop';
+import Infos from './pages/Infos';
+import Bisous from './pages/Bisous';
+import Navbar from './components/global/Navbar';
 
 function App() {
-  const { id, logout, admin } = useContext(CurrentUserContext);
-
   return (
     <div className="App">
       <Router>
-        <nav>
-          <Link to="/">Home</Link>
-          <Link to="/address">Adresses</Link>
-          <Link to="/click">Click</Link>
-          {admin === true && <a href="http://localhost:3001/">Admin panel</a>}
-          {id === 0 ? (
-            <Link to="/login">Se connecter</Link>
-          ) : (
-            <button className="logout" onClick={() => logout()}>
-              Se déconnecter
-            </button>
-          )}
-        </nav>
+        <Navbar />
         <main>
-          <CurrentTestContextProvider>
-            <Routes>
-              <Route path="*" element={<Home />} />
-              <Route path="/" element={<Home />} />
-              <Route path="/click" element={<TestContext />} />
-              <Route path="/address" element={<AddressList onlyMine={id != 0} />} />
-              <Route path="/login" element={<Login />} />
-            </Routes>
-          </CurrentTestContextProvider>
+          <Routes>
+            <Route path="*" element={<Home />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/news" element={<News />} />
+            <Route path="/club" element={<Club />} />
+            <Route path="/dealers" element={<Dealers />} />
+            <Route path="/wallofdwich" element={<WallOfDwich />} />
+            <Route path="/shop" element={<Shop />} />
+            <Route path="/infos" element={<Infos />} />
+            <Route path="/bisous" element={<Bisous />} />
+          </Routes>
         </main>
       </Router>
     </div>
