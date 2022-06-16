@@ -1,4 +1,5 @@
 import React from 'react';
+
 import ButtonKnowMore from '../global/Button';
 
 const NewsContent = () => {
@@ -6,7 +7,7 @@ const NewsContent = () => {
     <div>
       <h1>POP UP</h1>
       <h2>Sous titre + Date + Guest</h2>
-      <img>blablabla</img>
+      <img src="" alt="" />
       <p>blublublou</p>
       <ButtonKnowMore />
     </div>

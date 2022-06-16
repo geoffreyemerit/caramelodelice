@@ -1,4 +1,5 @@
 import React from 'react';
+
 import InfosContent from '../components/infos/InfosContent';
 
 const Infos = () => {

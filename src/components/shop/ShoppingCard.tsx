@@ -1,4 +1,5 @@
 import React from 'react';
+
 import ShoppingModal from './ShoppingModal';
 
 const ShoppingCard = () => {
