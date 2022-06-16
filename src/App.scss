@@ -1,7 +1,5 @@
-@import 'sass/_variables.scss';
-@import 'sass/_abstract.scss';
-@import 'sass/_typography.scss';
-@import 'sass/_index.scss';
-@import 'sass/_address.scss';
-@import 'sass/_login.scss';
-@import 'sass/_nav.scss';
+@import 'sass/global/abstract';
+@import 'sass/global/index';
+@import 'sass/global/nav';
+@import 'sass/global/typography';
+@import 'sass/global/variables';
