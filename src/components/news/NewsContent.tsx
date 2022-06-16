@@ -6,7 +6,7 @@ const NewsContent = () => {
     <div>
       <h1>POP UP</h1>
       <h2>Sous titre + Date + Guest</h2>
-      <img>blablabla</img>
+      image
       <p>blublublou</p>
       <ButtonKnowMore />
     </div>
