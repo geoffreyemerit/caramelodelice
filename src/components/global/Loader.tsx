@@ -1,11 +1,14 @@
 import React from 'react';
-import loaderGif from '../../../public/assets/images/global/gifVinyle.gif';
 
 const Loader = () => {
   return (
-    <div className="container">
-      <div className="container__loader">
-        <img src={loaderGif} alt="Goodwich is coming" height={320} />
+    <div className="loader">
+      <div className="loader__container">
+        <img
+          src="https://firebasestorage.googleapis.com/v0/b/club-sandwich-86c01.appspot.com/o/global%2FgifVinyle.gif?alt=media&token=c5d02aca-a216-4a9a-9fc1-94c889a65395"
+          alt="Goodwich is coming"
+          height={170}
+        />
       </div>
     </div>
   );

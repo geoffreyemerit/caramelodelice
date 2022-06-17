@@ -23,7 +23,9 @@ function App() {
     }, 2000);
   }, []);
   return loading ? (
-    <Loader />
+    <div className="loadingGif">
+      <Loader />
+    </div>
   ) : (
     <div className="App">
       <Router>
