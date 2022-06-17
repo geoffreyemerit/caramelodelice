@@ -4,7 +4,12 @@
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  color: white;
+  color: $secondary;
+
+  @media screen and (max-width: $breakpoint-small) {
+    justify-content: center;
+  }
+
   &__info {
     display: flex;
     flex-direction: row;
@@ -12,6 +17,11 @@
     font-family: 'Made-Bold';
     margin-right: 3rem;
     margin-bottom: 1.2rem;
+
+    @media screen and (max-width: $breakpoint-small) {
+      justify-content: center;
+      margin-right: 0;
+    }
 
     &__sup {
       display: flex;
@@ -23,6 +33,12 @@
         flex-direction: row;
         justify-content: flex-end;
 
+        @media screen and (max-width: $breakpoint-small) {
+          flex-direction: column;
+          align-items: center;
+          margin-bottom: 1.6rem;
+        }
+
         &__street {
           margin-right: 0.6rem;
         }
@@ -31,6 +47,23 @@
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
+        font-size: 16px;
+
+        @media screen and (max-width: $breakpoint-extralarge) {
+          font-size: 14px;
+        }
+        @media screen and (max-width: $breakpoint-largest) {
+          font-size: 12px;
+        }
+        @media screen and (max-width: $breakpoint-medium) {
+          font-size: 10px;
+        }
+        @media screen and (max-width: $breakpoint-small) {
+          font-size: 8px;
+        }
+        @media screen and (max-width: $breakpoint-smallest) {
+          font-size: 6px;
+        }
 
         &__openingdays {
           margin-right: 2.05rem;
@@ -44,9 +77,17 @@
   }
   &__logo {
     margin-left: 0.9rem;
-    color: black;
     align-self: flex-end;
-    font-size: xx-large;
-    transform: translateY(0.3rem);
+
+    .icon {
+      width: 2rem;
+      height: 2rem;
+      &--instagram {
+        color: $secondary;
+      }
+    }
+    @media screen and (max-width: $breakpoint-small) {
+      display: none;
+    }
   }
 }

@@ -18,19 +18,17 @@ function App() {
     <div className="App">
       <Router>
         <Navbar />
-        <main>
-          <Routes>
-            <Route path="*" element={<Home />} />
-            <Route path="/" element={<Home />} />
-            <Route path="/news" element={<News />} />
-            <Route path="/club" element={<Club />} />
-            <Route path="/dealers" element={<Dealers />} />
-            <Route path="/wallofdwich" element={<WallOfDwich />} />
-            <Route path="/shop" element={<Shop />} />
-            <Route path="/infos" element={<Infos />} />
-            <Route path="/bisous" element={<Bisous />} />
-          </Routes>
-        </main>
+        <Routes>
+          <Route path="*" element={<Home />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/club" element={<Club />} />
+          <Route path="/dealers" element={<Dealers />} />
+          <Route path="/wallofdwich" element={<WallOfDwich />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/infos" element={<Infos />} />
+          <Route path="/bisous" element={<Bisous />} />
+        </Routes>
       </Router>
     </div>
   );

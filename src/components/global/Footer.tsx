@@ -1,5 +1,5 @@
 import React from 'react';
-import { BsInstagram } from 'react-icons/bs';
+import Logo from './Logo';
 
 const Footer = () => {
   return (
@@ -30,7 +30,7 @@ const Footer = () => {
             href="https://instagram.com/club_sandwich64?igshid=YmMyMTA2M2Y="
             target="_blank"
             rel="noreferrer">
-            <BsInstagram />
+            <Logo myStyle="icon icon--instagram" icon="logos-instagram" />
           </a>
         </div>
       </div>
