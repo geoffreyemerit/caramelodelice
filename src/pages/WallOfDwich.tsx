@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Gallery from '../components/wallOfDwich/Gallery';
 
 const WallOfDwich = () => {
