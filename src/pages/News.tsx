@@ -1,4 +1,5 @@
 import React from 'react';
+
 import NewsContent from '../components/news/NewsContent';
 
 const News = () => {

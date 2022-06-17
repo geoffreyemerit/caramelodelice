@@ -1,4 +1,5 @@
 import React from 'react';
+
 import ClubContent from '../components/club/ClubContent';
 
 const Club = () => {
