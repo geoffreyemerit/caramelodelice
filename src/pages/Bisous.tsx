@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Newsletter from '../components/bisous/Newsletter';
 
 const Bisous = () => {

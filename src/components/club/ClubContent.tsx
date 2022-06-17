@@ -4,7 +4,10 @@ const ClubContent = () => {
   return (
     <div>
       <h2>TITRE</h2>
-      image1, image2, image3
+      <img src="" alt="" />
+      <img src="" alt="" />
+      <img src="" alt="" />
+
     </div>
   );
 };

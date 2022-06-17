@@ -1,15 +1,17 @@
 import './App.scss';
+
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Home from './pages/Home';
-import News from './pages/News';
+
+import Navbar from './components/global/Navbar';
+import Bisous from './pages/Bisous';
 import Club from './pages/Club';
 import Dealers from './pages/Dealers';
-import WallOfDwich from './pages/WallOfDwich';
-import Shop from './pages/Shop';
+import Home from './pages/Home';
 import Infos from './pages/Infos';
-import Bisous from './pages/Bisous';
-import Navbar from './components/global/Navbar';
+import News from './pages/News';
+import Shop from './pages/Shop';
+import WallOfDwich from './pages/WallOfDwich';
 
 function App() {
   return (
