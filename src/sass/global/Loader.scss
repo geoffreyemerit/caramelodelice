@@ -1,0 +1,13 @@
+.container {
+  background-color: #272727;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__loader {
+    font-family: 'Made-Bold';
+  }
+}
