@@ -1,5 +1,5 @@
 import './App.scss';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import News from './pages/News';
@@ -10,9 +10,18 @@ import Shop from './pages/Shop';
 import Infos from './pages/Infos';
 import Bisous from './pages/Bisous';
 import Navbar from './components/global/Navbar';
+import Loader from './components/global/Loader';
 
 function App() {
-  return (
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
+  return loading ? (
+    <Loader />
+  ) : (
     <div className="App">
       <Router>
         <Navbar />
