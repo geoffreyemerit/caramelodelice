@@ -1,0 +1,51 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  &__info {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    font-family: 'Made-Bold';
+    margin-right: 3rem;
+    margin-bottom: 1.2rem;
+
+    &__sup {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+
+      &__address {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+
+        &__street {
+          margin-right: 0.6rem;
+        }
+      }
+      &__opening {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+
+        &__openingdays {
+          margin-right: 2.05rem;
+          text-align: left;
+        }
+        &__openinghours {
+          text-align: right;
+        }
+      }
+    }
+  }
+  &__logo {
+    margin-left: 0.9rem;
+    color: black;
+    align-self: flex-end;
+    font-size: xx-large;
+    transform: translateY(0.3rem);
+  }
+}
