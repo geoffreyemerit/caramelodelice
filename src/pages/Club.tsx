@@ -1,4 +1,5 @@
 import React from 'react';
+
 import ClubSection from '../components/club/ClubSection';
 
 const Club = () => {
