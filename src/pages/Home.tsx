@@ -2,13 +2,11 @@ import React from 'react';
 
 import Footer from '../components/global/Footer';
 import Logo from '../components/global/Logo';
-import Navbar from '../components/global/Navbar';
 import Sound from '../components/global/Sound';
 
 const Home = () => {
   return (
     <div className="home">
-      <Navbar />
       <Logo myStyle="home__csLogo" icon="logos-club-sandwich-logo" />
       <h1 className="home__title">
         WELCOME TO <span className="home__title--club">THE CLUB</span>
@@ -30,7 +28,6 @@ const Home = () => {
         doloribus a quae ipsa, fugit ratione aut error ad illo labore repellat cum laborum
         possimus voluptatum esse maiores recusandae?
       </p>
-      <Footer />
     </div>
   );
 };

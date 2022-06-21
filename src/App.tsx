@@ -32,7 +32,6 @@ function App() {
       <Router>
         <Navbar />
         <Sound />
-        <Footer />
         <Routes>
           <Route path="*" element={<Home />} />
           <Route path="/" element={<Home />} />
@@ -44,6 +43,7 @@ function App() {
           <Route path="/infos" element={<Infos />} />
           <Route path="/bisous" element={<Bisous />} />
         </Routes>
+        <Footer />
       </Router>
     </div>
   );

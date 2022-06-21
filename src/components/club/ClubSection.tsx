@@ -26,8 +26,8 @@ const ClubSection = ({ id }: ClubSection) => {
   return (
     <div className="clubSection">
       <div className="clubSection__text">
-        <h2>{content?.subTitle}</h2>
-        <h1>{content?.title}</h1>
+        <h2 className="clubSection__text__subTitle">{content?.subTitle}</h2>
+        <h1 className="clubSection__text__title">{content?.title}</h1>
       </div>
       <img className="clubSection__image1" src={content?.image1} alt={content?.title} />
     </div>

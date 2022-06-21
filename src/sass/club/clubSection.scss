@@ -1,24 +1,30 @@
 .clubSection {
   height: 100vh;
+  position: relative;
+  left: 35%;
   &__image1 {
-    height: 60%;
-    @media screen and (max-width: $breakpoint-small) {
-      justify-content: center;
-      margin-right: 0;
+    height: 70%;
+    top: 7%;
+    position: relative;
+  }
+  &__text {
+    top: 66%;
+    right: 3%;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    &__subTitle {
+      font-family: 'Made-Medium';
+      color: $secondary;
+      position: absolute;
+      font-size: 4rem;
+    }
+    &__title {
+      font-family: 'Made-Bold';
+      color: $secondary;
+      font-size: 6rem;
+      position: absolute;
+      margin-top: 3rem;
     }
   }
-}
-
-h1 {
-  font-family: 'Made-Bold';
-  color: #fff;
-  font-size: 3rem;
-  position: absolute;
-  margin-top: 1.2rem;
-}
-
-h2 {
-  font-family: 'Made-Medium';
-  color: #fff;
-  position: absolute;
 }
