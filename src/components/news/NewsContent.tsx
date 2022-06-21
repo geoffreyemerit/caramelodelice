@@ -28,7 +28,8 @@ const NewsContent = ({ id }: newsContentProps) => {
       <img className="newsContent__img" src={content?.image} alt={content?.title} />
       <div className="newsContent__container">
         <h1 className="newsContent__container__title">
-          Pop<span className="newsContent__container__title__span"> up</span> </h1>
+          Pop<span className="newsContent__container__title__span"> up</span>{' '}
+        </h1>
         <h2 className="newsContent__container__subtitle">{content?.subTitle}</h2>
         <h3 className="newsContent__container__duration">{content?.durationEvent}</h3>
         <h4 className="newsContent__container__name">{content?.title}</h4>
