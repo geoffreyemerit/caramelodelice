@@ -1,12 +1,13 @@
 import React from 'react';
-
-import ClubContent from '../components/club/ClubContent';
+import ClubSection from '../components/club/ClubSection';
 
 const Club = () => {
   return (
-    <div>
-      <h1>HELLO CLUB</h1>
-      <ClubContent />
+    <div className="club">
+      <ClubSection id={1} />
+      <ClubSection id={2} />
+      <ClubSection id={3} />
+      <ClubSection id={4} />
     </div>
   );
 };

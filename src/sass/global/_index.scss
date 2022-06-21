@@ -1,24 +1,9 @@
 .App {
-  background-color: #272727;
-  height: 100vh;
   width: 100vw;
+  height: 100%;
+  background-color: #272727;
 }
 
-li {
-  list-style: none;
-}
-
-main {
-  display: flex;
-  justify-content: center;
-}
-
-.body {
-  margin: 20px 0 10px;
-  font-size: 0.9rem;
-}
-
-.home > ul > li {
-  display: block;
-  padding: 5px;
+.loadingGif {
+  background-color: #272727;
 }

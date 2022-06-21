@@ -1,0 +1,24 @@
+.clubSection {
+  height: 100vh;
+  &__image1 {
+    height: 60%;
+    @media screen and (max-width: $breakpoint-small) {
+      justify-content: center;
+      margin-right: 0;
+    }
+  }
+}
+
+h1 {
+  font-family: 'Made-Bold';
+  color: #fff;
+  font-size: 3rem;
+  position: absolute;
+  margin-top: 1.2rem;
+}
+
+h2 {
+  font-family: 'Made-Medium';
+  color: #fff;
+  position: absolute;
+}
