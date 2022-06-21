@@ -1,8 +1,8 @@
 @import 'sass/global/abstract';
+@import 'sass/global/variables';
 @import 'sass/global/index';
 @import 'sass/global/nav';
 @import 'sass/global/typography';
-@import 'sass/global/variables';
 @import 'sass/global/footer';
 @import 'sass/global/loader.scss';
 @import 'sass/global/home';
@@ -12,4 +12,3 @@
 @import 'sass/global/scrollDown.scss';
 @import 'sass/news/news.scss';
 @import 'sass/news/newsContent.scss';
-
