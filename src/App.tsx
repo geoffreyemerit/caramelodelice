@@ -14,6 +14,8 @@ import Loader from './components/global/Loader';
 import News from './pages/News';
 import Shop from './pages/Shop';
 import WallOfDwich from './pages/WallOfDwich';
+import Sound from './components/global/Sound';
+import Footer from './components/global/Footer';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -30,6 +32,8 @@ function App() {
     <div className="App">
       <Router>
         <Navbar />
+        <Sound />
+        <Footer />
         <Routes>
           <Route path="*" element={<Home />} />
           <Route path="/" element={<Home />} />
