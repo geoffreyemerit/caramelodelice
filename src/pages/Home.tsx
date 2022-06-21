@@ -1,12 +1,9 @@
 import React from 'react';
 
-
 const Home = () => {
   return (
     <div className="home">
-      <Navbar />
-      <Logo myStyle="home__csLogo" icon="logos-club-sandwich-logo" />
-      <h1 className="home__title">
+      <h1>
         WELCOME TO <span className="home__title--club">THE CLUB</span>
       </h1>
       {/* Exemple pour appeler le logo.svg / 
@@ -25,7 +22,6 @@ const Home = () => {
         doloribus a quae ipsa, fugit ratione aut error ad illo labore repellat cum laborum
         possimus voluptatum esse maiores recusandae?
       </p>
-      <Footer />
     </div>
   );
 };
