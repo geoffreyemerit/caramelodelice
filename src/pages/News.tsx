@@ -1,12 +1,13 @@
 import React from 'react';
 
+import ScrollDown from '../components/global/ScrollDown';
 import NewsContent from '../components/news/NewsContent';
 
 const News = () => {
   return (
-    <div>
-      <h1>HELLO NEWS</h1>
-      <NewsContent />
+    <div className="news">
+      <ScrollDown />
+      <NewsContent id={1} />
     </div>
   );
 };
