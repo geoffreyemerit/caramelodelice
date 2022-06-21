@@ -43,6 +43,7 @@ function App() {
           <Route path="/infos" element={<Infos />} />
           <Route path="/bisous" element={<Bisous />} />
         </Routes>
+        <Footer />
       </Router>
       <Footer />
     </div>
