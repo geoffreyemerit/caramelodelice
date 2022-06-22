@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Button = () => {
-  return (
-    <div>
-      <h1>En savoir plus</h1>
-    </div>
-  );
+import IButton from '../../interfaces/IButton';
+
+const Button = ({ text, className }: IButton) => {
+
+  return <div className={className}><div className={`${className}__h1`}>{text}</div>
+  </div>;
 };
 
 export default Button;
