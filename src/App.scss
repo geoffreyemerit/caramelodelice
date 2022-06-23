@@ -2,6 +2,7 @@
 @import 'sass/global/variables';
 @import 'sass/global/index';
 @import 'sass/global/typography';
+<<<<<<< HEAD
 //----------------------------------------------
 @import 'sass/global/loader.scss';
 @import 'sass/global/button.scss';
@@ -23,3 +24,16 @@
 @import 'sass/shop/shoppingCard.scss';
 @import 'sass/shop/shoppingModal.scss';
 //----------------------------------------------
+=======
+@import 'sass/global/nav';
+@import 'sass/global/footer';
+@import 'sass/global/loader';
+@import 'sass/global/home';
+@import 'sass/club/club';
+@import 'sass/club/clubSection';
+@import 'sass/global/sound';
+@import 'sass/global/scrollDown';
+@import 'sass/news/news';
+@import 'sass/news/newsContent';
+@import 'sass/global/button';
+>>>>>>> dd8a4cc9fb3f14dcfc53ea94e656a9f3bd68c6fa

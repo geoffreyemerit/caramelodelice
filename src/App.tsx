@@ -17,7 +17,7 @@ import Shop from './pages/Shop';
 import WallOfDwich from './pages/WallOfDwich';
 
 function App() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState<boolean>(true);
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
@@ -30,8 +30,8 @@ function App() {
   ) : (
     <div className="App">
       <Router>
-        <Navbar />
-        <Sound />
+        {/* <Navbar /> */}
+        {/* <Sound /> */}
         <Routes>
           <Route path="*" element={<Home />} />
           <Route path="/" element={<Home />} />
@@ -45,7 +45,7 @@ function App() {
         </Routes>
         {/* <Footer /> */}
       </Router>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
