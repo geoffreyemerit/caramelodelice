@@ -72,6 +72,7 @@
       font-size: 0.4rem;
       color: $secondary;
       text-shadow: none;
+      font-family: 'Made-Medium';
       @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-small) {
         font-size: 30%;
       }

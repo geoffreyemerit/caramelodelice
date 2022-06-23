@@ -1,5 +1,5 @@
 export default interface INewsType {
-    id: number,
-    name: string,
-    pdfFile: string;
+  id: number;
+  name: string;
+  pdfFile: string;
 }

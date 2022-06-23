@@ -15,7 +15,6 @@ import Infos from './pages/Infos';
 import News from './pages/News';
 import Shop from './pages/Shop';
 import WallOfDwich from './pages/WallOfDwich';
-import ShoppingModal from './components/shop/ShoppingModal';
 
 function App() {
   const [loading, setLoading] = useState<boolean>(true);
