@@ -22,7 +22,7 @@ const NewsContent = ({ id }: NewsContentProps) => {
     //faire un axios vers /api/newsTypes/idNewsType
     //récuperer le name
 
-    //faire un promise all de allNewsType et newsTypes/id 
+    //faire un promise all de allNewsType et newsTypes/id
     setContent(data);
   };
 

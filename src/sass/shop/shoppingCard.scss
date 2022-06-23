@@ -1,9 +1,68 @@
+// SHOPPING CARD = 1 ITEM //
 .card {
-  background-color: aqua;
-  height: 10rem;
-  width: 10rem;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  height: 8rem;
+  width: calc(90% / 2);
+  @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-small) {
+    height: calc(95% / 2);
+    width: calc(75% / 2);
+  }
+  @media only screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-largest) {
+    height: calc(100% / 2);
+    width: calc(80% / 3);
+  }
+  @media only screen and (min-width: $breakpoint-largest) and (max-width: $breakpoint-extralarge) {
+    height: calc(90% / 2);
+    width: calc(80% / 3);
+  }
+  @media only screen and (min-width: $breakpoint-extralarge) {
+    height: calc(90% / 2);
+    width: calc(75% / 3);
+  }
+  // Image de cet item //
   &__img {
+    opacity: 1;
+    display: block;
     height: 100%;
     width: 100%;
+    transition: 0.5s ease;
+    backface-visibility: hidden;
+  }
+  // Conteneur du bouton "en savoir plus" //
+  &__fadebox {
+    transition: 0.5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    // Bouton "en savoir plus" //
+    &__button {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: $secondary;
+      font-family: 'Made-Bold';
+      font-size: 1.2rem;
+      border: 2px solid $secondary;
+      width: 8rem;
+      height: 3rem;
+      &--line2 {
+        font-size: 0.5rem;
+        font-family: 'Made-Medium';
+      }
+    }
+  }
+  // Au hover, opacifier l'image //
+  &.card:hover .card__img {
+    opacity: 0.3;
+  }
+  // Pour faire apparaître le bouton //
+  &.card:hover .card__fadebox {
+    opacity: 1;
   }
 }
