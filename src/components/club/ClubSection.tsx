@@ -3,18 +3,18 @@ import React, { useEffect, useState } from 'react';
 
 import IPage from '../../interfaces/IPage';
 
-interface ClubSection {
+interface ClubSectionProps {
   id: number;
 }
 
-const ClubSection = ({ id }: ClubSection) => {
+const ClubSection = ({ id }: ClubSectionProps) => {
   // JE CRÉE UN USESTATE AFIN DE STOCKER LA DATA ISSU DE L'APPEL AXIOS DANS CONTENT
   const [content, setContent] = useState<IPage>();
 
   // APPEL API AXIOS
   const getContent = async () => {
-    const url = `http://localhost:3000/api/pages/${id}`;
-    const { data } = await axios.get(url);
+    const url: string = `http://localhost:3000/api/pages/${id}`;
+    const { data } = await axios.get<IPage>(url);
     setContent(data);
   };
 

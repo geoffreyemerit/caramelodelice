@@ -3,7 +3,7 @@ import ReactPlayer from 'react-player';
 
 const Sound = () => {
   // state variable to define if music is playing or not
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState<boolean>(false);
   // function to revert the value of the variable
   const handleChange = () => {
     setIsPlaying(!isPlaying);

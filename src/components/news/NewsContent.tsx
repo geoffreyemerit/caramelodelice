@@ -16,8 +16,14 @@ const NewsContent = ({ id }: NewsContentProps) => {
 
   // APPEL API AXIOS
   const getContent = async () => {
-    const url = `http://localhost:3000/api/newsPages/${id}`;
-    const { data } = await axios.get(url);
+    const url: string = `http://localhost:3000/api/newsPages/${id}`;
+    const { data } = await axios.get<INewsPage>(url);
+    //data.idNewsType contient l'Id de la table newsType
+
+    //faire un axios vers /api/newsTypes/idNewsType
+    //récuperer le name
+
+    //faire un promise all de allNewsType et newsTypes/id 
     setContent(data);
   };
 
