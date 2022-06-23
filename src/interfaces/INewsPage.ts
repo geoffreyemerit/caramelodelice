@@ -5,5 +5,5 @@ export default interface INewsPage {
   durationEvent: string;
   description: string;
   image: string;
-  idNewsTypes: number;
+  idNewsType: number;
 }
