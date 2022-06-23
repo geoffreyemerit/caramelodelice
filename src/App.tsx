@@ -17,7 +17,7 @@ import Shop from './pages/Shop';
 import WallOfDwich from './pages/WallOfDwich';
 
 function App() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState<boolean>(true);
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
