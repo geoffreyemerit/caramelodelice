@@ -1,10 +1,11 @@
 import './App.scss';
-
+import '../src/sass/global/_index.scss';
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Logo from './components/global/Logo';
+
 import Footer from './components/global/Footer';
 import Loader from './components/global/Loader';
+import Logo from './components/global/Logo';
 import Navbar from './components/global/Navbar';
 import Sound from './components/global/Sound';
 import Bisous from './pages/Bisous';
@@ -30,14 +31,9 @@ function App() {
   ) : (
     <div className="App">
       <Router>
-<<<<<<< Updated upstream
-        {/* <Navbar /> */}
-        {/* <Sound /> */}
-=======
+        <Sound />
         <Logo />
         <Navbar />
-        <Sound />
->>>>>>> Stashed changes
         <Routes>
           <Route path="*" element={<Home />} />
           <Route path="/" element={<Home />} />
@@ -50,7 +46,7 @@ function App() {
           <Route path="/bisous" element={<Bisous />} />
         </Routes>
       </Router>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

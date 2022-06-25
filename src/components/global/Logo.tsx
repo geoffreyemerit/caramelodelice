@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Icons from '../../../public/assets/logos.svg';
 
 interface Props {
@@ -6,12 +7,17 @@ interface Props {
   myStyle?: string;
 }
 
-const Logo = ({ icon = 'logos-club-sandwich-logo', myStyle = 'home__csLogo' }: Props) => {
+const Logo = ({
+  icon = 'logos-club-sandwich-logo',
+  myStyle = 'logo__logotype',
+}: Props) => {
   return (
     <>
-      <svg className={myStyle}>
-        <use xlinkHref={`${Icons}#${icon}`}></use>
-      </svg>
+      <div className="logo">
+        <svg className={myStyle}>
+          <use xlinkHref={`${Icons}#${icon}`}></use>
+        </svg>
+      </div>
     </>
   );
 };

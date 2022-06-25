@@ -2,10 +2,10 @@
 @import 'sass/global/variables';
 @import 'sass/global/index';
 @import 'sass/global/typography';
+@import 'sass/global/logo';
 @import 'sass/global/nav';
 @import 'sass/global/footer';
 @import 'sass/global/loader';
-@import 'sass/global/home';
 @import 'sass/club/club';
 @import 'sass/club/clubSection';
 @import 'sass/global/sound';
@@ -13,3 +13,5 @@
 @import 'sass/news/news';
 @import 'sass/news/newsContent';
 @import 'sass/global/button';
+@import 'sass/home/home';
+@import 'sass/home/homeContent';

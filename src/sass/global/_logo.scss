@@ -1,0 +1,12 @@
+.logo {
+  display: flex;
+  width: 30%;
+  height: 30%;
+  margin-top: -3rem;
+
+  &__logotype {
+    width: 8rem;
+    height: 8rem;
+    margin: 2rem;
+  }
+}
