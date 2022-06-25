@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
 import INewsPage from '../../interfaces/INewsPage';
+import INewsType from '../../interfaces/INewsType';
 import Button from '../global/Button';
 
 //CALL INTERFACE FRONT NEEDED
@@ -10,21 +11,25 @@ interface NewsContentProps {
 }
 
 const NewsContent = ({ id }: NewsContentProps) => {
-  // JE CRÉE UN USESTATE AFIN DE STOCKER LA DATA ISSU DE L'APPEL AXIOS DANS CONTENT
-  const [content, setContent] = useState<INewsPage>();
+  // JE CRÉE UN USESTATE AFIN DE STOCKER LA DATA ISSU DE L'APPEL AXIOS
+  const [page, setPage] = useState<INewsPage>();
+  const [type, setType] = useState<INewsType>();
+
 
   // APPEL API AXIOS
   const getContent = async () => {
-    const url: string = `http://localhost:3000/api/newsPages/${id}`;
-    const { data } = await axios.get<INewsPage>(url);
-    //data.idNewsType contient l'Id de la table newsType
+    //APPEL PROMESSE DE NEWSPAGE AXIOS.GET DE L'INTERFACE DE L'URL
+    const newsPage = await axios.get<INewsPage>(`http://localhost:3000/api/newsPages/${id}`);
 
-    //faire un axios vers /api/newsTypes/idNewsType
-    //récuperer le name
+    //APPEL PROMESSE DE NEWSTYPE AXIOS.GET DE L'INTERFACE DE L'URL
+    const newsType = await axios.get<INewsType>(`http://localhost:3000/api/newsTypes/${newsPage.data.idNewsType}`);
 
-    //faire un promise all de allNewsType et newsTypes/id
-    setContent(data);
+
+    // JE FAIS APPEL A MES USESTATE ET A LEUR DATA GRACE AU SET 
+    setPage(newsPage.data);
+    setType(newsType.data);
   };
+
 
   // AU CHARGEMENT DU COMPOSANT, J'EXÉCUTE LA FONCTION GETCONTENT
   useEffect(() => {
@@ -33,30 +38,30 @@ const NewsContent = ({ id }: NewsContentProps) => {
 
   return (
     <div className="newsContent">
-      <img className="newsContent__img" src={content?.image} alt={content?.title} />
-      <div className="newsContent__container">
-        <div className="newsContent__container__header">
-          <div className="newsContent__container__header__titleContainer">
-            <h1 className="newsContent__container__header__titleContainer__h1">POP</h1>
-            <h1 className="newsContent__container__header__titleContainer__h1__span">
-              UP
-            </h1>
+
+      {/* On fais un && des data reçus, si on l'a on envoi, sinon on continu */}
+      {page && type &&
+        <>
+          <img className="newsContent__img" src={page.image} alt={page.title} />
+          <div className="newsContent__container">
+            <div className='newsContent__container__header'>
+              <div className='newsContent__container__header__titleContainer'>
+                <h1 className="newsContent__container__header__titleContainer__h1">
+                  POP
+                </h1>
+                <h1 className="newsContent__container__header__titleContainer__h1__span">UP</h1>
+              </div>
+              <div className='newsContent__container__header__infosContainer'>
+                <h2 className="newsContent__container__header__infosContainer__h2">{type.name}</h2>
+                <h3 className="newsContent__container__header__infosContainer__h3">{page.durationEvent}</h3>
+                <h4 className="newsContent__container__header__infosContainer__h4">{page.title}</h4>
+                <Button className='buttonNews' text='En savoir plus' />
+              </div>
+            </div>
+            <p className="newsContent__container__p">{page.description}</p>
+
           </div>
-          <div className="newsContent__container__header__infosContainer">
-            <h2 className="newsContent__container__header__infosContainer__h2">
-              {content?.subTitle}
-            </h2>
-            <h3 className="newsContent__container__header__infosContainer__h3">
-              {content?.durationEvent}
-            </h3>
-            <h4 className="newsContent__container__header__infosContainer__h4">
-              {content?.title}
-            </h4>
-            <Button className="buttonNews" text="En savoir plus" />
-          </div>
-        </div>
-        <p className="newsContent__container__p">{content?.description}</p>
-      </div>
+        </>}
     </div>
   );
 };
