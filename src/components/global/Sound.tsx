@@ -15,6 +15,9 @@ const Sound = () => {
         <div className="sound__soundcheck">
           {/* if the button is clicked, the box becomes white */}
           <div
+            role="button"
+            tabIndex={0}
+            onKeyPress={handleChange}
             className={
               isPlaying ? 'sound__soundcheck__box--active' : 'sound__soundcheck__box'
             }
