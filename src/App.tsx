@@ -3,11 +3,12 @@ import '../src/sass/global/_index.scss';
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-import Footer from './components/global/Footer';
+// import Footer from './components/global/Footer';
 import Loader from './components/global/Loader';
 import Logo from './components/global/Logo';
 import Navbar from './components/global/Navbar';
 import Sound from './components/global/Sound';
+
 import Bisous from './pages/Bisous';
 import Club from './pages/Club';
 import Dealers from './pages/Dealers';
