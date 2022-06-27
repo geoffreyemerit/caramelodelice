@@ -140,7 +140,7 @@
 
                 &__h1 {
                     font-family: 'Made-Bold';
-                    color: white;
+                    color: $secondary;
                     font-size: 6.7rem;
                     transform: translateX(-4.5rem);
 
@@ -156,7 +156,7 @@
 
                     &__span {
                         font-family: 'Made-Bold';
-                        color: green;
+                        color: $tertiary;
                         font-size: 6.7rem;
                         transform: translateY(-3rem) translateX(5.2rem);
 
@@ -226,7 +226,7 @@
                 &__h2 {
                     font-size: 3rem;
                     font-family: 'Made-Medium';
-                    color: white;
+                    color: $secondary;
 
                     @media only screen and (min-width: 320px) and (max-width: 480px) {
                         font-size: 5rem;
@@ -253,7 +253,7 @@
                     text-align: center;
                     font-size: 0.7rem;
                     font-family: 'Made-Medium';
-                    color: white;
+                    color: $secondary;
                     width: 150%;
 
                     @media only screen and (min-width: 320px) and (max-width: 480px) {
@@ -281,7 +281,7 @@
                     width: 200%;
                     font-size: 1rem;
                     font-family: 'Made-Bold';
-                    color: white;
+                    color: $secondary;
                     padding: 1rem 3rem 0 3rem;
 
                     @media only screen and (min-width: 320px) and (max-width: 480px) {
@@ -311,7 +311,7 @@
         //DESCRIPTION
         &__p {
             font-family: 'Made-Light';
-            color: white;
+            color: $secondary;
             padding-left: 3rem;
             padding-right: 3rem;
             font-size: 1rem;

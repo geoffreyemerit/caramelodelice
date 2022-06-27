@@ -1,0 +1,9 @@
+.infos {
+    height: 100%;
+
+    &__img {
+        position: absolute;
+        width: 20rem;
+        transform: translateY(19rem) translateX(15rem);
+    }
+}

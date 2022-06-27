@@ -1,0 +1,157 @@
+.infosContent {
+    height: 100vh;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        transform: translateX(-10rem);
+        margin-top: 0.5rem;
+        width: 100vw;
+
+        &__h2 {
+            font-size: 1.9rem;
+            font-family: 'Made-Medium';
+            color: $secondary;
+        }
+
+        &__h1 {
+            font-size: 4.5rem;
+            font-family: 'Made-Medium';
+            color: $secondary;
+            transform: translateX(-2.5rem);
+
+            &__span {
+                font-size: 4rem;
+                font-family: 'Made-Medium';
+                color: $tertiary;
+            }
+        }
+
+        &__boxContainer {
+
+            transform: translateX(10rem);
+
+            &__h3 {
+                font-size: 1.9rem;
+                width: 43rem;
+                font-family: 'Made-Medium';
+                text-transform: uppercase;
+                color: $secondary;
+                margin-top: 3rem;
+
+            }
+
+            &__select {
+                margin-top: 1.8rem;
+                border: solid 0.1rem $secondary ;
+                width: 24rem;
+                height: 3rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                background-color: rgba(255, 255, 255, 0.11);
+                cursor: pointer;
+
+                &--active {
+                    margin-top: 1.8rem;
+                    border: solid 0.1rem $secondary ;
+                    width: 24rem;
+                    height: 3rem;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                    align-items: center;
+                    background-color: rgba(0, 0, 0, 0.11);
+                    cursor: pointer;
+                }
+
+
+
+                &__type {
+                    font-size: 1.4rem;
+                    font-family: 'Made-Medium';
+                    color: rgba(255, 255, 255, 0.605);
+                }
+
+                &__arrow {
+                    transform: rotate(-90deg);
+                    font-size: 1.4rem;
+                    font-family: 'Made-Medium';
+                    color: rgb(255, 255, 255);
+                }
+            }
+
+
+            &__music {
+                text-transform: uppercase;
+                border-right: solid 0.1rem $secondary ;
+                border-left: solid 0.1rem $secondary ;
+                width: 24rem;
+                height: 2.8rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                font-size: 1rem;
+                cursor: pointer;
+
+                &__a {
+                    text-decoration: none;
+                    color: $secondary;
+                    font-family: 'Made-Medium';
+                }
+
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.11);
+                }
+            }
+
+            &__kitchen {
+                text-transform: uppercase;
+                border: solid 0.1rem $secondary ;
+                width: 24rem;
+                height: 3rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                font-size: 1rem;
+
+                cursor: pointer;
+
+                &__a {
+                    text-decoration: none;
+                    color: $secondary;
+                    font-family: 'Made-Medium';
+                }
+
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.11);
+                }
+            }
+
+            &__a {
+                text-transform: uppercase;
+                margin-top: 1.8rem;
+                border: solid 0.1rem $secondary ;
+                width: 18rem;
+                height: 3rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                font-size: 0.7rem;
+                font-family: 'Made-Medium';
+                color: $secondary;
+                text-decoration: none;
+
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.11);
+                }
+            }
+        }
+    }
+
+}
