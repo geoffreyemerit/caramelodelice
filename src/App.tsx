@@ -1,5 +1,6 @@
 import './App.scss';
 import '../src/sass/global/_index.scss';
+
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
