@@ -27,7 +27,6 @@ const NewsContent = ({ id }: NewsContentProps) => {
       `http://localhost:3000/api/newsTypes/${newsPage.data.idNewsType}`,
     );
 
-    // JE FAIS APPEL A MES USESTATE ET A LEUR DATA GRACE AU SET
     setPage(newsPage.data);
     setType(newsType.data);
   };
@@ -39,6 +38,7 @@ const NewsContent = ({ id }: NewsContentProps) => {
 
   return (
     <div className="newsContent">
+
       {/* On fais un && des data reçus, si on l'a on envoi, sinon on continu */}
       {page && type && (
         <>
@@ -67,6 +67,7 @@ const NewsContent = ({ id }: NewsContentProps) => {
               </div>
             </div>
             <p className="newsContent__container__p">{page.description}</p>
+
           </div>
         </>
       )}
