@@ -26,14 +26,13 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="footer__logo">
-          <a
-            href="https://instagram.com/club_sandwich64?igshid=YmMyMTA2M2Y="
-            target="_blank"
-            rel="noreferrer">
-            <Logo myStyle="icon icon--instagram" icon="logos-instagram" />
-          </a>
-        </div>
+        <a
+          className="footer__instalogo"
+          href="https://instagram.com/club_sandwich64?igshid=YmMyMTA2M2Y="
+          target="_blank"
+          rel="noreferrer">
+          <Logo myStyle="icon icon--instagram" icon="logos-instagram" />
+        </a>
       </div>
     </div>
   );

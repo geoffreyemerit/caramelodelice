@@ -3,11 +3,11 @@ import React, { useEffect, useState } from 'react';
 
 import IPage from '../../interfaces/IPage';
 
-interface ClubSectionProps {
+interface HomeContentProps {
   id: number;
 }
 
-const ClubSection = ({ id }: ClubSectionProps) => {
+const HomeContent = ({ id }: HomeContentProps) => {
   // JE CRÉE UN USESTATE AFIN DE STOCKER LA DATA ISSU DE L'APPEL AXIOS DANS CONTENT
   const [content, setContent] = useState<IPage>();
 
@@ -24,14 +24,19 @@ const ClubSection = ({ id }: ClubSectionProps) => {
   }, []);
 
   return (
-    <div className="clubSection">
-      <div className="clubSection__text">
-        <h2 className="clubSection__text__subTitle">{content?.subTitle}</h2>
-        <h1 className="clubSection__text__title">{content?.title}</h1>
+    <>
+      <div className="homeContent">
+        <div className="homeContent__subTitle">{content?.subTitle.toUpperCase()}</div>
+        <div className="homeContent__title">
+          CLUB <br /> SANDWICH.
+        </div>
       </div>
-      <img className="clubSection__image1" src={content?.image1} alt={content?.title} />
-    </div>
+
+      <div className="home__description">
+        <div className="home__description__club">{content?.description}</div>
+      </div>
+    </>
   );
 };
 
-export default ClubSection;
+export default HomeContent;

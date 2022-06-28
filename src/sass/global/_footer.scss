@@ -1,10 +1,10 @@
 .footer {
-  width: 100vw;
-  height: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
   color: $secondary;
+  margin-right: 1rem;
+  margin-bottom: 2.5rem;
 
   @media screen and (max-width: $breakpoint-small) {
     justify-content: center;
@@ -12,10 +12,7 @@
 
   &__info {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
     font-family: 'Made-Bold';
-    margin-right: 3rem;
     margin-bottom: 1.2rem;
 
     @media screen and (max-width: $breakpoint-small) {
@@ -75,15 +72,18 @@
       }
     }
   }
-  &__logo {
-    margin-left: 0.9rem;
-    align-self: flex-end;
+  &__instalogo {
+    display: flex;
+    flex-direction: column;
+    margin: -0.5rem 0.9rem 0.9rem 0.9rem;
+    width: 1.5rem;
+    height: 1.5rem;
 
     .icon {
-      width: 2rem;
-      height: 2rem;
       &--instagram {
         color: $secondary;
+        width: 100%;
+        height: 100%;
       }
     }
     @media screen and (max-width: $breakpoint-small) {
