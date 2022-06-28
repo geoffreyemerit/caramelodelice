@@ -1,4 +1,5 @@
 import React from 'react';
+
 import ShoppingList from '../components/shop/ShoppingList';
 
 const Shop = () => {
