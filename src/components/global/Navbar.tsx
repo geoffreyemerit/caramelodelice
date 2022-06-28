@@ -37,7 +37,7 @@ const Navbar = () => {
           navData.isActive ? 'navbar__link navbar__link--active' : 'navbar__link'
         }
         to="/wallofdwich">
-        wall Of dwich
+        wall of dwich
       </NavLink>
       <NavLink
         className={(navData) =>
