@@ -7,12 +7,21 @@
 @import 'sass/home/home';
 @import 'sass/home/homeContent';
 @import 'sass/global/loader.scss';
-@import 'sass/global/button.scss';
+
+@import 'sass/global/home';
+@import 'sass/club/club';
+@import 'sass/club/clubSection';
+@import 'sass/dealers/dealers';
+@import 'sass/dealers/dealersSection';
+
 @import 'sass/global/sound';
 @import 'sass/global/scrollDown.scss';
 @import 'sass/global/nav';
 @import 'sass/news/news.scss';
 @import 'sass/news/newsContent.scss';
+
+@import 'sass/global/button.scss';
+
 @import 'sass/club/club';
 @import 'sass/club/clubSection';
 
@@ -28,4 +37,5 @@
 @import 'sass/shop/shoppingList.scss';
 @import 'sass/shop/shoppingCard.scss';
 @import 'sass/shop/shoppingModal.scss';
+
 
