@@ -27,10 +27,13 @@ const HomeContent = ({ id }: HomeContentProps) => {
     <>
       <div className="homeContent">
         <div className="homeContent__subTitle">{content?.subTitle.toUpperCase()}</div>
-        <div className="homeContent__title">{content?.title.toUpperCase()}</div>
-        <div className="description">
-          <div className="description__club">{content?.description}</div>
+        <div className="homeContent__title">
+          CLUB <br /> SANDWICH.
         </div>
+      </div>
+
+      <div className="home__description">
+        <div className="home__description__club">{content?.description}</div>
       </div>
     </>
   );
