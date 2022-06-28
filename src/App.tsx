@@ -57,6 +57,7 @@ const App = () => {
       <Loader />
     </div>
   ) : (
+
     <div
       className="App"
       // only display background image if displayBackground is true
