@@ -21,11 +21,8 @@ const Sound = () => {
             className={
               isPlaying ? 'sound__soundcheck__box--active' : 'sound__soundcheck__box'
             }
-            role="button"
-            tabIndex={0}
             // when clicking on the div, the value of isPlaying changes
-            onClick={handleChange}
-            onKeyDown={handleChange}>
+            onClick={handleChange}>
             {/* integrating the React player input and hiding it */}
             <ReactPlayer
               url="https://soundcloud.com/elsa-rampazzo/sets/club-sandwich"
