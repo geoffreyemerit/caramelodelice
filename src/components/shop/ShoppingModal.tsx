@@ -29,6 +29,7 @@ const ShoppingModal = ({ item, setModalToOpen }: ShoppingModalProps) => {
             <h2 className="shoppingModal__containt__up__title--h2">{item?.subTitle}</h2>
           </div>
           {/* >> Exit */}
+          {/* >> Exit --> DESKTOP */}
           <div
             role="button"
             tabIndex={0}
@@ -42,12 +43,6 @@ const ShoppingModal = ({ item, setModalToOpen }: ShoppingModalProps) => {
           </div>
         </div>
         <div className="shoppingModal__containt__down">
-          {/* >> Carousel */}
-          {/* <img
-            className="shoppingModal__containt__down__carousel--img"
-            src={item?.image1}
-            alt={item?.title}
-          /> */}
           <Swiper
             className="shoppingModal__containt__down__carousel"
             loop
@@ -70,6 +65,15 @@ const ShoppingModal = ({ item, setModalToOpen }: ShoppingModalProps) => {
           </Swiper>
           {/* >> Description item */}
           <p className="shoppingModal__containt__down__desc">{item?.description}</p>
+          {/* >> Exit --> MOBILE */}
+          <div
+            role="button"
+            tabIndex={0}
+            onClick={() => setModalToOpen(-1)}
+            onKeyPress={() => setModalToOpen(-1)}
+            className="shoppingModal__containt__down__button--mobile">
+            Retour
+          </div>
         </div>
       </div>
     </div>

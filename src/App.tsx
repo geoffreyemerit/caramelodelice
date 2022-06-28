@@ -8,9 +8,9 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import IPage from '../src/interfaces/IPage';
 // import Footer from './components/global/Footer';
 import Loader from './components/global/Loader';
-import Logo from './components/global/Logo';
-import Navbar from './components/global/Navbar';
-import Sound from './components/global/Sound';
+// import Logo from './components/global/Logo';
+// import Navbar from './components/global/Navbar';
+// import Sound from './components/global/Sound';
 import Bisous from './pages/Bisous';
 import Club from './pages/Club';
 import Dealers from './pages/Dealers';
@@ -71,9 +71,9 @@ const App = () => {
             }
           : {}
       }>
-      <Sound />
+      {/* <Sound />
       <Logo />
-      <Navbar />
+      <Navbar /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/news" element={<News />} />
