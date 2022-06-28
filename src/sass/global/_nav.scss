@@ -4,36 +4,33 @@
   font-family: 'Made-Bold';
   justify-content: space-around;
   text-decoration: none;
-  margin-left: 3rem;
-  z-index: 1;
+  margin-top: 2rem;
+  z-index: 50;
+  transform: translateX(-2rem);
 
   @media only screen and (min-width: 320px) and (max-width: 480px) {
     display: none;
   }
 
   @media only screen and (min-width: 480px) and (max-width: 820px) {
-    width: 50%;
     height: 22rem;
     position: absolute;
     top: 25%;
   }
 
   @media only screen and (min-width: 821px) and (max-width: 1024px) {
-    width: 50%;
     height: 22rem;
     position: absolute;
     top: 25%;
   }
 
   @media only screen and (min-width: 1025px) and (max-width: 1224px) {
-    width: 50%;
     height: 22rem;
     position: absolute;
     top: 25%;
   }
 
   @media only screen and (min-width: 1225px) {
-    width: 50%;
     height: 22rem;
     position: absolute;
     top: 20%;

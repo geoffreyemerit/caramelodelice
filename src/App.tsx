@@ -6,7 +6,7 @@ import React, { useEffect, useState } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 
 import IPage from '../src/interfaces/IPage';
-import Footer from './components/global/Footer';
+// import Footer from './components/global/Footer';
 import Loader from './components/global/Loader';
 import Logo from './components/global/Logo';
 import Navbar from './components/global/Navbar';
@@ -58,6 +58,7 @@ const App = () => {
       <Loader />
     </div>
   ) : (
+
     <div
       className="App"
       // only display background image if displayBackground is true
@@ -85,7 +86,7 @@ const App = () => {
         <Route path="/bisous" element={<Bisous />} />
         <Route path="*" element={<Home />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
