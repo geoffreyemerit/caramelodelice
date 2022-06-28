@@ -20,6 +20,7 @@ const ShoppingModal = ({ item, setModalToOpen }: ShoppingModalProps) => {
   return (
     <div className="shoppingModal">
       <div className="shoppingModal__containt">
+        <span className="shoppingModal__containt--mobile">PREVIEW </span>
         {/* >> Div Top */}
         <div className="shoppingModal__containt__up">
           {/* >> Title */}
@@ -33,9 +34,9 @@ const ShoppingModal = ({ item, setModalToOpen }: ShoppingModalProps) => {
             tabIndex={0}
             onClick={() => setModalToOpen(-1)}
             onKeyPress={() => setModalToOpen(-1)}
-            className="shoppingModal__containt__up__button">
+            className="shoppingModal__containt__up__button--desktop">
             <Logo
-              myStyle="shoppingModal__containt__up__button--logo"
+              myStyle="shoppingModal__containt__up__button--desktop--logo"
               icon="logos-cross"
             />
           </div>
