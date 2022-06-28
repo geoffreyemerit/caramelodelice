@@ -18,6 +18,7 @@ const InfosContent = ({ idPage, idTypeKitchen, idTypeMusic, idTypeAll }: InfosCo
   const [typeKitchen, seTypeKitchen] = useState<INewsType>();
   const [typeMusic, setTypeMusic] = useState<INewsType>();
   const [typeAll, setTypeAll] = useState<INewsType>();
+  const [type, setType] = useState<INewsType>();
 
   // APPEL API AXIOS
   const getContent = async () => {
@@ -30,10 +31,13 @@ const InfosContent = ({ idPage, idTypeKitchen, idTypeMusic, idTypeAll }: InfosCo
 
     const typeAll = await axios.get<INewsType>(`http://localhost:3000/api/newsTypes/${idTypeAll}`);
 
+    const type = await axios.get<INewsType>(`http://localhost:3000/api/newsTypes`);
+
     setPage(page.data);
     seTypeKitchen(typeKitchen.data);
     setTypeMusic(typeMusic.data)
     setTypeAll(typeAll.data)
+    setType(type.data)
   };
 
 
@@ -43,6 +47,8 @@ const InfosContent = ({ idPage, idTypeKitchen, idTypeMusic, idTypeAll }: InfosCo
   }, []);
 
   const [isActive, setIsActive] = useState(true);
+
+  console.log(type)
 
   return (
     <div className='infosContent'>
