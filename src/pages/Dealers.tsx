@@ -3,7 +3,7 @@ import DealersSection from '../components/dealers/DealersSection';
 
 const Dealers = () => {
   return (
-    <div>
+    <div className="dealers">
       <DealersSection id={6} idSupplier={1} />
       <DealersSection id={7} idSupplier={2} />
       <DealersSection id={8} idSupplier={3} />

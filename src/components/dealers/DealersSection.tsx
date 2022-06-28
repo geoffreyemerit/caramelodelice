@@ -42,10 +42,18 @@ const DealersSection = ({ id, idSupplier }: DealersSectionProps) => {
             <h2 className="dealersSection__text__subTitle">{page.subTitle}</h2>
             <h1 className="dealersSection__text__title">{page.title}</h1>
           </div>
-          <img className="dealersSection__image1" src={page.image1} alt={page.title} />
           <div className="dealersSection__supplier">
-            <h3 className="dealersSection__supplier__name">{supplier.name}</h3>
-            <h4 className="dealersSection__supplier__location">{supplier.location}</h4>
+            <img
+              className="dealersSection__supplier__image1"
+              src={page.image1}
+              alt={page.title}
+            />
+            <div className="dealersSection__supplier__infos">
+              <h3 className="dealersSection__supplier__infos__name">{supplier.name}</h3>
+              <h4 className="dealersSection__supplier__infos__location">
+                {supplier.location}
+              </h4>
+            </div>
           </div>
         </>
       )}
