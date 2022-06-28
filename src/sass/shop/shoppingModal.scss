@@ -1,5 +1,88 @@
 .shoppingModal {
-  width: 30rem;
-  height: 30rem;
-  background-color: red;
+  width: 150vw;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  top: 45%;
+  left: 60%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 1;
+  &__containt {
+    background: rgb(135, 135, 135);
+    background: linear-gradient(
+      90deg,
+      rgba(135, 135, 135, 1) 0%,
+      rgba(101, 101, 101, 1) 50%,
+      rgba(64, 63, 63, 1) 100%
+    );
+    height: 60%;
+    width: 40%;
+    border-radius: 30px 0 30px 30px;
+    border: 1px solid $secondary;
+    &__up {
+      display: flex;
+      justify-content: space-between;
+      height: 20%;
+      width: 100%;
+      border-radius: 30px 0 0 0;
+      font-family: 'Made-Bold';
+      &__title {
+        display: flex;
+        flex-direction: column;
+        color: $secondary;
+        padding-left: 1.5rem;
+        &--h1 {
+          text-transform: uppercase;
+          color: $secondary;
+          font-size: 3rem;
+          transform: translateY(-1.6rem);
+        }
+        &--h2 {
+          color: $tertiary;
+          font-size: 2rem;
+          transform: translateY(-2.1rem);
+        }
+      }
+      &__button {
+        display: flex;
+        justify-content: flex-end;
+        cursor: pointer;
+        &--logo {
+          width: 3rem;
+          height: 3rem;
+
+          color: $secondary;
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
+    }
+    &__down {
+      border-radius: 0 0 30px 30px;
+      height: 80%;
+      width: 100%;
+      display: flex;
+      &__carousel--img {
+        height: 100%;
+        width: 30%;
+        padding: 1rem;
+      }
+      &__desc {
+        height: 100%;
+        width: 70%;
+        font-size: 1rem;
+        font-family: 'Made-Light';
+        border-radius: 0 0 30px 0;
+        padding: 2rem 1rem;
+        color: $secondary;
+        align-self: center;
+        justify-content: center;
+        text-align: justify;
+      }
+    }
+  }
 }

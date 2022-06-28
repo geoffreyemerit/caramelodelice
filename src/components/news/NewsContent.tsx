@@ -38,7 +38,6 @@ const NewsContent = ({ id }: NewsContentProps) => {
 
   return (
     <div className="newsContent">
-
       {/* On fais un && des data reçus, si on l'a on envoi, sinon on continu */}
       {page && type && (
         <>
@@ -67,7 +66,6 @@ const NewsContent = ({ id }: NewsContentProps) => {
               </div>
             </div>
             <p className="newsContent__container__p">{page.description}</p>
-
           </div>
         </>
       )}
