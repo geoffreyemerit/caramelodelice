@@ -468,7 +468,7 @@ VALUES
  (7),
  ('Dans la vie, il y aura toujours un pdf pour t’aiguiller.'),
  ('Balance les infos en pdf'),
- ('Que veux tu savoir ?'),
+ ('Que veux-tu savoir ?'),
 ('https://firebasestorage.googleapis.com/v0/b/club-sandwich-86c01.appspot.com/o/club%2Fcrew.png?alt=media&token=f27b6dae-b04c-4992-99af-437a0d3eb07e'),
  (''),
  (''),
@@ -492,15 +492,15 @@ INSERT INTO
 VALUES
 (
  ('Kitchen'),
- ('www.pdf.kitchen.com')
+ ('https://firebasestorage.googleapis.com/v0/b/club-sandwich-86c01.appspot.com/o/infos%2FQG_resume_june22.pdf?alt=media&token=eb837ea6-2eb0-42e0-9372-44265d3b0247')
  ),
  (
  ('Music'),
- ('www.pdf.music.com')
+ ('https://firebasestorage.googleapis.com/v0/b/club-sandwich-86c01.appspot.com/o/infos%2FQG_resume_june22.pdf?alt=media&token=eb837ea6-2eb0-42e0-9372-44265d3b0247')
  ),
  (
  ('All'),
- ('www.pdf.all.com')
+ ('https://firebasestorage.googleapis.com/v0/b/club-sandwich-86c01.appspot.com/o/infos%2FQG_resume_june22.pdf?alt=media&token=eb837ea6-2eb0-42e0-9372-44265d3b0247')
  );
  
 -- -----------------------------------------------------
