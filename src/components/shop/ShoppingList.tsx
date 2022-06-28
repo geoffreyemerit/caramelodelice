@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Logo from '../global/Logo';
 import ShoppingCard from './ShoppingCard';
 
 const ShoppingList = () => {
@@ -12,7 +11,6 @@ const ShoppingList = () => {
       <ShoppingCard id={1} />
       <ShoppingCard id={1} />
       <ShoppingCard id={1} />
-      <Logo myStyle="icon icon--brille" icon="logos-brille" />
     </div>
   );
 };

@@ -3,8 +3,8 @@
   justify-content: flex-end;
   align-items: flex-end;
   color: $secondary;
-  margin-right: 1 rem;
-  margin-bottom: 2rem;
+  margin-right: 1rem;
+  margin-bottom: 2.5rem;
 
   @media screen and (max-width: $breakpoint-small) {
     justify-content: center;
@@ -75,7 +75,7 @@
   &__instalogo {
     display: flex;
     flex-direction: column;
-    margin: 0rem 0.9rem 0.9rem 0.9rem;
+    margin: -0.5rem 0.9rem 0.9rem 0.9rem;
     width: 1.5rem;
     height: 1.5rem;
 

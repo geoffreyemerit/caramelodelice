@@ -7,7 +7,7 @@ interface HomeContentProps {
   id: number;
 }
 
-const C = ({ id }: HomeContentProps) => {
+const HomeContent = ({ id }: HomeContentProps) => {
   // JE CRÉE UN USESTATE AFIN DE STOCKER LA DATA ISSU DE L'APPEL AXIOS DANS CONTENT
   const [content, setContent] = useState<IPage>();
 
@@ -27,20 +27,16 @@ const C = ({ id }: HomeContentProps) => {
     <>
       <div className="homeContent">
         <div className="homeContent__subTitle">{content?.subTitle.toUpperCase()}</div>
-        <div className="homeContent__title">{content?.title.toUpperCase()}</div>
-        <div className="homeContent__description">{content?.description}</div>
-        <div className="homeContent__image">
-          {/* // style={{
-          //   backgroundImage: `url(${content?.image1})`,
-          //   backgroundPosition: 'center',
-          //   backgroundSize: 'cover',
-          //   backgroundRepeat: 'no-repeat',
-          // }}> */}
-          {/* <img src={content?.image1} alt={content?.title} /> */}
+        <div className="homeContent__title">
+          CLUB <br /> SANDWICH.
         </div>
+      </div>
+
+      <div className="home__description">
+        <div className="home__description__club">{content?.description}</div>
       </div>
     </>
   );
 };
 
-export default C;
+export default HomeContent;

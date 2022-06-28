@@ -1,9 +1,11 @@
 import './App.scss';
 import '../src/sass/global/_index.scss';
 
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 
+import IPage from '../src/interfaces/IPage';
 import Footer from './components/global/Footer';
 import Loader from './components/global/Loader';
 import Logo from './components/global/Logo';
@@ -18,7 +20,33 @@ import News from './pages/News';
 import Shop from './pages/Shop';
 import WallOfDwich from './pages/WallOfDwich';
 
-function App() {
+const App = () => {
+  //retrieve the route (useLocation)
+  const location = useLocation();
+  // create displayBackground variable and set to boolean
+  let displayBackground: boolean = false;
+
+  // this variable is true if location.pathname is either /, *, or /home
+  if (
+    location.pathname === '/' ||
+    location.key === 'default' ||
+    location.pathname === '/home'
+  ) {
+    displayBackground = true;
+  }
+
+  const [content, setContent] = useState<IPage>();
+
+  const getContent = async () => {
+    const url: string = `http://localhost:3000/api/pages/5`;
+    const { data } = await axios.get<IPage>(url);
+    setContent(data);
+  };
+
+  useEffect(() => {
+    getContent();
+  }, []);
+
   const [loading, setLoading] = useState<boolean>(true);
   useEffect(() => {
     setTimeout(() => {
@@ -30,26 +58,36 @@ function App() {
       <Loader />
     </div>
   ) : (
-    <div className="App">
-      <Router>
-        <Sound />
-        <Logo />
-        <Navbar />
-        <Routes>
-          <Route path="*" element={<Home />} />
-          <Route path="/" element={<Home />} />
-          <Route path="/news" element={<News />} />
-          <Route path="/club" element={<Club />} />
-          <Route path="/dealers" element={<Dealers />} />
-          <Route path="/wallofdwich" element={<WallOfDwich />} />
-          <Route path="/shop" element={<Shop />} />
-          <Route path="/infos" element={<Infos />} />
-          <Route path="/bisous" element={<Bisous />} />
-        </Routes>
-      </Router>
+    <div
+      className="App"
+      // only display background image if displayBackground is true
+      style={
+        displayBackground
+          ? {
+              backgroundImage: `url(${content?.image1})`,
+              backgroundPosition: 'center',
+              backgroundSize: 'cover',
+              backgroundRepeat: 'no-repeat',
+            }
+          : {}
+      }>
+      <Sound />
+      <Logo />
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/news" element={<News />} />
+        <Route path="/club" element={<Club />} />
+        <Route path="/dealers" element={<Dealers />} />
+        <Route path="/wallofdwich" element={<WallOfDwich />} />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/infos" element={<Infos />} />
+        <Route path="/bisous" element={<Bisous />} />
+        <Route path="*" element={<Home />} />
+      </Routes>
       <Footer />
     </div>
   );
-}
+};
 
 export default App;

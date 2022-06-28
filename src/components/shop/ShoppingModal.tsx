@@ -1,4 +1,11 @@
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+
 import React from 'react';
+// import required modules
+import { Pagination } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 import IItem from '../../interfaces/IItem';
 import Logo from '../global/Logo';
@@ -35,31 +42,31 @@ const ShoppingModal = ({ item, setModalToOpen }: ShoppingModalProps) => {
         </div>
         <div className="shoppingModal__containt__down">
           {/* >> Carousel */}
-          <img
+          {/* <img
             className="shoppingModal__containt__down__carousel--img"
             src={item?.image1}
             alt={item?.title}
-          />
-          {/* <Swiper
-            className="shoppingModal__containt__buttom__carousel"
-            spaceBetween={30}
+          /> */}
+          <Swiper
+            className="shoppingModal__containt__down__carousel"
             loop
-            effect="fade"
-            navigation
-            pagination={{
-              clickable: true,
-            }}
-            modules={[EffectFade, Navigation, Pagination]}>
-            {images.map((image, index) => (
-              <SwiperSlide key={index}>
-                <img
-                  className="shoppingModal__containt__buttom__carousel--img"
-                  src={item?.image1}
-                  alt={id}
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper> */}
+            pagination={true}
+            modules={[Pagination]}>
+            <SwiperSlide>
+              <img
+                className="shoppingModal__containt__down__carousel--img"
+                src={item?.image1}
+                alt={item?.title}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                className="shoppingModal__containt__down__carousel--img"
+                src={item?.image2}
+                alt={item?.title}
+              />
+            </SwiperSlide>
+          </Swiper>
           {/* >> Description item */}
           <p className="shoppingModal__containt__down__desc">{item?.description}</p>
         </div>
