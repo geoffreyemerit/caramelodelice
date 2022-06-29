@@ -5,5 +5,8 @@
     width: 8rem;
     height: 8rem;
     margin: 2rem;
+    @media only screen and (max-width: $breakpoint-largest) {
+      display: none;
+    }
   }
 }

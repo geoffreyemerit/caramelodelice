@@ -4,12 +4,13 @@ import '../src/sass/global/_index.scss';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
+
 import IPage from '../src/interfaces/IPage';
 // import Footer from './components/global/Footer';
 import Loader from './components/global/Loader';
-import Logo from './components/global/Logo';
-import Navbar from './components/global/Navbar';
-import Sound from './components/global/Sound';
+// import Logo from './components/global/Logo';
+// import Navbar from './components/global/Navbar';
+// import Sound from './components/global/Sound';
 import Bisous from './pages/Bisous';
 import Club from './pages/Club';
 import Dealers from './pages/Dealers';
@@ -57,7 +58,6 @@ const App = () => {
       <Loader />
     </div>
   ) : (
-
     <div
       className="App"
       // only display background image if displayBackground is true
@@ -71,9 +71,9 @@ const App = () => {
             }
           : {}
       }>
-      <Sound />
+      {/* <Sound />
       <Logo />
-      <Navbar />
+      <Navbar /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/news" element={<News />} />
