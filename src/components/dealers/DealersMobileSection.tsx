@@ -44,6 +44,7 @@ const DealersMobileSection = () => {
             <Swiper
               slidesPerView={1.2}
               spaceBetween={10}
+              loop
               pagination={{
                 clickable: true,
               }}
