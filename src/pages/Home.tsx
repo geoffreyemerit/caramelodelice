@@ -1,12 +1,15 @@
 import React from 'react';
-
+import Footer from '../components/global/Footer';
 import HomeContent from '../components/home/HomeContent';
 
 const Home = () => {
   return (
-    <div className="home">
-      <HomeContent id={5} />
-    </div>
+    <>
+      <div className="home">
+        <HomeContent id={5} />
+        <Footer />
+      </div>
+    </>
   );
 };
 

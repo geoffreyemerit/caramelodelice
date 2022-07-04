@@ -23,6 +23,7 @@ const InfosContent = ({
   const [typeKitchen, seTypeKitchen] = useState<INewsType>();
   const [typeMusic, setTypeMusic] = useState<INewsType>();
   const [typeAll, setTypeAll] = useState<INewsType>();
+  const [type, setType] = useState<INewsType>();
 
   // APPEL API AXIOS
   const getContent = async () => {
@@ -54,8 +55,15 @@ const InfosContent = ({
 
   const [isActive, setIsActive] = useState(true);
 
+  console.log(type);
+
   return (
     <div className="infosContent">
+      <img
+        className="infosContent__img"
+        src="/assets/Perso-08_1.svg"
+        alt="logo_club_sandwich"
+      />
       {page && typeKitchen && typeMusic && typeAll && (
         <>
           <div className="infosContent__container">
