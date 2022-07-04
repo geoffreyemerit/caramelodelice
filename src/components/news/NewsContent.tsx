@@ -82,13 +82,16 @@ const NewsContent = ({ id }: NewsContentProps) => {
                       className="newsContent__mobileContainer__logo"
                       src="/assets/xClubSandwich.svg"
                       alt="logo_club_sandwich_close"
-                      onClick={handleClick} onKeyDown={handleClick}
+                      onClick={handleClick}
+                      onKeyDown={handleClick}
                       role="presentation"
                       area-hidden="true"
                     />
                   </div>
                 ) : (
-                  <div onClick={handleClick} onKeyDown={handleClick}
+                  <div
+                    onClick={handleClick}
+                    onKeyDown={handleClick}
                     role="presentation"
                     area-hidden="true">
                     <Button className="buttonNews" text="En savoir plus" />
