@@ -62,7 +62,11 @@ const InfosContent = ({
 
   return (
     <div className="infosContent">
-      <img className="infosContent__img" src="/assets/Perso-08_1.svg" alt="logo_club_sandwich" />
+      <img
+        className="infosContent__img"
+        src="/assets/Perso-08_1.svg"
+        alt="logo_club_sandwich"
+      />
       {page && typeKitchen && typeMusic && typeAll && (
         <>
           <div className="infosContent__container">
