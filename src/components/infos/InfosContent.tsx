@@ -23,7 +23,6 @@ const InfosContent = ({
   const [typeKitchen, seTypeKitchen] = useState<INewsType>();
   const [typeMusic, setTypeMusic] = useState<INewsType>();
   const [typeAll, setTypeAll] = useState<INewsType>();
-  const [type, setType] = useState<INewsType>();
 
   // APPEL API AXIOS
   const getContent = async () => {
@@ -54,8 +53,6 @@ const InfosContent = ({
   }, []);
 
   const [isActive, setIsActive] = useState(true);
-
-  console.log(type);
 
   return (
     <div className="infosContent">
