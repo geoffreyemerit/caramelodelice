@@ -1,6 +1,10 @@
 .infosContent {
     height: 84vh;
 
+    @media only screen and (max-height: 660px) {
+        height: 84%;
+    }
+
     &__container {
         display: flex;
         flex-direction: column;
@@ -9,6 +13,10 @@
         margin-top: 16vh;
         width: 100vw;
         z-index: 5;
+
+        @media only screen and (max-height: 660px) {
+            margin-top: 16%;
+        }
 
         @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-small) {
             transform: inherit;
@@ -126,6 +134,10 @@
 
             transform: translateX(10rem);
             z-index: 30;
+
+            @media only screen and (max-height: 660px) {
+                padding-bottom: 16%;
+            }
 
             @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-small) {
                 display: flex;
@@ -258,6 +270,8 @@
                 background-color: #3f3f3f;
                 cursor: pointer;
                 z-index: 50;
+
+
 
                 @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-small) {
                     margin-top: 4rem;
