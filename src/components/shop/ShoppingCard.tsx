@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
 import IItem from '../../interfaces/IItem';
+import ShoppingModal from './ShoppingModal';
 
 //INTERFACE D'APPEL FRONT NÉCESSAIRE
 interface ShoppingCardProps {
@@ -13,7 +14,7 @@ const ShoppingCard = ({ id }: ShoppingCardProps) => {
   const [item, setItem] = useState<IItem>();
 
   // JE CRÉE UN USESTATE AFIN D'OUVRIR LA MODALE AU CLIC SUR UN ITEM
-  // const [isModalOpened, setIsModalOpened] = useState<boolean>(false);
+  const [modalToOpen, setModalToOpen] = useState<number>(-1);
 
   // APPEL API AXIOS
   const getContent = async () => {
@@ -30,20 +31,32 @@ const ShoppingCard = ({ id }: ShoppingCardProps) => {
   }, []);
 
   return (
-    <div className="card">
+    <>
       {/* On fais un && des data reçus, si on l'a on envoi, sinon on continu */}
       {item && (
-        <>
-          <img className="card__img" src={item?.image1} alt={item?.title} />
+        <div
+          className="card"
+          role="button"
+          tabIndex={0}
+          onKeyPress={() => setModalToOpen(item?.id)}
+          onClick={() => {
+            setModalToOpen(item?.id);
+          }}>
+          <img className="card__img" src={item.image1} alt={item.title} />
           <div className="card__fadebox">
             <div className="card__fadebox__button">
               JE VEUX
               <span className="card__fadebox__button--line2">en savoir plus</span>
             </div>
           </div>
-        </>
+        </div>
       )}
-    </div>
+      {/* Si modalToOpen est supérieur ou égal à 0 et qu'il y a un item */}
+      {/* Alors ouvre ShoppingModal // On passe item et setModalToOpen en props*/}
+      {modalToOpen > -1 && item && (
+        <ShoppingModal item={item} setModalToOpen={setModalToOpen} />
+      )}
+    </>
   );
 };
 

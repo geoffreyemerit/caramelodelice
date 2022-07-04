@@ -34,6 +34,7 @@ const InfosContent = ({
       `http://localhost:3000/api/newsTypes/${idTypeKitchen}`,
     );
 
+
     const typeMusic = await axios.get<INewsType>(
       `http://localhost:3000/api/newsTypes/${idTypeMusic}`,
     );
@@ -42,13 +43,10 @@ const InfosContent = ({
       `http://localhost:3000/api/newsTypes/${idTypeAll}`,
     );
 
-    const type = await axios.get<INewsType>(`http://localhost:3000/api/newsTypes`);
-
     setPage(page.data);
     seTypeKitchen(typeKitchen.data);
     setTypeMusic(typeMusic.data);
     setTypeAll(typeAll.data);
-    setType(type.data);
   };
 
   // AU CHARGEMENT DU COMPOSANT, J'EXÉCUTE LA FONCTION GETCONTENT

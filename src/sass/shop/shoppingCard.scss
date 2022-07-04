@@ -10,17 +10,18 @@
     width: calc(75% / 2);
   }
   @media only screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-largest) {
-    height: calc(100% / 2);
-    width: calc(80% / 3);
+    height: calc(85% / 2);
+    width: calc(50% / 2);
   }
   @media only screen and (min-width: $breakpoint-largest) and (max-width: $breakpoint-extralarge) {
     height: calc(90% / 2);
-    width: calc(80% / 3);
+    width: calc(75% / 3);
   }
   @media only screen and (min-width: $breakpoint-extralarge) {
     height: calc(90% / 2);
-    width: calc(75% / 3);
+    width: calc(72% / 3);
   }
+
   // Image de cet item //
   &__img {
     opacity: 1;
