@@ -9,56 +9,56 @@ const Navbar = () => {
           navData.isActive ? 'navbar__link navbar__link--active' : 'navbar__link'
         }
         to="/">
-        Home
+        home
       </NavLink>
       <NavLink
         className={(navData) =>
           navData.isActive ? 'navbar__link navbar__link--active' : 'navbar__link'
         }
         to="/news">
-        News
+        news
       </NavLink>
       <NavLink
         className={(navData) =>
           navData.isActive ? 'navbar__link navbar__link--active' : 'navbar__link'
         }
         to="/club">
-        Club
+        club
       </NavLink>
       <NavLink
         className={(navData) =>
           navData.isActive ? 'navbar__link navbar__link--active' : 'navbar__link'
         }
         to="/dealers">
-        Dealers
+        dealers
       </NavLink>
       <NavLink
         className={(navData) =>
           navData.isActive ? 'navbar__link navbar__link--active' : 'navbar__link'
         }
         to="/wallofdwich">
-        Wall Of Dwich
+        wall of dwich
       </NavLink>
       <NavLink
         className={(navData) =>
           navData.isActive ? 'navbar__link navbar__link--active' : 'navbar__link'
         }
         to="/shop">
-        Shop
+        shop
       </NavLink>
       <NavLink
         className={(navData) =>
           navData.isActive ? 'navbar__link navbar__link--active' : 'navbar__link'
         }
         to="/infos">
-        Infos
+        infos
       </NavLink>
       <NavLink
         className={(navData) =>
           navData.isActive ? 'navbar__link navbar__link--active' : 'navbar__link'
         }
         to="/bisous">
-        Bisous
+        bisous
       </NavLink>
     </nav>
   );

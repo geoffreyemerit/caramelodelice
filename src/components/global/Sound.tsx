@@ -3,7 +3,7 @@ import ReactPlayer from 'react-player';
 
 const Sound = () => {
   // state variable to define if music is playing or not
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState<boolean>(false);
   // function to revert the value of the variable
   const handleChange = () => {
     setIsPlaying(!isPlaying);
@@ -15,6 +15,9 @@ const Sound = () => {
         <div className="sound__soundcheck">
           {/* if the button is clicked, the box becomes white */}
           <div
+            role="button"
+            tabIndex={0}
+            onKeyPress={handleChange}
             className={
               isPlaying ? 'sound__soundcheck__box--active' : 'sound__soundcheck__box'
             }

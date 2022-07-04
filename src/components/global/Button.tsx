@@ -1,11 +1,16 @@
 import React from 'react';
 
-import IButton from '../../interfaces/IButton';
+interface ButtonProps {
+  text: string;
+  className: string;
+}
 
-const Button = ({ text, className }: IButton) => {
-
-  return <div className={className}><div className={`${className}__h1`}>{text}</div>
-  </div>;
+const Button = ({ text, className }: ButtonProps) => {
+  return (
+    <div className={className}>
+      <div className={`${className}__h1`}>{text}</div>
+    </div>
+  );
 };
 
 export default Button;

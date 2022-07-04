@@ -4,9 +4,8 @@ import InfosContent from '../components/infos/InfosContent';
 
 const Infos = () => {
   return (
-    <div>
-      <h1>DES INFOS EN VEUX TU EN VOILÀ BÉBÉ</h1>
-      <InfosContent />
+    <div className="infos">
+      <InfosContent idPage={11} idTypeKitchen={1} idTypeMusic={2} idTypeAll={3} />
     </div>
   );
 };

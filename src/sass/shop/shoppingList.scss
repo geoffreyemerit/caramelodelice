@@ -1,0 +1,30 @@
+// $breakpoint-extralarge: 1224px;
+// $breakpoint-largest: 1024px;
+// $breakpoint-medium: 768px;
+// $breakpoint-small: 480px;
+// $breakpoint-smallest: 320px;
+//-----------------------------------
+// SHOPPING LIST  //
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 90%;
+  height: 100%;
+  @media only screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-medium) {
+    width: 85%;
+    height: 65%;
+    gap: 1rem;
+  }
+  @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
+    width: 70%;
+    height: 65%;
+    gap: 1rem;
+  }
+  @media only screen and (min-width: $breakpoint-largest) {
+    max-width: 65vw;
+    height: 70%;
+    margin-left: 20%;
+    gap: 1rem;
+  }
+}

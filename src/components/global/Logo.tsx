@@ -1,18 +1,23 @@
-import React, { FC } from 'react';
+import React from 'react';
 
 import Icons from '../../../public/assets/logos.svg';
 
 interface Props {
-  icon: string;
-  myStyle: string;
+  icon?: string;
+  myStyle?: string;
 }
 
-const Logo: FC<Props> = ({ icon, myStyle }) => {
+const Logo = ({
+  icon = 'logos-club-sandwich-logo',
+  myStyle = 'logo__logotype',
+}: Props) => {
   return (
     <>
-      <svg className={myStyle}>
-        <use xlinkHref={`${Icons}#${icon}`}></use>
-      </svg>
+      <div className="logo">
+        <svg className={myStyle}>
+          <use xlinkHref={`${Icons}#${icon}`}></use>
+        </svg>
+      </div>
     </>
   );
 };
