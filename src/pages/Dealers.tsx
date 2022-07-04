@@ -1,4 +1,5 @@
 import React from 'react';
+
 import DealersSection from '../components/dealers/DealersSection';
 
 const Dealers = () => {
