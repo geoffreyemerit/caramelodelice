@@ -16,7 +16,6 @@ import 'swiper/css/pagination';
 import { Autoplay, Pagination, Parallax } from 'swiper';
 
 const DealersMobileSection = () => {
-  // JE CRÉE UN USESTATE AFIN DE STOCKER LA DONNÉE DE MA SECTION ISSU DE L'APPEL AXIOS DANS "PAGE"
   const [supplierList, setSupplierList] = useState<ISupplier[]>();
 
   // APPEL API AXIOS POUR TOUS LES SUPPLIERS
@@ -40,9 +39,9 @@ const DealersMobileSection = () => {
             <h2 className="dealersSection__text__sectionTitle">dealers</h2>
             <h2 className="dealersSection__text__outLine">LOCALS</h2>
           </div>
-          <div className="dealersSection__caroussel">
+          <div className="dealersSection__supplier">
             <Swiper
-              slidesPerView={1.2}
+              slidesPerView={1.07}
               spaceBetween={10}
               loop
               pagination={{
@@ -50,7 +49,22 @@ const DealersMobileSection = () => {
               }}
               modules={[Pagination, Autoplay, Parallax]}
               className="mySwiper">
+              {/* NEED TO MAP THIS BELOW */}
+              {/* {supplierList.map((supplier, index) => {
+                <SwiperSlide>
+                  <img
+                    key={index}
+                    className="dealersSection__supplier__imageCaroussel"
+                    src={supplier.logo}
+                    alt={supplier.name}
+                  />
+                </SwiperSlide>;
+              })} */}
               <SwiperSlide>
+                <div className="dealersSection__supplier__infos">
+                  <div>{supplierList[0].name}</div>
+                  <div>{supplierList[0].location}</div>
+                </div>
                 <img
                   className="dealersSection__supplier__imageCaroussel"
                   src={supplierList[0].logo}
@@ -58,6 +72,10 @@ const DealersMobileSection = () => {
                 />
               </SwiperSlide>
               <SwiperSlide>
+                <div className="dealersSection__supplier__infos">
+                  <div>{supplierList[1].name}</div>
+                  <div>{supplierList[1].location}</div>
+                </div>
                 <img
                   className="dealersSection__supplier__imageCaroussel"
                   src={supplierList[1].logo}
@@ -65,6 +83,10 @@ const DealersMobileSection = () => {
                 />
               </SwiperSlide>
               <SwiperSlide>
+                <div className="dealersSection__supplier__infos">
+                  <div>{supplierList[2].name}</div>
+                  <div>{supplierList[2].location}</div>
+                </div>
                 <img
                   className="dealersSection__supplier__imageCaroussel"
                   src={supplierList[2].logo}
@@ -72,6 +94,10 @@ const DealersMobileSection = () => {
                 />
               </SwiperSlide>
               <SwiperSlide>
+                <div className="dealersSection__supplier__infos">
+                  <div>{supplierList[3].name}</div>
+                  <div>{supplierList[3].location}</div>
+                </div>
                 <img
                   className="dealersSection__supplier__imageCaroussel"
                   src={supplierList[3].logo}
@@ -79,6 +105,10 @@ const DealersMobileSection = () => {
                 />
               </SwiperSlide>
               <SwiperSlide>
+                <div className="dealersSection__supplier__infos">
+                  <div>{supplierList[4].name}</div>
+                  <div>{supplierList[4].location}</div>
+                </div>
                 <img
                   className="dealersSection__supplier__imageCaroussel"
                   src={supplierList[4].logo}

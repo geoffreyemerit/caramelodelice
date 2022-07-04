@@ -3,12 +3,34 @@
   width: 100vw;
 
   @media only screen and (min-width: 320px) and (max-width: 479px) {
-    font-size: 12px;
+    font-size: 10px;
+    overflow: hidden;
     &__supplier {
+      display: flex;
+      margin-top: 16rem;
+      &__infos {
+        color: $secondary;
+        font-family: 'Made-Bold';
+        font-size: 2rem;
+        position: absolute;
+        text-align: center;
+        left: 0;
+        right: 0;
+        top: 0;
+        margin-left: auto;
+        margin-right: auto;
+        width: 30rem;
+        background-color: rgba(39, 39, 39, 0.6);
+        border-radius: 0 0 10px 10px;
+      }
       &__imageCaroussel {
-        height: 80vh;
+        height: 70vh;
         width: auto;
-        overflow: hidden;
+        margin: auto; /* Magic! */
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
       }
     }
     &__text {
@@ -25,10 +47,9 @@
         visibility: visible;
         font-family: 'Made-Outline-Bold';
         color: $secondary;
-        font-size: 4rem;
+        font-size: 3rem;
         margin-left: 50%;
         padding-top: 12%;
-        padding-bottom: 1%;
       }
       &__subTitle {
         visibility: hidden;
@@ -36,15 +57,46 @@
       &__title {
         visibility: hidden;
       }
+    }
+    .swiper-pagination-bullet {
+      border: 1px solid white;
+      padding: 0.4rem 0.4rem;
+      --swiper-theme-color: white;
+      transform: translateY(-40px);
+      z-index: 999;
+      --swiper-pagination-bullet-width: 0.6rem;
+      --swiper-pagination-bullet-height: 0.6rem;
     }
   }
   @media only screen and (min-width: 480px) and (max-width: 767px) {
     font-size: 12px;
+    overflow: hidden;
     &__supplier {
+      display: flex;
+      margin-top: 10rem;
+      &__infos {
+        color: $secondary;
+        font-family: 'Made-Bold';
+        font-size: 2rem;
+        position: absolute;
+        text-align: center;
+        left: 0;
+        right: 0;
+        top: 0;
+        margin-left: auto;
+        margin-right: auto;
+        width: 30rem;
+        background-color: rgba(39, 39, 39, 0.6);
+        border-radius: 0 0 10px 10px;
+      }
       &__imageCaroussel {
-        height: 80vh;
+        height: 70vh;
         width: auto;
-        overflow: hidden;
+        margin: auto; /* Magic! */
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
       }
     }
     &__text {
@@ -64,7 +116,6 @@
         font-size: 4rem;
         margin-left: 50%;
         padding-top: 12%;
-        padding-bottom: 1%;
       }
       &__subTitle {
         visibility: hidden;
@@ -72,18 +123,47 @@
       &__title {
         visibility: hidden;
       }
+    }
+    .swiper-pagination-bullet {
+      border: 1px solid white;
+      padding: 0.4rem 0.4rem;
+      --swiper-theme-color: white;
+      transform: translateY(-40px);
+      z-index: 999;
+      --swiper-pagination-bullet-width: 0.6rem;
+      --swiper-pagination-bullet-height: 0.6rem;
     }
   }
   @media only screen and (min-width: 768px) and (max-width: 1023px) {
     font-size: 14px;
+    overflow: hidden;
     &__supplier {
-      &__imageCaroussel {
-        height: 80vh;
-        width: auto;
-        overflow: hidden;
+      display: flex;
+      // object-position: bottom;
+      margin-top: 4rem;
+      &__infos {
+        color: $secondary;
+        font-family: 'Made-Bold';
+        font-size: 2rem;
+        position: absolute;
+        text-align: center;
+        left: 0;
+        right: 0;
+        top: 0;
         margin-left: auto;
         margin-right: auto;
-        display: block;
+        width: 30rem;
+        background-color: rgba(39, 39, 39, 0.6);
+        border-radius: 0 0 10px 10px;
+      }
+      &__imageCaroussel {
+        height: 70vh;
+        width: auto;
+        margin: auto; /* Magic! */
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
       }
     }
     &__text {
@@ -111,6 +191,15 @@
       &__title {
         visibility: hidden;
       }
+    }
+    .swiper-pagination-bullet {
+      border: 1px solid white;
+      padding: 0.4rem 0.4rem;
+      --swiper-theme-color: white;
+      transform: translateY(-20px);
+      z-index: 999;
+      --swiper-pagination-bullet-width: 0.6rem;
+      --swiper-pagination-bullet-height: 0.6rem;
     }
   }
   @media only screen and (min-width: 1024px) and (max-width: 1223px) {
@@ -140,7 +229,7 @@
         color: $secondary;
         font-size: 6rem;
         position: absolute;
-        margin-top: 1.5rem;
+        margin-top: -1.5rem;
       }
     }
     &__supplier {
@@ -209,7 +298,7 @@
         color: $secondary;
         font-size: 6rem;
         position: absolute;
-        margin-top: 1.5rem;
+        margin-top: -1.5rem;
       }
     }
     &__supplier {
