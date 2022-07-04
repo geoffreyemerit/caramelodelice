@@ -1,7 +1,7 @@
 .infosContent {
     height: 84vh;
 
-    @media only screen and (max-height: 660px) {
+    @media only screen and (max-height: 660px) and (min-width: 1025px) {
         height: 84%;
     }
 
@@ -14,8 +14,8 @@
         width: 100vw;
         z-index: 5;
 
-        @media only screen and (max-height: 660px) {
-            margin-top: 16%;
+        @media only screen and (max-height: 660px) and (min-width: 1025px) {
+            margin-top: 5%;
         }
 
         @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-small) {
@@ -169,7 +169,7 @@
                 transform: translateX(10rem);
             }
 
-            @media only screen and (max-height: 660px) {
+            @media only screen and (max-height: 660px) and (min-width: 1025px) {
                 padding-bottom: 16%;
             }
 
@@ -544,7 +544,7 @@
             z-index: 0;
         }
 
-        @media only screen and (max-height: 660px) {
+        @media only screen and (max-height: 660px) and (min-width: 1025px) {
             display: none;
         }
     }

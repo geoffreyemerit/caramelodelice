@@ -36,12 +36,23 @@ const NewsContent = ({ id }: NewsContentProps) => {
     getContent();
   }, []);
 
+  //J'INITIALISE LE BOUTTON SUR FALSE AVEC UNE FUNC QUI LE PASSE A TRUE
+  const [isClicked, setIsClicked] = useState<boolean>(false);
+  const handleClick = () => {
+    setIsClicked(!isClicked);
+  };
+
   return (
     <div className="newsContent">
       {/* On fais un && des data reçus, si on l'a on envoi, sinon on continu */}
       {page && type && (
         <>
-          <img className="newsContent__img" src={page.image} alt={page.title} />
+          {isClicked ? (
+            <img className="newsContent__img--active" src={page.image} alt={page.title} />
+          ) : (
+            <img className="newsContent__img" src={page.image} alt={page.title} />
+          )}
+
           <div className="newsContent__container">
             <div className="newsContent__container__header">
               <div className="newsContent__container__header__titleContainer">
@@ -62,7 +73,27 @@ const NewsContent = ({ id }: NewsContentProps) => {
                 <h4 className="newsContent__container__header__infosContainer__h4">
                   {page.title}
                 </h4>
-                <Button className="buttonNews" text="En savoir plus" />
+                {isClicked ? (
+                  <div className="newsContent__mobileContainer">
+                    <p className="newsContent__mobileContainer__pMobile">
+                      {page.description}
+                    </p>
+                    <img
+                      className="newsContent__mobileContainer__logo"
+                      src="/assets/xClubSandwich.svg"
+                      alt="logo_club_sandwich_close"
+                      onClick={handleClick} onKeyDown={handleClick}
+                      role="presentation"
+                      area-hidden="true"
+                    />
+                  </div>
+                ) : (
+                  <div onClick={handleClick} onKeyDown={handleClick}
+                    role="presentation"
+                    area-hidden="true">
+                    <Button className="buttonNews" text="En savoir plus" />
+                  </div>
+                )}
               </div>
             </div>
             <p className="newsContent__container__p">{page.description}</p>
