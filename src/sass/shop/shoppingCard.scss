@@ -1,9 +1,3 @@
-// $breakpoint-extralarge: 1224px;
-// $breakpoint-largest: 1024px;
-// $breakpoint-medium: 768px;
-// $breakpoint-small: 480px;
-// $breakpoint-smallest: 320px;
-//-----------------------------------
 // SHOPPING CARD = 1 ITEM //
 .card {
   cursor: pointer;
@@ -24,15 +18,18 @@
   }
   @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
     height: 15.5rem;
-    width: 14rem;
+    width: 13.8rem;
+    margin: 1rem 0.5rem;
   }
   @media only screen and (min-width: $breakpoint-largest) and (max-width: $breakpoint-extralarge) {
-    height: 12rem;
+    // $breakpoint-largest: 1024px --- $breakpoint-extralarge: 1224px;
+    height: 13rem;
     width: 12rem;
   }
   @media only screen and (min-width: $breakpoint-extralarge) {
-    height: 11rem;
-    width: 11rem;
+    // $breakpoint-extralarge: 1224px --- ++
+    height: 12rem;
+    width: 10.5rem;
   }
 
   // Image de cet item //
