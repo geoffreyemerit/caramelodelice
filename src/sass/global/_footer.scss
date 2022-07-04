@@ -13,7 +13,7 @@
   &__info {
     display: flex;
     font-family: 'Made-Bold';
-    margin-bottom: 1.2rem;
+    overflow: hidden;
 
     @media screen and (max-width: $breakpoint-small) {
       justify-content: center;
@@ -78,6 +78,9 @@
     margin: -0.5rem 0.9rem 0.9rem 0.9rem;
     width: 1.5rem;
     height: 1.5rem;
+    @media screen and (min-width: 1024px) and (max-width: 1224px) {
+      margin: -0.5rem 0.9rem 4rem 0.9rem;
+    }
 
     .icon {
       &--instagram {
@@ -86,6 +89,7 @@
         height: 100%;
       }
     }
+
     @media screen and (max-width: $breakpoint-small) {
       display: none;
     }
