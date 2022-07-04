@@ -4,6 +4,7 @@ import '../src/sass/global/_index.scss';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
+
 import IPage from '../src/interfaces/IPage';
 // import Footer from './components/global/Footer';
 import Loader from './components/global/Loader';
@@ -57,7 +58,6 @@ const App = () => {
       <Loader />
     </div>
   ) : (
-
     <div
       className="App"
       // only display background image if displayBackground is true
