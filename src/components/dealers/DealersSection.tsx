@@ -40,6 +40,8 @@ const DealersSection = ({ id, idSupplier }: DealersSectionProps) => {
         <>
           <div className="dealersSection__text">
             <h2 className="dealersSection__text__subTitle">{page.subTitle}</h2>
+            <h2 className="dealersSection__text__sectionTitle">dealers</h2>
+            <h2 className="dealersSection__text__outLine">LOCALS</h2>
             <h1 className="dealersSection__text__title">{page.title}</h1>
           </div>
           <div className="dealersSection__supplier">
