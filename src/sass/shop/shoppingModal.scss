@@ -1,3 +1,4 @@
+// $breakpoint-huge: 1824px;
 // $breakpoint-extralarge: 1224px;
 // $breakpoint-largest: 1024px;
 // $breakpoint-medium: 768px;
@@ -25,12 +26,13 @@
     align-items: center;
     backdrop-filter: blur(5px);
     background-color: transparent;
-    top: 45%;
+    top: 51%;
     left: 60%;
     transform: translateX(-50%) translateY(-50%);
   }
   //Modale conteneur
   &__containt {
+    position: fixed;
     height: 100%;
     width: 100%;
     @media only screen and (min-width: $breakpoint-largest) {
@@ -41,8 +43,8 @@
         rgba(101, 101, 101, 1) 50%,
         rgba(64, 63, 63, 1) 100%
       );
-      height: 60%;
-      width: 40%;
+      height: 80%;
+      width: 45%;
       border-radius: 30px 0 30px 30px;
       border: 1px solid $secondary;
     }
@@ -91,7 +93,7 @@
       @media only screen and (min-width: $breakpoint-largest) {
         display: flex;
         justify-content: space-between;
-        height: 25%;
+        height: 15%;
         width: 100%;
         border-radius: 30px 0 0 0;
       }
@@ -169,7 +171,7 @@
       }
       @media only screen and (min-width: $breakpoint-largest) {
         border-radius: 0 0 30px 30px;
-        height: 75%;
+        height: 85%;
         width: 100%;
         display: flex;
         flex-direction: row;
@@ -177,22 +179,22 @@
       //Carousel de l'item avec 2 images
       &__carousel {
         height: 10rem;
-        width: 50%;
+        width: 8.5rem;
         @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-small) {
           height: 22rem;
-          width: 20rem;
+          width: 18rem;
         }
         @media only screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-medium) {
           height: 20rem;
-          width: 17rem;
+          width: 16rem;
         }
         @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
           height: 22rem;
-          width: 17rem;
+          width: 18rem;
         }
         @media only screen and (min-width: $breakpoint-largest) {
-          height: 85%;
-          width: 30%;
+          height: 22rem;
+          width: 21rem;
           align-self: center;
         }
         &--img {
@@ -225,10 +227,17 @@
           width: 90%;
           margin: 1.5rem;
         }
-        @media only screen and (min-width: $breakpoint-largest) {
+        @media only screen and (min-width: $breakpoint-largest) and (max-width: $breakpoint-huge) {
           height: 90%;
           width: 60%;
-          font-size: 1rem;
+          font-size: 1.3rem;
+          padding: 0 2rem 0 0;
+          border-radius: 0 0 30px 0;
+        }
+        @media only screen and (min-width: $breakpoint-huge) {
+          height: 90%;
+          width: 60%;
+          font-size: 2rem;
           padding: 0 2rem 0 0;
           border-radius: 0 0 30px 0;
         }

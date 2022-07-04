@@ -1,19 +1,16 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
-
-import ISupplier from '../../interfaces/ISupplier';
-
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
-
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 // import './styles.css';
-
 // import required modules
 import { Autoplay, Pagination, Parallax } from 'swiper';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import ISupplier from '../../interfaces/ISupplier';
 
 const DealersMobileSection = () => {
   const [supplierList, setSupplierList] = useState<ISupplier[]>();
