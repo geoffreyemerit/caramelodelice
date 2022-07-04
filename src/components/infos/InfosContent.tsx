@@ -54,7 +54,6 @@ const InfosContent = ({
 
   const [isActive, setIsActive] = useState(true);
 
-
   return (
     <div className="infosContent">
       <img
