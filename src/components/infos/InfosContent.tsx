@@ -34,7 +34,6 @@ const InfosContent = ({
       `http://localhost:3000/api/newsTypes/${idTypeKitchen}`,
     );
 
-
     const typeMusic = await axios.get<INewsType>(
       `http://localhost:3000/api/newsTypes/${idTypeMusic}`,
     );
