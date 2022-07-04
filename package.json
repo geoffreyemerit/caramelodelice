@@ -22,7 +22,7 @@
     "react-player": "^2.10.1",
     "react-router-dom": "^6.2.1",
     "sass": "^1.52.1",
-    "swiper": "^8.2.5"
+    "swiper": "^8.2.6"
   },
   "devDependencies": {
     "@types/react": "^17.0.14",
