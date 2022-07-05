@@ -8,7 +8,7 @@ const Home = () => {
     <>
       <div className="home">
         <HomeContent id={5} />
-        <Footer />
+        <Footer className="footer" />
       </div>
     </>
   );
