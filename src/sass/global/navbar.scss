@@ -10,6 +10,8 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  position: absolute;
+
   @media only screen and (min-width: $breakpoint-largest) {
     display: flex;
     justify-content: flex-start;
@@ -99,6 +101,11 @@
 
       @media only screen and (min-width: 821px) and (max-width: 1024px) {
         align-self: flex-start;
+        background: linear-gradient(
+          180deg,
+          rgb(28 28 28/ 20%) 0%,
+          rgb(25 25 25/ 70%) 100%
+        );
       }
 
       @media only screen and (min-width: 1025px) and (max-width: 1224px) {

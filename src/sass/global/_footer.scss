@@ -22,7 +22,6 @@
   }
 }
 
-
 .footer {
   display: flex;
   justify-content: flex-end;
@@ -40,7 +39,9 @@
   }
 
   @media only screen and (min-width: 820px) and (max-width: 1025px) {
-    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &__info {
@@ -51,6 +52,10 @@
     @media screen and (max-width: $breakpoint-small) {
       justify-content: center;
       margin-right: 0;
+    }
+
+    @media screen and (min-width: 820px) and (max-width: 1025px) {
+      flex-direction: column;
     }
 
     &__sup {
@@ -68,8 +73,16 @@
           align-items: center;
           margin-bottom: 1.6rem;
         }
+        @media only screen and (min-width: 820px) and (max-width: 1025px) {
+          flex-direction: column;
+          align-items: center;
+          margin-bottom: 1.6rem;
+        }
 
         &__street {
+          margin-right: 0.6rem;
+        }
+        &__city {
           margin-right: 0.6rem;
         }
       }

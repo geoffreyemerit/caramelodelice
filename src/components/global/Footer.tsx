@@ -15,7 +15,7 @@ const Footer = ({ className }: FooterProps) => {
             <span className="footer__info__sup__address__street">
               24, RUE D&apos;ESPAGNE
             </span>
-            <span>64200 BIARRITZ</span>
+            <span className="footer__info__sup__address__city">64200 BIARRITZ</span>
           </div>
           <div className="footer__info__sup__opening">
             <div className="footer__info__sup__opening__openingdays">
