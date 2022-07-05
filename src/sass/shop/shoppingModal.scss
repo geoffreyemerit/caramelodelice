@@ -274,7 +274,7 @@
 .swiper-pagination-bullet {
   border: 1px solid white;
   --swiper-theme-color: white;
-  transform: translateY(14px);
+  transform: translateY(5px);
   --swiper-pagination-bullet-width: 0.6rem;
   --swiper-pagination-bullet-height: 0.6rem;
   @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-small) {

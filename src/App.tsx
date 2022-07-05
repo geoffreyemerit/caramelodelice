@@ -9,7 +9,7 @@ import IPage from '../src/interfaces/IPage';
 // import Footer from './components/global/Footer';
 import Loader from './components/global/Loader';
 import Logo from './components/global/Logo';
-import Navbar from './components/global/Navbar';
+// import Navbar from './components/global/Navbar';
 import Sound from './components/global/Sound';
 import Bisous from './pages/Bisous';
 import Club from './pages/Club';
@@ -19,6 +19,7 @@ import Infos from './pages/Infos';
 import News from './pages/News';
 import Shop from './pages/Shop';
 import WallOfDwich from './pages/WallOfDwich';
+import Hamburger from './components/global/Hamburger';
 
 const App = () => {
   //retrieve the route (useLocation)
@@ -73,7 +74,7 @@ const App = () => {
       }>
       <Sound />
       <Logo />
-      <Navbar />
+      <Hamburger />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/news" element={<News />} />
