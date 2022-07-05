@@ -11,6 +11,19 @@
     font-family: Made-Bold;
     font-size: 2rem;
     color: $secondary;
+
+    @media only screen and (min-width: 1825px) {
+      font-size: 2.7rem;
+      width: 39%;
+    }
+    @media only screen and (min-width: 1440px) and (max-width: 1824px) {
+      font-size: 2.5rem;
+      width: 42%;
+    }
+    @media only screen and (min-width: 1325px) and (max-width: 1440px) {
+      width: 42%;
+      font-size: 2.2rem;
+    }
     @media only screen and (min-width: 1290px) and (max-width: 1325px) {
       width: 42%;
     }
@@ -28,7 +41,21 @@
     color: $secondary;
     line-height: 4rem;
 
+    @media only screen and (min-width: 1825px) {
+      font-size: 4.9rem;
+      width: 39%;
+    }
+
+    @media only screen and (min-width: 1440px) and (max-width: 1824px) {
+      font-size: 4.5rem;
+      width: 42%;
+    }
+    @media only screen and (min-width: 1325px) and (max-width: 1440px) {
+      font-size: 4.2rem;
+      width: 42%;
+    }
     @media only screen and (min-width: 1290px) and (max-width: 1325px) {
+      font-size: 4rem;
       width: 42%;
     }
     @media only screen and (min-width: 1140px) and (max-width: 1290px) {
