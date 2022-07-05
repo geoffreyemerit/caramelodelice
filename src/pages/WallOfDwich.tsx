@@ -1,12 +1,13 @@
 import React from 'react';
 
+import Footer from '../components/global/Footer';
 import Gallery from '../components/wallOfDwich/Gallery';
 
 const WallOfDwich = () => {
   return (
-    <div>
-      <h1>LE WALL OF DWICH MAMAMIA</h1>
+    <div className="wallOfDwich">
       <Gallery />
+      <Footer className="footer" />
     </div>
   );
 };
