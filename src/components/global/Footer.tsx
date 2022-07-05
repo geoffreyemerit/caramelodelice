@@ -2,9 +2,13 @@ import React from 'react';
 
 import Logo from './Logo';
 
-const Footer = () => {
+interface FooterProps {
+  className: string;
+}
+
+const Footer = ({ className }: FooterProps) => {
   return (
-    <div className="footer">
+    <div className={className}>
       <div className="footer__info">
         <div className="footer__info__sup">
           <div className="footer__info__sup__address">

@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Footer from '../components/global/Footer';
 import ShoppingList from '../components/shop/ShoppingList';
 
 const Shop = () => {
@@ -18,6 +19,7 @@ const Shop = () => {
         </span>
       </h2>
       <ShoppingList />
+      <Footer className="footer" />
     </div>
   );
 };
