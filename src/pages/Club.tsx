@@ -1,7 +1,7 @@
 import React from 'react';
 
 import ClubSection from '../components/club/ClubSection';
-import GoToTop from '../components/GoToTop';
+import GoToTop from '../components/global/GoToTop';
 
 const Club = () => {
   return (

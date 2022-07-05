@@ -1,6 +1,6 @@
 import React from 'react';
 
-import GoToTop from '../components/GoToTop';
+import GoToTop from '../components/global/GoToTop';
 import InfosContent from '../components/infos/InfosContent';
 
 const Infos = () => {

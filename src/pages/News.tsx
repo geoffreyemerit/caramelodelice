@@ -1,7 +1,7 @@
 import React from 'react';
 
 import ScrollDown from '../components/global/ScrollDown';
-import GoToTop from '../components/GoToTop';
+import GoToTop from '../components/global/GoToTop';
 import NewsContent from '../components/news/NewsContent';
 
 const News = () => {
