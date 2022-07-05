@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import DealersMobileSection from '../components/dealers/DealersMobileSection';
 import DealersSection from '../components/dealers/DealersSection';
+import GoToTop from '../components/global/GoToTop';
 
 const Dealers = () => {
   // CREATING USESTATE TO DETECT WINDOW WIDTH (ABOUT MOBILE CAROUSSEL)
@@ -37,6 +38,7 @@ const Dealers = () => {
   ) : (
     <div>
       <DealersMobileSection />
+      <GoToTop />
     </div>
   );
 };
