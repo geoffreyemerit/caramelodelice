@@ -21,7 +21,6 @@
 }
 
 .navbar {
-  display: none;
   flex-direction: column;
   font-family: 'Made-Bold';
   justify-content: space-around;
@@ -29,7 +28,7 @@
   margin-top: 2rem;
   z-index: 50;
 
-  @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-largest) {
+  @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
     display: none;
   }
 
