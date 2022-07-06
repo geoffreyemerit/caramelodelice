@@ -1,27 +1,47 @@
-import React, { useState } from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
-import navLinks from '../../../data/navLinks';
+import IPageTypes from '../../interfaces/IPageTypes';
 import Footer from './Footer';
 import Logo from './Logo';
 
 const Navbar = () => {
   const [isOpened, setIsOpened] = useState(false);
+  // JE CRÉE UN USESTATE AFIN DE STOCKER LA DATA ISSU DE L'APPEL AXIOS
+  const [pageTypes, setPageTypes] = useState<IPageTypes[]>();
+
+  // APPEL API AXIOS
+  const getContent = async () => {
+    //APPEL PROMESSE DE NEWSPAGE AXIOS.GET DE L'INTERFACE DE L'URL
+    const pageTypes = await axios.get<IPageTypes[]>(
+      `http://localhost:3000/api/pageTypes`,
+    );
+
+    // JE FAIS APPEL A MON USESTATE ET A SA DATA GRACE AU SET
+    setPageTypes(pageTypes.data);
+  };
+
+  // AU CHARGEMENT DU COMPOSANT, J'EXÉCUTE LA FONCTION GETCONTENT
+  useEffect(() => {
+    getContent();
+  }, []);
 
   return (
     <header className="nav__container">
       {/* :DESKTOP MENU */}
       <nav className="navbar">
-        {navLinks.map((link) => (
-          <NavLink
-            className={(navData) =>
-              navData.isActive ? 'navbar__link navbar__link--active' : 'navbar__link'
-            }
-            key={link.id}
-            to={link.path}>
-            {link.title}
-          </NavLink>
-        ))}
+        {pageTypes &&
+          pageTypes.map((pageType) => (
+            <NavLink
+              className={(navData) =>
+                navData.isActive ? 'navbar__link navbar__link--active' : 'navbar__link'
+              }
+              key={pageType.path}
+              to={pageType.path}>
+              {pageType.name}
+            </NavLink>
+          ))}
       </nav>
 
       {/* >> Menu Burger Icon */}
@@ -56,6 +76,7 @@ const Navbar = () => {
       )}
 
       {/* :MOBILE MENU */}
+
       {isOpened && (
         <div className="hamburger">
           {/* >> Partie haute // Logo // Menu */}
@@ -65,26 +86,25 @@ const Navbar = () => {
               icon="logos-club-sandwich-logo"
             />
             <nav className="hamburger__up__nav">
-              {navLinks.map((link) => (
-                <NavLink
-                  className="hamburger__up__nav--link"
-                  key={link.id}
-                  to={link.path}
-                  onClick={() => {
-                    setIsOpened(!isOpened);
-                  }}>
-                  {link.title}
-                </NavLink>
-              ))}
+              {pageTypes &&
+                pageTypes.map((pageType) => (
+                  <NavLink
+                    className="hamburger__up__nav--link"
+                    key={pageType.path}
+                    to={pageType.path}
+                    onClick={() => {
+                      setIsOpened(!isOpened);
+                    }}>
+                    {pageType.name}
+                  </NavLink>
+                ))}
             </nav>
             <div className="hamburger__up--text">on vous</div>
           </div>
           {/* >> Partie basse // Addresse */}
           <div className="hamburger__down">
             <div className="hamburger__down--text">attend</div>
-            <div className="hamburger__down--footer">
-              <Footer />
-            </div>
+            <Footer className="footer__burger" />
           </div>
         </div>
       )}
