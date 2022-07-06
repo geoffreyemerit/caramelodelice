@@ -24,7 +24,7 @@ const App = () => {
   //retrieve the route (useLocation)
   const location = useLocation();
   // create displayBackground variable and set to boolean
-  let displayBackground: boolean = false;
+  let homePage: boolean = false;
 
   // this variable is true if location.pathname is either /, *, or /home
   if (
@@ -32,7 +32,7 @@ const App = () => {
     location.key === 'default' ||
     location.pathname === '/home'
   ) {
-    displayBackground = true;
+    homePage = true;
   }
 
   const [content, setContent] = useState<IPage>();
@@ -62,7 +62,7 @@ const App = () => {
       className="App"
       // only display background image if displayBackground is true
       style={
-        displayBackground
+        homePage
           ? {
               backgroundImage: `url(${content?.image1})`,
               backgroundPosition: 'center',
@@ -73,6 +73,7 @@ const App = () => {
       }>
       <Sound />
       <Logo />
+      {/* {!homePage && <Navbar />}  */}
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
