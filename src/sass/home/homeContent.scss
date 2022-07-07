@@ -12,6 +12,13 @@
     margin-top: 6rem;
     margin-bottom: 2rem;
   }
+  @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-medium) {
+    align-items: center;
+    justify-content: flex-start;
+    height: 40%;
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+  }
 
   &__subTitle {
     width: 40%;
@@ -41,6 +48,11 @@
       width: 44%;
     }
     @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
+      text-align: center;
+      font-size: 1.5rem;
+      margin-top: 5rem;
+    }
+    @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-medium) {
       text-align: center;
       font-size: 1.5rem;
       margin-top: 5rem;
