@@ -1,6 +1,14 @@
 .logo {
   width: 100vw;
-  @media only screen and (max-width: 1024px) {
+
+  // @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
+  //   width: 19vw;
+  //   height: 19vh;
+  //   min-height: 120px;
+  //   max-height: 170px;
+  // }
+
+  @media only screen and (max-width: $breakpoint-largest) {
     display: flex;
     justify-content: center;
   }

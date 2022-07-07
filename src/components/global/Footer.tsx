@@ -35,7 +35,10 @@ const Footer = ({ className }: FooterProps) => {
           href="https://instagram.com/club_sandwich64?igshid=YmMyMTA2M2Y="
           target="_blank"
           rel="noreferrer">
-          <Logo myStyle="icon icon--instagram" icon="logos-instagram" />
+          <Logo
+            myStyle="footer__instalogo footer__instalogo--instagram"
+            icon="logos-instagram"
+          />
         </a>
       </div>
     </div>

@@ -5,41 +5,30 @@
   flex-direction: column;
   background: linear-gradient(180deg, rgb(28 28 28/ 20%) 0%, rgb(25 25 25/ 70%) 100%);
 
-  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+  @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
     align-items: center;
   }
   &__description {
     width: 43%;
     margin-left: 3rem;
     margin-bottom: -5rem;
-<<<<<<< Updated upstream
 
-    // @media only screen and (max-width: $breakpoint-medium) {
-    //   display: none;
-    // }
-
-    // @media only screen and (min-width: 820px) and (max-width: 1024px) {
-    //   text-align: center;
-    // }
-
-=======
-    @media only screen and (min-width: 320px) and (max-width: 480px) {
+    @media only screen and (max-width: $breakpoint-medium) {
       display: none;
     }
 
-    @media only screen and (min-width: 481px) and (max-width: 820px) {
-      display: none;
+    @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
+      text-align: center;
     }
->>>>>>> Stashed changes
+
     &__club {
       font-family: Made-Bold;
       color: $secondary;
     }
-    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
       margin-bottom: 3rem;
       margin-left: 0;
-      font-size: 1.2rem;
-      margin-top: -8rem;
+      // font-size: 1.2rem;
     }
   }
 }
