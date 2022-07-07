@@ -31,6 +31,7 @@ const Navbar = () => {
     <header className="nav__container">
       {/* :DESKTOP MENU */}
       <nav className="navbar">
+
         {pageTypes &&
           pageTypes.map((pageType) => (
             <NavLink
@@ -42,6 +43,7 @@ const Navbar = () => {
               {pageType.name}
             </NavLink>
           ))}
+
       </nav>
 
       {/* >> Menu Burger Icon */}
@@ -53,7 +55,8 @@ const Navbar = () => {
           onKeyPress={() => setIsOpened(!isOpened)}
           onClick={() => {
             setIsOpened(!isOpened);
-          }}>
+          }}
+        >
           <Logo
             myStyle="hamburger__up__icon hamburger__up__icon--burger"
             icon="logos-menu-burger"
@@ -67,7 +70,8 @@ const Navbar = () => {
           onKeyPress={() => setIsOpened(!isOpened)}
           onClick={() => {
             setIsOpened(!isOpened);
-          }}>
+          }}
+        >
           <Logo
             myStyle="hamburger__up__icon hamburger__up__icon--cross"
             icon="logos-cross"
@@ -86,6 +90,7 @@ const Navbar = () => {
               icon="logos-club-sandwich-logo"
             />
             <nav className="hamburger__up__nav">
+
               {pageTypes &&
                 pageTypes.map((pageType) => (
                   <NavLink
@@ -98,13 +103,16 @@ const Navbar = () => {
                     {pageType.name}
                   </NavLink>
                 ))}
+
             </nav>
             <div className="hamburger__up--text">on vous</div>
           </div>
           {/* >> Partie basse // Addresse */}
           <div className="hamburger__down">
             <div className="hamburger__down--text">attend</div>
+
             <Footer className="footer__burger" />
+
           </div>
         </div>
       )}

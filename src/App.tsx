@@ -38,7 +38,7 @@ const App = () => {
   const [content, setContent] = useState<IPage>();
 
   const getContent = async () => {
-    const url: string = `http://localhost:3000/api/pages/5`;
+    const url: string = `http://localhost:3000/api/pages/41`;
     const { data } = await axios.get<IPage>(url);
     setContent(data);
   };
@@ -70,7 +70,8 @@ const App = () => {
               backgroundRepeat: 'no-repeat',
             }
           : {}
-      }>
+      }
+    >
       <Sound />
       <Logo />
       {/* {!homePage && <Navbar />}  */}
