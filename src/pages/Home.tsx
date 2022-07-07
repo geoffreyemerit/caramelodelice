@@ -7,8 +7,8 @@ const Home = () => {
   return (
     <>
       <div className="home">
-        <HomeContent id={5} />
-        <Footer />
+        <HomeContent id={41} />
+        <Footer className="footer" />
       </div>
     </>
   );

@@ -1,3 +1,69 @@
+.footer__burger {
+  color: $secondary;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+  @media only screen and (min-width: $breakpoint-smallest) {
+    font-size: 2.5vh;
+  }
+
+  &__info__sup {
+    &__address {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin-bottom: 1.5rem;
+    }
+    &__opening {
+      &__openingdays {
+        text-align: left;
+        font-size: 0.5rem;
+        margin-right: 2rem;
+        @media only screen and (min-width: $breakpoint-smallest) {
+          font-size: 1.7vh;
+        }
+      }
+      &__openinghours {
+        text-align: right;
+        font-size: 0.5rem;
+        @media only screen and (min-width: $breakpoint-smallest) {
+          font-size: 1.7vh;
+        }
+      }
+    }
+  }
+  &__instalogo {
+    display: none;
+  }
+}
+
+.footer__absolute {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  color: $secondary;
+  margin-right: 1rem;
+  margin-bottom: 2.3rem;
+  bottom: 0;
+  right: 0;
+
+  @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-small) {
+    display: none;
+  }
+
+  @media only screen and (min-width: 480px) and (max-width: 820px) {
+    display: none;
+  }
+
+  @media only screen and (min-width: 820px) and (max-width: 1025px) {
+    display: none;
+  }
+}
+
 .footer {
   display: flex;
   justify-content: flex-end;
@@ -6,8 +72,16 @@
   margin-right: 1rem;
   margin-bottom: 2.3rem;
 
-  @media screen and (max-width: $breakpoint-small) {
-    justify-content: center;
+  @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-small) {
+    display: none;
+  }
+
+  @media only screen and (min-width: 480px) and (max-width: 820px) {
+    display: none;
+  }
+
+  @media only screen and (min-width: 820px) and (max-width: 1025px) {
+    display: none;
   }
 
   &__info {
@@ -40,6 +114,7 @@
           margin-right: 0.6rem;
         }
       }
+
       &__opening {
         display: flex;
         flex-direction: row;
@@ -49,15 +124,19 @@
         @media screen and (max-width: $breakpoint-extralarge) {
           font-size: 14px;
         }
+
         @media screen and (max-width: $breakpoint-largest) {
           font-size: 12px;
         }
+
         @media screen and (max-width: $breakpoint-medium) {
           font-size: 10px;
         }
+
         @media screen and (max-width: $breakpoint-small) {
           font-size: 8px;
         }
+
         @media screen and (max-width: $breakpoint-smallest) {
           font-size: 6px;
         }
@@ -66,18 +145,21 @@
           margin-right: 2.05rem;
           text-align: left;
         }
+
         &__openinghours {
           text-align: right;
         }
       }
     }
   }
+
   &__instalogo {
     display: flex;
     flex-direction: column;
     margin: -0.5rem 0.9rem 0.9rem 0.9rem;
     width: 1.5rem;
     height: 1.5rem;
+
     @media screen and (min-width: 1024px) and (max-width: 1224px) {
       margin: -0.5rem 0.9rem 4rem 0.9rem;
     }

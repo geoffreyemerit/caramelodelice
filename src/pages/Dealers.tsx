@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 
 import DealersMobileSection from '../components/dealers/DealersMobileSection';
 import DealersSection from '../components/dealers/DealersSection';
+import Footer from '../components/global/Footer';
+import GoToTop from '../components/global/GoToTop';
 
 const Dealers = () => {
   // CREATING USESTATE TO DETECT WINDOW WIDTH (ABOUT MOBILE CAROUSSEL)
@@ -26,17 +28,24 @@ const Dealers = () => {
     };
   }, []);
 
+  // APPEL AXIOS OU JE STOCK DANS UN USESTATE L'ENSEMBLE DE MES PAGES QUI CORRESPONDENT AU TYPE DE PAGE DEALERS
+
   return windowSize.innerWidth >= 1023 ? (
     <div className="dealers">
-      <DealersSection id={6} idSupplier={1} />
-      <DealersSection id={7} idSupplier={2} />
-      <DealersSection id={8} idSupplier={3} />
-      <DealersSection id={9} idSupplier={4} />
-      <DealersSection id={10} idSupplier={5} />
+      {/* MAP de chaque dealers section */}
+      {/* usestate.map((element)=>{DealersSection}) */}
+
+      <DealersSection id={51} idSupplier={1} />
+      <DealersSection id={61} idSupplier={11} />
+      <DealersSection id={71} idSupplier={21} />
+      <DealersSection id={81} idSupplier={31} />
+      <DealersSection id={91} idSupplier={41} />
     </div>
   ) : (
     <div>
       <DealersMobileSection />
+      <Footer className="footer__absolute" />
+      <GoToTop />
     </div>
   );
 };
