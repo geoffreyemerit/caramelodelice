@@ -35,7 +35,8 @@ const ShoppingModal = ({ item, setModalToOpen }: ShoppingModalProps) => {
             tabIndex={0}
             onClick={() => setModalToOpen(-1)}
             onKeyPress={() => setModalToOpen(-1)}
-            className="shoppingModal__containt__up__button--desktop">
+            className="shoppingModal__containt__up__button--desktop"
+          >
             <Logo
               myStyle="shoppingModal__containt__up__button--desktop--logo"
               icon="logos-cross"
@@ -43,11 +44,13 @@ const ShoppingModal = ({ item, setModalToOpen }: ShoppingModalProps) => {
           </div>
         </div>
         <div className="shoppingModal__containt__down">
+          {/* >> Carousel */}
           <Swiper
             className="shoppingModal__containt__down__carousel"
             loop
             pagination={true}
-            modules={[Pagination]}>
+            modules={[Pagination]}
+          >
             <SwiperSlide>
               <img
                 className="shoppingModal__containt__down__carousel--img"
@@ -71,7 +74,8 @@ const ShoppingModal = ({ item, setModalToOpen }: ShoppingModalProps) => {
             tabIndex={0}
             onClick={() => setModalToOpen(-1)}
             onKeyPress={() => setModalToOpen(-1)}
-            className="shoppingModal__containt__down__button--mobile">
+            className="shoppingModal__containt__down__button--mobile"
+          >
             Retour
           </div>
         </div>

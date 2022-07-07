@@ -45,7 +45,8 @@ const DealersMobileSection = () => {
                 clickable: true,
               }}
               modules={[Pagination, Autoplay, Parallax]}
-              className="mySwiper">
+              className="mySwiper"
+            >
               {/* NEED TO MAP THIS BELOW */}
               {/* {supplierList.map((supplier, index) => {
                 <SwiperSlide>
