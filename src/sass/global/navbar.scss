@@ -4,6 +4,7 @@
 // $breakpoint-medium: 768px;
 // $breakpoint-small: 480px;
 // $breakpoint-smallest: 320px;
+
 .nav__container {
   width: 100vw;
   min-height: 10vh;
@@ -15,10 +16,7 @@
     justify-content: flex-start;
     align-items: center;
     height: 0;
-<<<<<<< HEAD
     min-height: 0;
-=======
->>>>>>> fba7666f0ea150a243855953a3fa40dcbc804910
   }
 }
 
@@ -28,6 +26,7 @@
   font-family: 'Made-Bold';
   justify-content: space-around;
   text-decoration: none;
+  background-color: red;
   margin-top: 2rem;
   z-index: 50;
 

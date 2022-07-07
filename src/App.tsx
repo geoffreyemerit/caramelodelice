@@ -70,12 +70,11 @@ const App = () => {
               backgroundRepeat: 'no-repeat',
             }
           : {}
-      }
-    >
+      }>
       <Sound />
       <Logo />
       {/* {!homePage && <Navbar />}  */}
-      <Navbar />
+      <Navbar className="navbar" />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/news" element={<News />} />

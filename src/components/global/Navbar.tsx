@@ -1,22 +1,23 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
-
-import IPageTypes from '../../interfaces/IPageTypes';
+import IPageType from '../../interfaces/IPageType';
 import Footer from './Footer';
 import Logo from './Logo';
 
-const Navbar = () => {
+interface NavbarProps {
+  className: string;
+}
+
+const Navbar = ({ className }: NavbarProps) => {
   const [isOpened, setIsOpened] = useState(false);
   // JE CRÉE UN USESTATE AFIN DE STOCKER LA DATA ISSU DE L'APPEL AXIOS
-  const [pageTypes, setPageTypes] = useState<IPageTypes[]>();
+  const [pageTypes, setPageTypes] = useState<IPageType[]>();
 
   // APPEL API AXIOS
   const getContent = async () => {
     //APPEL PROMESSE DE NEWSPAGE AXIOS.GET DE L'INTERFACE DE L'URL
-    const pageTypes = await axios.get<IPageTypes[]>(
-      `http://localhost:3000/api/pageTypes`,
-    );
+    const pageTypes = await axios.get<IPageType[]>(`http://localhost:3000/api/pageTypes`);
 
     // JE FAIS APPEL A MON USESTATE ET A SA DATA GRACE AU SET
     setPageTypes(pageTypes.data);
@@ -26,26 +27,28 @@ const Navbar = () => {
   useEffect(() => {
     getContent();
   }, []);
-
+  console.log(className);
   return (
     <header className="nav__container">
       {/* :DESKTOP MENU */}
-      <nav className="navbar">
-
+      <nav className={className}>
         {pageTypes &&
           pageTypes.map((pageType) => (
             <NavLink
+              // className={(navData) =>
+              //   navData.isActive ? 'navbar__link navbar__link--active' : 'navbar__link'
+              // }
               className={(navData) =>
-                navData.isActive ? 'navbar__link navbar__link--active' : 'navbar__link'
+                navData.isActive
+                  ? `${className}__link ${className}__link--active`
+                  : `${className}__link`
               }
               key={pageType.path}
               to={pageType.path}>
               {pageType.name}
             </NavLink>
           ))}
-
       </nav>
-
       {/* >> Menu Burger Icon */}
       {!isOpened ? (
         <div
@@ -55,8 +58,7 @@ const Navbar = () => {
           onKeyPress={() => setIsOpened(!isOpened)}
           onClick={() => {
             setIsOpened(!isOpened);
-          }}
-        >
+          }}>
           <Logo
             myStyle="hamburger__up__icon hamburger__up__icon--burger"
             icon="logos-menu-burger"
@@ -70,8 +72,7 @@ const Navbar = () => {
           onKeyPress={() => setIsOpened(!isOpened)}
           onClick={() => {
             setIsOpened(!isOpened);
-          }}
-        >
+          }}>
           <Logo
             myStyle="hamburger__up__icon hamburger__up__icon--cross"
             icon="logos-cross"
@@ -90,7 +91,6 @@ const Navbar = () => {
               icon="logos-club-sandwich-logo"
             />
             <nav className="hamburger__up__nav">
-
               {pageTypes &&
                 pageTypes.map((pageType) => (
                   <NavLink
@@ -103,7 +103,6 @@ const Navbar = () => {
                     {pageType.name}
                   </NavLink>
                 ))}
-
             </nav>
             <div className="hamburger__up--text">on vous</div>
           </div>
@@ -112,7 +111,6 @@ const Navbar = () => {
             <div className="hamburger__down--text">attend</div>
 
             <Footer className="footer__burger" />
-
           </div>
         </div>
       )}
