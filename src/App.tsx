@@ -70,8 +70,7 @@ const App = () => {
               backgroundRepeat: 'no-repeat',
             }
           : {}
-      }
-    >
+      }>
       <Sound />
       <Logo />
       {/* {!homePage && <Navbar />}  */}

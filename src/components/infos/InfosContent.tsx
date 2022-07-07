@@ -82,8 +82,7 @@ const InfosContent = ({
                   onClick={() => setIsActive(!isActive)}
                   onKeyDown={() => setIsActive(!isActive)}
                   role="presentation"
-                  area-hidden="true"
-                >
+                  area-hidden="true">
                   <h3 className="infosContent__container__boxContainer__select__type">
                     {page.description}
                   </h3>
@@ -97,8 +96,7 @@ const InfosContent = ({
                   onClick={() => setIsActive(!isActive)}
                   onKeyDown={() => setIsActive(!isActive)}
                   role="presentation"
-                  area-hidden="true"
-                >
+                  area-hidden="true">
                   <h3 className="infosContent__container__boxContainer__select__type">
                     {page.description}
                   </h3>
@@ -116,8 +114,7 @@ const InfosContent = ({
                     <a
                       className="infosContent__container__boxContainer__music__a"
                       href={typeMusic.pdfFile}
-                      download
-                    >
+                      download>
                       {typeMusic.name}
                     </a>
                   </h2>{' '}
@@ -125,8 +122,7 @@ const InfosContent = ({
                     <a
                       className="infosContent__container__boxContainer__kitchen__a"
                       href={typeKitchen.pdfFile}
-                      download
-                    >
+                      download>
                       {typeKitchen.name}
                     </a>
                   </h2>
@@ -135,8 +131,7 @@ const InfosContent = ({
 
               <a
                 className="infosContent__container__boxContainer__a"
-                href={typeAll.pdfFile}
-              >
+                href={typeAll.pdfFile}>
                 {page.subTitle}
               </a>
               <img
