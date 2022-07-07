@@ -10,8 +10,10 @@ USE `club_sandwich`;
  -- -----------------------------------------------------
 DROP TABLE IF EXISTS `pageTypes`;
 CREATE TABLE IF NOT EXISTS `pageTypes` (
-   `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-   `name` VARCHAR(50) NULL
+   `id` INT NOT NULL PRIMARY KEY,
+   `path` VARCHAR(50) NOT NULL,
+   `name` VARCHAR(50) NOT NULL,
+   `isActive` BOOLEAN NOT NULL DEFAULT 1
  ) ENGINE = InnoDB;
 -- -----------------------------------------------------
  -- Table `users`
@@ -177,35 +179,33 @@ CREATE TABLE IF NOT EXISTS `openingHours` (
  -- -----------------------------------------------------
 INSERT INTO
  pageTypes (
-   name
- )
+   id ,name, path
+)
 VALUES
- (
-   'Home'
- ),
- (
-   'News'
- )
-,
- (
-   'Club'
- ),
- (
-   'Dealers'
- ),
- (
-   'Wall Of Dwich'
- ),
- (
-   'Shop'
- ),
- (
-   'Infos'
- ),
- (
-   'Bisous'
- );
-
+( (1),
+ ('Home'),
+ ('/home')),
+((2),
+ ('News'),
+ ('/news')),
+((3),
+ ('Club'),
+ ('/club')),
+((4),
+ ('Dealers'),
+ ('/dealers')),
+((5),
+ ('Wall Of Dwich'),
+ ('/wallofdwich')),
+((6),
+ ('Shop'),
+ ('/shop')),
+((7),
+ ('Infos'),
+ ('/infos')),
+((8),
+ ('Bisous'),
+ ('/bisous'));
  
 -- -----------------------------------------------------
  -- Table `users`
@@ -255,27 +255,27 @@ VALUES
 (
  ('AuPetit Family'),
  ('Biarritz'),
- ('')
+ ('https://firebasestorage.googleapis.com/v0/b/club-sandwich-86c01.appspot.com/o/dealers%2Fcheese.png?alt=media&token=27aaa365-16d4-4ad9-a060-a543787c73e9')
  ),
 (
  ('La ferme des Acacias'),
  ('Urt'),
- ('')
+ ('https://firebasestorage.googleapis.com/v0/b/club-sandwich-86c01.appspot.com/o/dealers%2Fcharcut.png?alt=media&token=19dfbf41-ef04-4ee4-a555-7d9e44a7c553')
  ),
 (
  ('Ona Garia'),
  ('Biarritz'),
- ('')
+ ('https://firebasestorage.googleapis.com/v0/b/club-sandwich-86c01.appspot.com/o/dealers%2Fbakery.png?alt=media&token=6b0da702-b0fb-4740-b793-8bb283b29c2a')
  ),
 (
  ('L’orangerie'),
  ('Anglet'),
- ('')
+ ('https://firebasestorage.googleapis.com/v0/b/club-sandwich-86c01.appspot.com/o/dealers%2Fvegetables.png?alt=media&token=4d996b75-488a-46e3-bed6-35b7a842dd99')
  ),
 (
  ('Beaucoup d’amis'),
  ('locaux'),
- ('')
+('https://firebasestorage.googleapis.com/v0/b/club-sandwich-86c01.appspot.com/o/dealers%2Fdrinks.png?alt=media&token=03402b46-56f3-4270-8c47-4b430c24c0b4')
  );
  
 -- -----------------------------------------------------
@@ -377,7 +377,7 @@ VALUES
 (
 (1),
 ('Club sandwich.'),
-('Welcome to the'),
+('Welcome to'),
 ('Club sandwich, lieu de vie du quartier Bibi. Un lieu de vie générateur de lien social, promoteur d’un mode de vie responsable dans l’assiette et dans le verre. Un lieu ouvert à tous sans barrière économique ni sociale grâce à une offre différente le midi et le soir. A travers le divertissement et l’engagement, nous souhaitons être un point de rencontre et d’ancrage.'),
 ('https://firebasestorage.googleapis.com/v0/b/club-sandwich-86c01.appspot.com/o/home%2FbgHomeV1.jpeg?alt=media&token=f8d1f445-92ff-48a3-bb0b-dd1dc3d4099d'),
 (''),
@@ -567,7 +567,7 @@ VALUES
 (
  ('T Shirt'),
  ('100% coton'),
- ('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada orci a elementum laoreet. Cras consequat eu augue eu elementum. Duis dictum ligula cursus est commodo, nec rhoncus libero hendrerit. Mauris convallis est orci, mattis malesuada purus pretium eu. Vivamus sit amet dictum nisi. Praesent malesuada, nulla sed cursus pharetra, quam eros eleifend urna, non consectetur nibh lorem at nibh.'),
+ ('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada orci a elementum laoreet. Cras consequat eu augue eu elementum. Duis dictum ligula cursus est commodo, nec rhoncus libero hendrerit.'),
  ('https://firebasestorage.googleapis.com/v0/b/club-sandwich-86c01.appspot.com/o/shop%2FtshirtFront.png?alt=media&token=55a9b246-846a-43b5-829f-2c0550cc2cf8'),
 ('https://firebasestorage.googleapis.com/v0/b/club-sandwich-86c01.appspot.com/o/shop%2FtshirtBack.png?alt=media&token=e7a842c1-731a-49ae-88a2-0770405c2bc4'),
  (1)
@@ -634,6 +634,8 @@ VALUES
  ('14h'),
  ('23h')
  );
+
+
 
 
 
