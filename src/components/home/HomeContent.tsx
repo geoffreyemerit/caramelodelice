@@ -31,6 +31,7 @@ const HomeContent = ({ id }: HomeContentProps) => {
           CLUB <br /> SANDWICH.
         </div>
       </div>
+
       <div className="home__description">
         <div className="home__description__club">{content?.description}</div>
       </div>

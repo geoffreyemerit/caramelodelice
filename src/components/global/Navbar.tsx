@@ -6,7 +6,11 @@ import IPageTypes from '../../interfaces/IPageTypes';
 import Footer from './Footer';
 import Logo from './Logo';
 
-const Navbar = () => {
+interface NavBarProps {
+  className: string;
+}
+
+const Navbar = ({ className }: NavBarProps) => {
   const [isOpened, setIsOpened] = useState(false);
   // JE CRÉE UN USESTATE AFIN DE STOCKER LA DATA ISSU DE L'APPEL AXIOS
   const [pageTypes, setPageTypes] = useState<IPageTypes[]>();
@@ -30,13 +34,11 @@ const Navbar = () => {
   return (
     <header className="nav__container">
       {/* :DESKTOP MENU */}
-      <nav className="navbar">
+      <nav className={className}>
         {pageTypes &&
           pageTypes.map((pageType) => (
             <NavLink
-              className={(navData) =>
-                navData.isActive ? 'navbar__link navbar__link--active' : 'navbar__link'
-              }
+              className={{navData.isActive ? `${className}__link ${className}__link--active` : `${className}__link`}}
               key={pageType.path}
               to={pageType.path}>
               {pageType.name}
