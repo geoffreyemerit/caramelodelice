@@ -70,13 +70,11 @@
   justify-content: flex-end;
   align-items: flex-end;
   color: $secondary;
-<<<<<<< HEAD
-  background-color: aqua;
-  margin-bottom: 1rem;
-  @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-largest) {
-    display: none;
-  }
-=======
+  // background-color: aqua;
+  // margin-bottom: 1rem;
+  // @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-largest) {
+  //   display: none;
+  // }
   margin-right: 1rem;
   margin-bottom: 2.3rem;
 
@@ -93,7 +91,6 @@
     margin-left: 1rem;
   }
 
->>>>>>> 34000ee329fc3bac889b2e779ad7401edb627388
   &__info {
     display: flex;
     font-family: 'Made-Bold';

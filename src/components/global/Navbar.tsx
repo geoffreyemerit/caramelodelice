@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
+
 import IPageType from '../../interfaces/IPageType';
 import Footer from './Footer';
 import Logo from './Logo';

@@ -1,7 +1,7 @@
 const dwich = [
   {
     id: 1,
-    img: '/assets/selectionWall/fromae.jpg',
+    img: '/assets/images/wallOfDwich/wallOfDwich1.jpeg',
   },
   {
     id: 2,
@@ -29,7 +29,7 @@ const dwich = [
   },
   {
     id: 8,
-    img: '/assets/selectionWall/fromae.jpg',
+    img: '/assets/images/wallOfDwich/wallOfDwich1.jpeg',
   },
   {
     id: 9,
@@ -57,7 +57,7 @@ const dwich = [
   },
   {
     id: 15,
-    img: '/assets/selectionWall/fromae.jpg',
+    img: '/assets/images/wallOfDwich/wallOfDwich1.jpeg',
   },
   {
     id: 16,
