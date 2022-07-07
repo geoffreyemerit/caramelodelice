@@ -14,7 +14,7 @@ const Footer = ({ className }: FooterProps) => {
             <span className={`${className}__info__sup__address__street`}>
               24, RUE D&apos;ESPAGNE
             </span>
-            <span>64200 BIARRITZ</span>
+            <span className="footer__info__sup__address__city">64200 BIARRITZ</span>
           </div>
           <div className="footer__info__sup__opening">
             <div className={`${className}__info__sup__opening__openingdays`}>
@@ -34,7 +34,10 @@ const Footer = ({ className }: FooterProps) => {
           href="https://instagram.com/club_sandwich64?igshid=YmMyMTA2M2Y="
           target="_blank"
           rel="noreferrer">
-          <Logo myStyle="icon icon--instagram" icon="logos-instagram" />
+          <Logo
+            myStyle="footer__instalogo footer__instalogo--instagram"
+            icon="logos-instagram"
+          />
         </a>
       </div>
     </div>

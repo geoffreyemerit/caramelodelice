@@ -41,7 +41,8 @@ const ShoppingCard = ({ id }: ShoppingCardProps) => {
           onKeyPress={() => setModalToOpen(item?.id)}
           onClick={() => {
             setModalToOpen(item?.id);
-          }}>
+          }}
+        >
           <img className="card__img" src={item.image1} alt={item.title} />
           <div className="card__fadebox">
             <div className="card__fadebox__button">

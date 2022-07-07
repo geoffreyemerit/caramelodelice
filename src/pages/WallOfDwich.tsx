@@ -1,12 +1,12 @@
 import React from 'react';
 
 import Footer from '../components/global/Footer';
-import Gallery from '../components/wallOfDwich/Gallery';
+import GalleryList from '../components/wallOfDwich/GalleryList';
 
 const WallOfDwich = () => {
   return (
     <div className="wallOfDwich">
-      <Gallery />
+      <GalleryList />
       <Footer className="footer" />
     </div>
   );
