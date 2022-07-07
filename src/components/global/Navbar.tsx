@@ -18,7 +18,8 @@ const Navbar = () => {
               navData.isActive ? 'navbar__link navbar__link--active' : 'navbar__link'
             }
             key={link.id}
-            to={link.path}>
+            to={link.path}
+          >
             {link.title}
           </NavLink>
         ))}
@@ -33,7 +34,8 @@ const Navbar = () => {
           onKeyPress={() => setIsOpened(!isOpened)}
           onClick={() => {
             setIsOpened(!isOpened);
-          }}>
+          }}
+        >
           <Logo
             myStyle="hamburger__up__icon hamburger__up__icon--burger"
             icon="logos-menu-burger"
@@ -47,7 +49,8 @@ const Navbar = () => {
           onKeyPress={() => setIsOpened(!isOpened)}
           onClick={() => {
             setIsOpened(!isOpened);
-          }}>
+          }}
+        >
           <Logo
             myStyle="hamburger__up__icon hamburger__up__icon--cross"
             icon="logos-cross"
@@ -72,7 +75,8 @@ const Navbar = () => {
                   to={link.path}
                   onClick={() => {
                     setIsOpened(!isOpened);
-                  }}>
+                  }}
+                >
                   {link.title}
                 </NavLink>
               ))}
@@ -83,7 +87,7 @@ const Navbar = () => {
           <div className="hamburger__down">
             <div className="hamburger__down--text">attend</div>
             <div className="hamburger__down--footer">
-              <Footer />
+              <Footer className="footer" />
             </div>
           </div>
         </div>

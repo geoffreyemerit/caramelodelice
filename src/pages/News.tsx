@@ -10,9 +10,9 @@ const News = () => {
     <div className="news">
       <ScrollDown />
       <NewsContent id={1} />
-      <NewsContent id={2} />
+      <NewsContent id={11} />
       <NewsContent id={1} />
-      <NewsContent id={2} />
+      <NewsContent id={11} />
       <Footer className="footer" />
       <GoToTop />
     </div>
