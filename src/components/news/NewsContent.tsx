@@ -93,8 +93,7 @@ const NewsContent = ({ id }: NewsContentProps) => {
                     onClick={handleClick}
                     onKeyDown={handleClick}
                     role="presentation"
-                    area-hidden="true"
-                  >
+                    area-hidden="true">
                     <Button className="buttonNews" text="En savoir plus" />
                   </div>
                 )}

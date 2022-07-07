@@ -10,6 +10,8 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  position: absolute;
+
   @media only screen and (min-width: $breakpoint-largest) {
     display: flex;
     justify-content: flex-start;
@@ -19,7 +21,6 @@
 }
 
 .navbar {
-  display: none;
   flex-direction: column;
   font-family: 'Made-Bold';
   justify-content: space-around;
@@ -27,7 +28,11 @@
   margin-top: 2rem;
   z-index: 50;
 
-  @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-largest) {
+  @media only screen and (max-width: $breakpoint-medium) {
+    justify-content: center;
+  }
+
+  @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
     display: none;
   }
 
@@ -99,6 +104,11 @@
 
       @media only screen and (min-width: 821px) and (max-width: 1024px) {
         align-self: flex-start;
+        background: linear-gradient(
+          180deg,
+          rgb(28 28 28/ 20%) 0%,
+          rgb(25 25 25/ 70%) 100%
+        );
       }
 
       @media only screen and (min-width: 1025px) and (max-width: 1224px) {
