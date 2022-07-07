@@ -44,6 +44,7 @@ const ShoppingModal = ({ item, setModalToOpen }: ShoppingModalProps) => {
           </div>
         </div>
         <div className="shoppingModal__containt__down">
+          {/* >> Carousel */}
           <Swiper
             className="shoppingModal__containt__down__carousel"
             loop
