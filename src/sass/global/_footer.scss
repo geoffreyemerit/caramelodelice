@@ -7,8 +7,8 @@
   align-items: center;
   margin-top: 1rem;
   @media only screen and (min-width: $breakpoint-smallest) {
-    font-size: 2.5vh;
-    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    margin: 2rem 0 1rem;
   }
   &__info__sup {
     &__address {
@@ -17,6 +17,9 @@
       align-items: center;
       flex-direction: column;
       margin-bottom: 1.5rem;
+      @media only screen and (min-width: $breakpoint-smallest) {
+        font-size: 1.2rem;
+      }
     }
     &__opening {
       &__openingdays {
@@ -24,14 +27,14 @@
         font-size: 0.5rem;
         margin-right: 2rem;
         @media only screen and (min-width: $breakpoint-smallest) {
-          font-size: 1.7vh;
+          font-size: 1rem;
         }
       }
       &__openinghours {
         text-align: right;
         font-size: 0.5rem;
         @media only screen and (min-width: $breakpoint-smallest) {
-          font-size: 1.7vh;
+          font-size: 1rem;
         }
       }
     }
