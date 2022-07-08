@@ -4,9 +4,13 @@ import { NavLink } from 'react-router-dom';
 
 import IPageTypes from '../../interfaces/IPageTypes';
 import Footer from './Footer';
-import Logo from './Logo';
+import IconSvg from './IconSvg';
 
-const Navbar = () => {
+interface NavbarProps {
+  className: string;
+}
+
+const Navbar = ({ className }: NavbarProps) => {
   const [isOpened, setIsOpened] = useState(false);
   // JE CRÉE UN USESTATE AFIN DE STOCKER LA DATA ISSU DE L'APPEL AXIOS
   const [pageTypes, setPageTypes] = useState<IPageTypes[]>();
@@ -28,14 +32,16 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header className="nav__container">
+    <header className={className}>
       {/* :DESKTOP MENU */}
-      <nav className="navbar">
+      <nav className={`${className}__desktop`}>
         {pageTypes &&
           pageTypes.map((pageType) => (
             <NavLink
               className={(navData) =>
-                navData.isActive ? 'navbar__link navbar__link--active' : 'navbar__link'
+                navData.isActive
+                  ? `${className}__desktop__link ${className}__desktop__link--active`
+                  : `${className}__desktop__link`
               }
               key={pageType.path}
               to={pageType.path}>
@@ -54,10 +60,7 @@ const Navbar = () => {
           onClick={() => {
             setIsOpened(!isOpened);
           }}>
-          <Logo
-            myStyle="hamburger__up__icon hamburger__up__icon--burger"
-            icon="logos-menu-burger"
-          />
+          <IconSvg myStyle={`${className}__mobile__up__icon`} icon="logos-menu-burger" />
         </div>
       ) : (
         <div
@@ -68,28 +71,24 @@ const Navbar = () => {
           onClick={() => {
             setIsOpened(!isOpened);
           }}>
-          <Logo
-            myStyle="hamburger__up__icon hamburger__up__icon--cross"
-            icon="logos-cross"
-          />
+          <IconSvg myStyle={`${className}__mobile__up__icon`} icon="logos-cross" />
         </div>
       )}
-
       {/* :MOBILE MENU */}
 
       {isOpened && (
-        <div className="hamburger">
+        <div className={`${className}__mobile`}>
           {/* >> Partie haute // Logo // Menu */}
-          <div className="hamburger__up">
-            <Logo
-              myStyle="hamburger__up__icon hamburger__up__icon--logo"
+          <div className={`${className}__mobile__up`}>
+            <IconSvg
+              myStyle={`${className}__mobile__up__icon ${className}__mobile__up__icon--cs`}
               icon="logos-club-sandwich-logo"
             />
-            <nav className="hamburger__up__nav">
+            <nav className={`${className}__mobile__up__nav`}>
               {pageTypes &&
                 pageTypes.map((pageType) => (
                   <NavLink
-                    className="hamburger__up__nav--link"
+                    className={`${className}__mobile__up__nav--link`}
                     key={pageType.path}
                     to={pageType.path}
                     onClick={() => {
@@ -99,13 +98,12 @@ const Navbar = () => {
                   </NavLink>
                 ))}
             </nav>
-            <div className="hamburger__up--text">on vous</div>
+            <div className={`${className}__mobile__up--text`}>on vous</div>
           </div>
           {/* >> Partie basse // Addresse */}
-          <div className="hamburger__down">
-            <div className="hamburger__down--text">attend</div>
-
-            <Footer className="footer__burger" />
+          <div className={`${className}__mobile__down`}>
+            <div className={`${className}__mobile__down--text`}>attend</div>
+            <Footer className={`${className}__mobile__down__footer__burger`} />
           </div>
         </div>
       )}
