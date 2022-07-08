@@ -1,7 +1,6 @@
 import React from 'react';
 
-import Logo from './Logo';
-
+import IconSvg from './IconSvg';
 interface FooterProps {
   className: string;
 }
@@ -35,7 +34,7 @@ const Footer = ({ className }: FooterProps) => {
           href="https://instagram.com/club_sandwich64?igshid=YmMyMTA2M2Y="
           target="_blank"
           rel="noreferrer">
-          <Logo
+          <IconSvg
             myStyle="footer__instalogo footer__instalogo--instagram"
             icon="logos-instagram"
           />
