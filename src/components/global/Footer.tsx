@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+
 import IAddress from '../../interfaces/IAddress';
 import IOpeningDay from '../../interfaces/IOpeningDay';
 import IOpeningHour from '../../interfaces/IOpeningHour';
@@ -60,8 +61,9 @@ const Footer = ({ className }: FooterProps) => {
               {openingHours &&
                 openingHours.map((openingHour) => (
                   <p key={openingHour.id}>
-                    {openingHour.startMorning}-{openingHour.endMorning} /
-                    {openingHour.startAfternoon}-{openingHour.endAfternoon}
+                    {openingHour.startMorning}
+                    {openingHour.endMorning} / {openingHour.startAfternoon}
+                    {openingHour.endAfternoon}
                   </p>
                 ))}
             </div>
