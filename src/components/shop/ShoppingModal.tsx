@@ -47,7 +47,7 @@ const ShoppingModal = ({ item, setModalToOpen }: ShoppingModalProps) => {
           <Swiper
             className="shoppingModal__containt__down__carousel"
             loop
-            pagination={true}
+            pagination={{ clickable: true }}
             modules={[Pagination]}>
             <SwiperSlide>
               <img

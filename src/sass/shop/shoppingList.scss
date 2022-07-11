@@ -3,6 +3,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  align-items: center;
   width: 90%;
   height: 100%;
   @media only screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-largest) {
@@ -16,14 +17,15 @@
     // $breakpoint-largest: 1024px --- $breakpoint-extralarge: 1224px
     max-width: 65vw;
     height: 70%;
-    margin-left: 20%;
+    margin-left: 25%;
     gap: 1rem;
   }
   @media only screen and (min-width: $breakpoint-extralarge) {
     // $breakpoint-extralarge: 1224px --- ++
     max-width: 57vw;
     height: 70%;
-    margin-left: 20%;
+    min-height: 70vh;
+    margin-left: 25%;
     gap: 2rem;
   }
 }

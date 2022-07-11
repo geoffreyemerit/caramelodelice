@@ -98,6 +98,7 @@
 
       &__address {
         display: flex;
+        text-transform: uppercase;
 
         @media screen and (max-width: $breakpoint-medium) {
           flex-direction: column;
@@ -110,8 +111,8 @@
           margin-bottom: 1.6rem;
         }
 
-        &__street {
-          margin-right: 0.6rem;
+        &__zipcode {
+          margin: 0 0.6rem;
         }
       }
 
