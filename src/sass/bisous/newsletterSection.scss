@@ -1,0 +1,69 @@
+.newsletterSection {
+  height: 50vh;
+  width: 60vw;
+  margin-top: 6rem;
+  margin-right: 4rem;
+
+  &__content {
+    font-family: 'Made-bold';
+    color: $secondary;
+
+    &__title1 {
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+    }
+    &__title2 {
+      font-size: 3.5rem;
+      line-height: 3.5rem;
+    }
+    &__title3 {
+      font-size: 3.5rem;
+      line-height: 3.5rem;
+      color: $tertiary;
+      margin-bottom: 2rem;
+    }
+    &__text1 {
+      margin-bottom: 2rem;
+    }
+    &__text2 {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__form__group {
+    display: flex;
+    padding: 15px 0 0;
+    width: 50%;
+  }
+
+  &__form__field {
+    font-family: 'Made-Medium';
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid grey;
+    outline: 0;
+    font-size: 1.3rem;
+    color: white;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+
+    &::placeholder {
+      color: grey;
+    }
+  }
+
+  &__form__field:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image-slice: 1;
+  }
+  /* reset input */
+  &__form__field {
+    &:required,
+    &:invalid {
+      box-shadow: none;
+    }
+  }
+}

@@ -270,13 +270,16 @@
       background-repeat: repeat-x;
       @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-largest) {
         font-size: 3.5vh;
+
       }
+
       @media only screen and (min-width: $breakpoint-largest) and (max-width: $breakpoint-extralarge) {
         align-self: flex-start;
         margin-left: 8rem;
         font-size: 1.9rem;
         padding-bottom: 0.3rem;
       }
+
       @media only screen and (min-width: $breakpoint-extralarge) {
         align-self: flex-start;
         margin-left: 8rem;
@@ -291,6 +294,7 @@
         z-index: 999;
         color: $tertiary;
       }
+
     }
   }
 
