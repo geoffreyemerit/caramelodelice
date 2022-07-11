@@ -1,46 +1,3 @@
-//FOOTER DE LA PAGE HOME
-.home__footer {
-  color: $secondary;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 1rem;
-  @media only screen and (min-width: $breakpoint-smallest) {
-    font-size: 1rem;
-    margin: 2rem 0 1rem;
-  }
-  &__info__sup {
-    &__address {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      margin-bottom: 1.5rem;
-      @media only screen and (min-width: $breakpoint-smallest) {
-        font-size: 1.2rem;
-      }
-    }
-    &__opening {
-      &__openingdays {
-        text-align: left;
-        font-size: 0.5rem;
-        margin-right: 2rem;
-        @media only screen and (min-width: $breakpoint-smallest) {
-          font-size: 1rem;
-        }
-      }
-      &__openinghours {
-        text-align: right;
-        font-size: 0.5rem;
-        @media only screen and (min-width: $breakpoint-smallest) {
-          font-size: 1rem;
-        }
-      }
-    }
-  }
-}
-
 //FOOTER DU MENU BURGER
 .navbar__mobile__down__footer__burger {
   color: $secondary;
@@ -134,10 +91,6 @@
     font-family: 'Made-Bold';
     align-items: flex-end;
 
-    // @media screen and (max-width: $breakpoint-small) {
-    //   justify-content: center;
-    //   margin-right: 0;
-    // }
     &__sup {
       display: flex;
       flex-direction: column;
@@ -145,15 +98,13 @@
 
       &__address {
         display: flex;
-        // flex-direction: row;
-        // justify-content: flex-end;
 
-        @media screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-medium) {
+        @media screen and (max-width: $breakpoint-medium) {
           flex-direction: column;
           align-items: center;
           margin-bottom: 1.6rem;
         }
-        @media only screen and (min-width: 820px) and (max-width: 1025px) {
+        @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
           flex-direction: column;
           align-items: center;
           margin-bottom: 1.6rem;
@@ -166,7 +117,6 @@
 
       &__opening {
         display: flex;
-        flex-direction: row;
         justify-content: flex-end;
         font-size: 16px;
 
@@ -213,3 +163,46 @@
     }
   }
 }
+
+// //FOOTER DE LA PAGE HOME
+// .homefooter {
+//   color: $secondary;
+//   display: flex;
+//   justify-content: center;
+//   flex-direction: column;
+//   align-items: center;
+//   margin-top: 1rem;
+//   @media only screen and (min-width: $breakpoint-smallest) {
+//     font-size: 1rem;
+//     margin: 2rem 0 1rem;
+//   }
+//   &infosup {
+//     &address {
+//       width: 100%;
+//       display: flex;
+//       align-items: center;
+//       flex-direction: column;
+//       margin-bottom: 1.5rem;
+//       @media only screen and (min-width: $breakpoint-smallest) {
+//         font-size: 1.2rem;
+//       }
+//     }
+//     &opening {
+//       &openingdays {
+//         text-align: left;
+//         font-size: 0.5rem;
+//         margin-right: 2rem;
+//         @media only screen and (min-width: $breakpoint-smallest) {
+//           font-size: 1rem;
+//         }
+//       }
+//       &__openinghours {
+//         text-align: right;
+//         font-size: 0.5rem;
+//         @media only screen and (min-width: $breakpoint-smallest) {
+//           font-size: 1rem;
+//         }
+//       }
+//     }
+//   }
+// }

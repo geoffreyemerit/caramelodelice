@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
-import IPageTypes from '../../interfaces/IPageTypes';
+import IPageTypes from '../../interfaces/IPageType';
 import Footer from './Footer';
 import IconSvg from './IconSvg';
 
