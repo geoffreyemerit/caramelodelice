@@ -52,6 +52,7 @@ const DealersSection = ({ id, idSupplier }: DealersSectionProps) => {
             />
             <div className="dealersSection__supplier__infos">
               <h3 className="dealersSection__supplier__infos__name">{supplier.name}</h3>
+              {console.log(supplier.name)}
               <h4 className="dealersSection__supplier__infos__location">
                 {supplier.location}
               </h4>

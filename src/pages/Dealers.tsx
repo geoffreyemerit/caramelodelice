@@ -40,6 +40,7 @@ const Dealers = () => {
       <DealersSection id={71} idSupplier={21} />
       <DealersSection id={81} idSupplier={31} />
       <DealersSection id={91} idSupplier={41} />
+      <DealersSection id={101} idSupplier={51} />
     </div>
   ) : (
     <div>
