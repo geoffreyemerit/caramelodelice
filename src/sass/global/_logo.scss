@@ -1,22 +1,8 @@
 .logo {
   width: 100vw;
-
-  // @media only screen and (max-width: $breakpoint-largest) {
-  //   display: flex;
-  //   justify-content: center;
-  // }
-
-  // @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-medium) {
-  //   display: flex;
-  //   justify-content: center;
-  // }
-
-  // Check Geo's code
-  // display: none;
-  // @media only screen and (min-width: $breakpoint-largest) {
-  //   width: 100vw;
-  //   display: flex;
-  // }
+  @media only screen and (max-width: $breakpoint-medium) {
+    display: none;
+  }
 
   &__logotype {
     position: fixed;

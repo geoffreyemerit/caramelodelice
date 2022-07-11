@@ -8,19 +8,10 @@ const Home = () => {
     <>
       <div className="home">
         <HomeContent id={41} />
-        <Footer className="home__footer" />
+        <Footer className="footer" />
       </div>
     </>
   );
 };
 
 export default Home;
-
-/* <h1>
-        WELCOME TO <span className="home__title--club">THE CLUB</span>
-      </h1>
-      {/* Exemple pour appeler le logo.svg / 
-      myStyle = nom de la classe pour le SCSS
-
-      icon = nom de l'id dans le fichier SVG (dans assets) 
-            <Logo myStyle="icon icon--menu" icon="logos-club-sandwich-logo" />*/

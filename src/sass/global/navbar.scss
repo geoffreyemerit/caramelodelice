@@ -5,7 +5,6 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  // position: absolute;
   @media only screen and (min-width: $breakpoint-largest) {
     display: flex;
     justify-content: flex-start;
@@ -211,15 +210,11 @@
   z-index: 201;
   margin: 0.5rem;
 }
-//-----------------------------------------//
-//-----------------------------------------//
-//-----------------------------------------//
+
 //-----------------------------------------//
 /// NAVBAR PARTICULIERE POUR LA PAGE HOME ///
 //-----------------------------------------//
-//-----------------------------------------//
-//-----------------------------------------//
-//-----------------------------------------//
+
 .homeContent__navbar {
   &__desktop {
     display: flex;
@@ -229,6 +224,9 @@
     align-items: center;
     text-decoration: none;
     z-index: 50;
+    @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
+      display: none;
+    }
     @media only screen and (min-width: $breakpoint-largest) and (max-width: $breakpoint-extralarge) {
       height: 20rem;
       display: flex;
@@ -256,8 +254,9 @@
       @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-small) {
         font-size: 1.8rem;
       }
-      @media only screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-largest) {
-        font-size: 2rem;
+
+      @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
+        font-size: 1.7rem;
       }
 
       @media only screen and (min-width: $breakpoint-largest) and (max-width: $breakpoint-extralarge) {
