@@ -8,9 +8,9 @@
   @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
     align-items: center;
     justify-content: flex-start;
-    height: 40%;
-    margin-top: 6rem;
+    margin-top: 3rem;
     margin-bottom: 2rem;
+    height: auto;
   }
   @media only screen and (max-width: $breakpoint-medium) {
     align-items: center;
@@ -58,6 +58,7 @@
       text-align: center;
       font-size: 1.8rem;
       margin-top: 7rem;
+
     }
     @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-medium) {
       text-align: center;
@@ -72,6 +73,7 @@
     font-size: 4rem;
     color: $tertiary;
     line-height: 4rem;
+    
     @media only screen and (max-width: $breakpoint-largest) {
       display: none;
     }
@@ -79,26 +81,32 @@
     @media only screen and (min-width: $breakpoint-huge) {
       font-size: 4.9rem;
       width: 39%;
+      color: $secondary;
     }
     @media only screen and (min-width: 1440px) and (max-width: $breakpoint-huge) {
       font-size: 4.5rem;
       width: 42%;
+      color: $secondary;
     }
     @media only screen and (min-width: 1325px) and (max-width: 1440px) {
       font-size: 4.2rem;
       width: 42%;
+      color: $secondary;
     }
     @media only screen and (min-width: 1290px) and (max-width: 1325px) {
       font-size: 4rem;
       width: 42%;
+      color: $secondary;
     }
     @media only screen and (min-width: 1140px) and (max-width: 1290px) {
       width: 43%;
+      color: $secondary;
       font-size: 3.9rem;
     }
     @media only screen and (min-width: $breakpoint-largest) and (max-width: 1140px) {
       width: 44%;
       font-size: 3.8rem;
+      color: $secondary;
     }
   }
 
@@ -121,6 +129,7 @@
 
     @media only screen and (min-width: $breakpoint-largest) {
       display: none;
+
     }
   }
 
