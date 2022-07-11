@@ -28,6 +28,8 @@ const DealersMobileSection = () => {
     getSupplierList();
   }, []);
 
+  console.log(supplierList);
+
   return (
     <div className="dealersSection">
       {supplierList && (
@@ -47,16 +49,21 @@ const DealersMobileSection = () => {
               modules={[Pagination, Autoplay, Parallax]}
               className="mySwiper">
               {/* NEED TO MAP THIS BELOW */}
-              {/* {supplierList.map((supplier, index) => {
-                <SwiperSlide>
-                  <img
-                    key={index}
-                    className="dealersSection__supplier__imageCaroussel"
-                    src={supplier.logo}
-                    alt={supplier.name}
-                  />
-                </SwiperSlide>;
-              })} */}
+              {/* {supplierList &&
+                supplierList.map((supplier, index) => {
+                  <SwiperSlide>
+                    <div className="dealersSection__supplier__infos">
+                      <div key={index}>{supplierList[0].name}</div>
+                      <div key={index}>{supplierList[0].location}</div>
+                    </div>
+                    <img
+                      key={index}
+                      className="dealersSection__supplier__imageCaroussel"
+                      src={supplier.logo}
+                      alt={supplier.name}
+                    />
+                  </SwiperSlide>;
+                })} */}
               <SwiperSlide>
                 <div className="dealersSection__supplier__infos">
                   <div>{supplierList[0].name}</div>
@@ -110,6 +117,17 @@ const DealersMobileSection = () => {
                   className="dealersSection__supplier__imageCaroussel"
                   src={supplierList[4].logo}
                   alt={supplierList[4].logo}
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="dealersSection__supplier__infos">
+                  <div>{supplierList[5].name}</div>
+                  <div>{supplierList[5].location}</div>
+                </div>
+                <img
+                  className="dealersSection__supplier__imageCaroussel"
+                  src={supplierList[5].logo}
+                  alt={supplierList[5].logo}
                 />
               </SwiperSlide>
             </Swiper>
