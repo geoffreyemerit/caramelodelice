@@ -5,11 +5,11 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  text-transform: uppercase;
   margin-top: 1rem;
   @media only screen and (min-width: $breakpoint-smallest) {
     font-size: 2.5vh;
   }
-
   &__info__sup {
     &__address {
       width: 100%;
@@ -17,6 +17,9 @@
       align-items: center;
       flex-direction: column;
       margin-bottom: 1.5rem;
+      &__bis {
+        display: flex;
+      }
     }
     &__opening {
       &__openingdays {
@@ -151,16 +154,23 @@
   margin-bottom: 2.3rem;
 
   @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-medium) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+
+    // ce composant doit etre en display none car en format mobile/tablette
+    // le footer n'apparait que dans la navbar et non chaque page.
+    display: none;
   }
 
   @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 1rem;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // margin-left: 1rem;
+    // ce composant doit etre en display none car en format mobile/tablette
+    // le footer n'apparait que dans la navbar et non chaque page.
+    display: none;
   }
 
   &__info {
@@ -187,9 +197,10 @@
           align-items: center;
           margin-bottom: 1.6rem;
         }
-
-        &__zipcode {
-          margin: 0 0.6rem;
+        &__bis {
+          &__zipcode {
+            margin: 0 0.6rem;
+          }
         }
       }
 
@@ -242,45 +253,64 @@
   }
 }
 
-// //FOOTER DE LA PAGE HOME
-// .homefooter {
-//   color: $secondary;
-//   display: flex;
-//   justify-content: center;
-//   flex-direction: column;
-//   align-items: center;
-//   margin-top: 1rem;
-//   @media only screen and (min-width: $breakpoint-smallest) {
-//     font-size: 1rem;
-//     margin: 2rem 0 1rem;
-//   }
-//   &infosup {
-//     &address {
-//       width: 100%;
-//       display: flex;
-//       align-items: center;
-//       flex-direction: column;
-//       margin-bottom: 1.5rem;
-//       @media only screen and (min-width: $breakpoint-smallest) {
-//         font-size: 1.2rem;
-//       }
-//     }
-//     &opening {
-//       &openingdays {
-//         text-align: left;
-//         font-size: 0.5rem;
-//         margin-right: 2rem;
-//         @media only screen and (min-width: $breakpoint-smallest) {
-//           font-size: 1rem;
-//         }
-//       }
-//       &__openinghours {
-//         text-align: right;
-//         font-size: 0.5rem;
-//         @media only screen and (min-width: $breakpoint-smallest) {
-//           font-size: 1rem;
-//         }
-//       }
-//     }
-//   }
-// }
+//FOOTER DE LA PAGE HOME
+.home__footer {
+  color: $secondary;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-transform: uppercase;
+  margin-top: 1rem;
+  @media only screen and (min-width: $breakpoint-smallest) {
+    font-size: 2.5vh;
+    margin: 1rem 0;
+  }
+  @media only screen and (min-width: $breakpoint-largest) {
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 1rem;
+  }
+
+  &__info__sup {
+    &__address {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      @media only screen and (min-width: $breakpoint-smallest) {
+        font-size: 2vh;
+      }
+      @media only screen and (min-width: $breakpoint-largest) {
+        font-size: 2.5vh;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 0.2rem;
+      }
+      &__bis {
+        &__zipcode {
+          margin: 0 0.6rem;
+        }
+      }
+    }
+    &__opening {
+      &__openingdays {
+        text-align: left;
+        font-size: 0.5rem;
+        margin-right: 2rem;
+        @media only screen and (min-width: $breakpoint-smallest) {
+          font-size: 1.7vh;
+        }
+      }
+      &__openinghours {
+        text-align: right;
+        font-size: 0.5rem;
+        @media only screen and (min-width: $breakpoint-smallest) {
+          font-size: 1.7vh;
+        }
+      }
+    }
+  }
+}

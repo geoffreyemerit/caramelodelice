@@ -6,6 +6,7 @@
   align-items: center;
   width: 90%;
   height: 100%;
+  min-height: 50vh;
   @media only screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-largest) {
     // $breakpoint-small: 480px --- $breakpoint-medium: 768px;
     width: 85%;
@@ -17,6 +18,7 @@
     // $breakpoint-largest: 1024px --- $breakpoint-extralarge: 1224px
     max-width: 65vw;
     height: 70%;
+    min-height: 70vh;
     margin-left: 25%;
     gap: 1rem;
   }
