@@ -73,8 +73,7 @@ const App = () => {
       }>
       <Sound />
       <Logo />
-      {/* {!homePage && <Navbar />}  */}
-      <Navbar />
+      {!homePage && <Navbar className="navbar" />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/news" element={<News />} />

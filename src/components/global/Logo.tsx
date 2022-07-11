@@ -7,17 +7,21 @@ interface Props {
   myStyle?: string;
 }
 
+// SEULEMENT LE LOGO CLUB SANDWICH
+// VISIBLE SUR DESKTOP
+// SINON UTILISER LE COMPOSANT ICONSVG
+
 const Logo = ({
   icon = 'logos-club-sandwich-logo',
   myStyle = 'logo__logotype',
 }: Props) => {
   return (
     <>
-      {/* <div className="logo"> */}
-      <svg className={myStyle}>
-        <use xlinkHref={`${Icons}#${icon}`}></use>
-      </svg>
-      {/* </div> */}
+      <div className="logo">
+        <svg className={myStyle}>
+          <use xlinkHref={`${Icons}#${icon}`}></use>
+        </svg>
+      </div>
     </>
   );
 };

@@ -15,10 +15,19 @@
   @media only screen and (max-width: $breakpoint-medium) {
     align-items: center;
     justify-content: flex-start;
+<<<<<<< HEAD
     margin-top: 6rem;
     margin-bottom: 2rem;
+=======
+    height: 40%;
+    margin: 2rem 0;
   }
-
+  &__iconCS {
+    color: $secondary;
+    height: 9rem;
+    width: 9rem;
+>>>>>>> f8550bf6023fd64a1bc9afc3c986a97e45c38f58
+  }
   &__subTitle {
     width: 40%;
     font-family: Made-Bold;
@@ -54,21 +63,30 @@
     @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-medium) {
       text-align: center;
       font-size: 1.5rem;
-      margin-top: 5rem;
+      margin-top: 1rem;
+      width: 70%;
     }
   }
   &__title {
     width: 40%;
     font-family: Made-Bold;
     font-size: 4rem;
-    color: $secondary;
+    color: $tertiary;
     line-height: 4rem;
 
+    @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-small) {
+      width: 70%;
+      font-size: 3rem;
+      line-height: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
     @media only screen and (min-width: $breakpoint-huge) {
       font-size: 4.9rem;
       width: 39%;
     }
-
     @media only screen and (min-width: 1440px) and (max-width: $breakpoint-huge) {
       font-size: 4.5rem;
       width: 42%;
