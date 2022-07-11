@@ -47,7 +47,7 @@
   justify-content: flex-end;
   align-items: flex-end;
   color: $secondary;
-  margin-right: 1rem;
+  margin-right: 2rem;
   margin-bottom: 2.3rem;
   bottom: 0;
   right: 0;
@@ -63,6 +63,83 @@
   @media only screen and (min-width: 820px) and (max-width: 1025px) {
     display: none;
   }
+
+  &__info {
+    display: flex;
+    font-family: 'Made-Bold';
+    align-items: flex-end;
+
+    &__sup {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+
+      &__address {
+        display: flex;
+
+        @media screen and (max-width: $breakpoint-medium) {
+          flex-direction: column;
+          align-items: center;
+          margin-bottom: 1.6rem;
+        }
+        @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
+          flex-direction: column;
+          align-items: center;
+          margin-bottom: 1.6rem;
+        }
+
+        &__street {
+          margin-right: 0.6rem;
+        }
+      }
+
+      &__opening {
+        display: flex;
+        justify-content: flex-end;
+        font-size: 16px;
+
+        @media screen and (max-width: $breakpoint-extralarge) {
+          font-size: 14px;
+        }
+
+        @media screen and (max-width: $breakpoint-largest) {
+          font-size: 12px;
+        }
+
+        @media screen and (max-width: $breakpoint-medium) {
+          font-size: 10px;
+        }
+
+        @media screen and (max-width: $breakpoint-small) {
+          font-size: 8px;
+        }
+
+        @media screen and (max-width: $breakpoint-smallest) {
+          font-size: 6px;
+        }
+
+        &__openingdays {
+          margin-right: 2.05rem;
+          text-align: left;
+        }
+
+        &__openinghours {
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  &__instalogo {
+    display: flex;
+    flex-direction: column;
+    width: 1.5rem;
+    height: 1.5rem;
+    &--instagram {
+      margin-left: 0.5rem;
+      color: $secondary;
+    }
+  }
 }
 
 .footer {
@@ -70,7 +147,7 @@
   justify-content: flex-end;
   align-items: flex-end;
   color: $secondary;
-  margin-right: 1rem;
+  margin-right: 2rem;
   margin-bottom: 2.3rem;
 
   @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-medium) {

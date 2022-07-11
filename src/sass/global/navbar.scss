@@ -257,28 +257,18 @@
 
       @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
         font-size: 1.7rem;
-
       }
+
       @media only screen and (min-width: $breakpoint-largest) and (max-width: $breakpoint-extralarge) {
         align-self: flex-start;
         margin-left: 8rem;
         font-size: 1.9rem;
       }
+
       @media only screen and (min-width: $breakpoint-extralarge) {
         align-self: flex-start;
         margin-left: 8rem;
         font-size: 1.8rem;
-      }
-      &:hover,
-      &--active {
-        background-image: url('../../../public/assets/wave.svg');
-        background-position: 0 1.2em;
-        background-size: 4rem 10px;
-        z-index: 999;
-        color: $tertiary;
-        @media only screen and (min-width: $breakpoint-largest) {
-          align-self: flex-start;
-        }
       }
     }
   }
