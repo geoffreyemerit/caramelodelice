@@ -53,7 +53,8 @@ const Navbar = ({ className }: NavbarProps) => {
       {/* >> Menu Burger Icon */}
       {!isOpened ? (
         <div
-          className="button--burger"
+          // className="button--burger"
+          className={`${className}__button--burger`}
           role="button"
           tabIndex={0}
           onKeyPress={() => setIsOpened(!isOpened)}
@@ -64,7 +65,7 @@ const Navbar = ({ className }: NavbarProps) => {
         </div>
       ) : (
         <div
-          className="button--cross"
+          className={`${className}__button ${className}__button--cross`}
           role="button"
           tabIndex={0}
           onKeyPress={() => setIsOpened(!isOpened)}
