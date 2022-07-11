@@ -1,6 +1,6 @@
 .homeContent {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -15,54 +15,77 @@
   @media only screen and (max-width: $breakpoint-medium) {
     align-items: center;
     justify-content: flex-start;
-    height: 40%;
     margin: 2rem 0;
+    height: auto;
   }
   &__iconCS {
+    width: 5.5rem;
+    height: 5.5rem;
     color: $secondary;
-    height: 9rem;
-    width: 9rem;
-
-    @media only screen and (min-width: $breakpoint-medium) {
+    margin-top: 2rem;
+    @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-medium) {
+      width: 30vw;
+      height: 30vh;
+      min-height: 100px;
+      max-height: 120px;
+      margin-top: 3rem;
+    }
+    @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
+      width: 19vw;
+      height: 19vh;
+      min-height: 120px;
+      max-height: 170px;
+    }
+    @media only screen and (min-width: $breakpoint-largest) {
       display: none;
     }
   }
   &__subTitle {
-    width: 40%;
+    display: flex;
     font-family: Made-Bold;
-    font-size: 2rem;
+    font-size: 1.3rem;
+    align-items: center;
+    justify-content: center;
     color: $secondary;
-
+    padding-top: 1rem;
     @media only screen and (min-width: $breakpoint-huge) {
       font-size: 2.7rem;
       width: 39%;
+      justify-content: flex-start;
     }
     @media only screen and (min-width: 1440px) and (max-width: $breakpoint-huge) {
       font-size: 2.5rem;
+      justify-content: flex-start;
       width: 42%;
     }
     @media only screen and (min-width: 1325px) and (max-width: 1440px) {
       width: 42%;
       font-size: 2.2rem;
+      justify-content: flex-start;
     }
     @media only screen and (min-width: 1290px) and (max-width: 1325px) {
       width: 42%;
+      font-size: 2.1rem;
+      justify-content: flex-start;
     }
     @media only screen and (min-width: 1140px) and (max-width: 1290px) {
       width: 43%;
+      font-size: 2rem;
+      justify-content: flex-start;
     }
     @media only screen and (min-width: $breakpoint-largest) and (max-width: 1140px) {
       width: 44%;
+      font-size: 1.9rem;
+      justify-content: flex-start;
     }
     @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
       text-align: center;
       font-size: 1.8rem;
-      margin-top: 7rem;
-
+      margin-top: 3rem;
     }
     @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-medium) {
       text-align: center;
-      font-size: 1.5rem;
+      font-size: 3vh;
       margin-top: 1rem;
       width: 70%;
     }
@@ -73,7 +96,7 @@
     font-size: 4rem;
     color: $tertiary;
     line-height: 4rem;
-    
+
     @media only screen and (max-width: $breakpoint-largest) {
       display: none;
     }
@@ -111,45 +134,59 @@
   }
 
   &__title__mobile {
-    width: 100%;
-    font-family: Made-Bold;
+    width: 70%;
+    font-family: 'Made-Bold';
     display: flex;
     justify-content: center;
     color: $tertiary;
 
     @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-medium) {
-      font-size: 3rem;
+      font-size: 5vh;
       line-height: 3rem;
     }
 
     @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
-      font-size: 5rem;
+      font-size: 7vh;
       line-height: 5rem;
     }
 
     @media only screen and (min-width: $breakpoint-largest) {
       display: none;
-
     }
   }
+  &__description {
+    display: none;
 
-  // &__nav {
-  //   width: 100vw;
-  //   min-height: 10vh;
-  //   display: flex;
-  //   justify-content: flex-end;
-  //   align-items: center;
-  //   position: absolute;
-  // }
-
-  // &__link {
-  //   display: flex;
-  //   justify-content: center;
-  //   font-size: 1.3rem;
-  //   text-decoration: none;
-  //   cursor: pointer;
-  //   color: $secondary;
-  //   padding-bottom: 0.3rem;
-  //   background-repeat: repeat-x;
-  // }
+    @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
+      display: flex;
+      text-align: center;
+      width: 70%;
+    }
+    @media only screen and (min-width: $breakpoint-largest) and (max-width: $breakpoint-huge) {
+      display: flex;
+      transform: translateY(5.5rem);
+      margin: 0 1rem;
+    }
+    @media only screen and (min-width: $breakpoint-huge) {
+      display: flex;
+      transform: translateY(7rem);
+      margin: 0 1rem;
+    }
+    &__club {
+      font-family: 'Made-Medium';
+      color: $secondary;
+      display: flex;
+      font-size: 2vh;
+    }
+    @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
+      margin: 3.5rem 0;
+      font-size: 2vh;
+    }
+    @media only screen and (min-width: $breakpoint-largest) {
+      text-align: start;
+      justify-content: flex-end;
+      font-size: 0.9rem;
+      width: 45%;
+    }
+  }
 }

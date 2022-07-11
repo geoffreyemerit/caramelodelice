@@ -36,8 +36,8 @@ const HomeContent = ({ id }: HomeContentProps) => {
         <div className="homeContent__title__mobile">THE CLUB.</div>
       </div>
       <Navbar className="homeContent__navbar" />
-      <div className="home__description">
-        <div className="home__description__club">{content?.description}</div>
+      <div className="homeContent__description">
+        <div className="homeContent__description__club">{content?.description}</div>
       </div>
     </>
   );
