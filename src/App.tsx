@@ -24,7 +24,7 @@ const App = () => {
   //retrieve the route (useLocation)
   const location = useLocation();
   // create displayBackground variable and set to boolean
-  let displayBackground: boolean = false;
+  let homePage: boolean = false;
 
   // this variable is true if location.pathname is either /, *, or /home
   if (
@@ -32,13 +32,13 @@ const App = () => {
     location.key === 'default' ||
     location.pathname === '/home'
   ) {
-    displayBackground = true;
+    homePage = true;
   }
 
   const [content, setContent] = useState<IPage>();
 
   const getContent = async () => {
-    const url: string = `http://localhost:3000/api/pages/5`;
+    const url: string = `http://localhost:3000/api/pages/41`;
     const { data } = await axios.get<IPage>(url);
     setContent(data);
   };
@@ -62,7 +62,7 @@ const App = () => {
       className="App"
       // only display background image if displayBackground is true
       style={
-        displayBackground
+        homePage
           ? {
               backgroundImage: `url(${content?.image1})`,
               backgroundPosition: 'center',
@@ -73,7 +73,8 @@ const App = () => {
       }>
       <Sound />
       <Logo />
-      <Navbar />
+      {/* {!homePage && <Navbar />}  */}
+      <Navbar className="navbar" />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/news" element={<News />} />

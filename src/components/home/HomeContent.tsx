@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
 import IPage from '../../interfaces/IPage';
+import Navbar from '../global/Navbar';
 
 interface HomeContentProps {
   id: number;
@@ -32,6 +33,7 @@ const HomeContent = ({ id }: HomeContentProps) => {
         </div>
       </div>
       <div className="home__description">
+        <Navbar className="navbar__home" />
         <div className="home__description__club">{content?.description}</div>
       </div>
     </>

@@ -4,13 +4,31 @@
   display: flex;
   flex-direction: column;
   background: linear-gradient(180deg, rgb(28 28 28/ 20%) 0%, rgb(25 25 25/ 70%) 100%);
+
+  @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
+    align-items: center;
+  }
   &__description {
     width: 43%;
     margin-left: 3rem;
     margin-bottom: -5rem;
+
+    @media only screen and (max-width: $breakpoint-medium) {
+      display: none;
+    }
+
+    @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
+      text-align: center;
+    }
+
     &__club {
       font-family: Made-Bold;
       color: $secondary;
+    }
+    @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
+      margin-bottom: 3rem;
+      margin-left: 0;
+      // font-size: 1.2rem;
     }
   }
 }

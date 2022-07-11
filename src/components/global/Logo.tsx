@@ -13,11 +13,11 @@ const Logo = ({
 }: Props) => {
   return (
     <>
-      <div className="logo">
-        <svg className={myStyle}>
-          <use xlinkHref={`${Icons}#${icon}`}></use>
-        </svg>
-      </div>
+      {/* <div className="logo"> */}
+      <svg className={myStyle}>
+        <use xlinkHref={`${Icons}#${icon}`}></use>
+      </svg>
+      {/* </div> */}
     </>
   );
 };

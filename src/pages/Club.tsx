@@ -8,9 +8,9 @@ const Club = () => {
   return (
     <div className="club">
       <ClubSection id={1} />
-      <ClubSection id={2} />
-      <ClubSection id={3} />
-      <ClubSection id={4} />
+      <ClubSection id={11} />
+      <ClubSection id={21} />
+      <ClubSection id={31} />
       <Footer className="footer" />
       <GoToTop />
     </div>
