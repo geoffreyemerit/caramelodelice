@@ -1,4 +1,5 @@
 export default interface IPage {
+  // map(arg0: (dwich: any, index: any) => JSX.Element): import('react').ReactNode;
   title: string;
   subTitle: string;
   description: string;
@@ -11,4 +12,5 @@ export default interface IPage {
   idUser?: number;
   idSupplier?: number;
   idAddress?: number;
+  idPageType: number;
 }

@@ -1,39 +1,62 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 
+import IPage from '../../interfaces/IPage';
+import IPageType from '../../interfaces/IPageType';
 import Gallery from './Gallery';
-import dwichs from './galleryData';
 
-const GalleryList = () => {
+interface WallOfDwichProps {
+  idPageType: number;
+}
+
+const GalleryList = ({ idPageType }: WallOfDwichProps) => {
+  const [pages, setPages] = useState<IPage[]>();
+  const [images7by7, setImages7by7] = useState<IPage[][]>();
+
+  // todo : add wallofdwich axios here and splits after
+
+  // APPEL API AXIOS
+  const getContent = async () => {
+    const pageType = await axios.get<IPageType>(
+      `http://localhost:3000/api/pageTypes/${idPageType}`,
+    );
+
+    //APPEL PROMESSE DE pageType AXIOS.GET DE L'INTERFACE DE L'URL
+    const pages = await axios.get<IPage[]>(
+      `http://localhost:3000/api/pageTypes/${pageType.data.id}/pages`,
+    );
+    console.log(pages);
+    setPages(pages.data);
+
+    // AU CHARGEMENT DU COMPOSANT, J'EXÉCUTE LA FONCTION GETCONTENT
+    useEffect(() => {
+      getContent();
+      const tempo7 = [];
+
+      // takes all images from wallOfDwich and splits them into array of 7 images
+      for (let i = 0; i < pages.data.length; i += 7) {
+        // loops every 7n elements
+        const tempoArray = pages.data.slice(i, i + 7);
+        tempo7.push(tempoArray);
+      }
+      setImages7by7(tempo7);
+    }, []);
+  };
+
+  useEffect(() => {
+    getContent();
+  }, []);
+
   return (
     <div className="gallery">
       <h1 className="gallery__h1">
         SAY <span className="gallery__h1__span">HELLO TO </span>
         <span className="gallery__h1__span2">MASTERPIECES</span>
       </h1>
-      {dwichs && (
+      {pages && (
         <div className="gallery__allGrid">
-          <Gallery
-            dwichs={[
-              dwichs[0],
-              dwichs[1],
-              dwichs[2],
-              dwichs[3],
-              dwichs[4],
-              dwichs[5],
-              dwichs[6],
-            ]}
-          />
-          <Gallery
-            dwichs={[
-              dwichs[0],
-              dwichs[1],
-              dwichs[2],
-              dwichs[3],
-              dwichs[4],
-              dwichs[5],
-              dwichs[6],
-            ]}
-          />
+          {images7by7 &&
+            images7by7.map((images7, index) => <Gallery page={images7} key={index} />)}
         </div>
       )}
     </div>

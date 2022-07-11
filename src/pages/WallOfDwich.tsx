@@ -6,8 +6,8 @@ import GalleryList from '../components/wallOfDwich/GalleryList';
 const WallOfDwich = () => {
   return (
     <div className="wallOfDwich">
-      <GalleryList />
-      <Footer className="footer" />
+      <GalleryList idPageType={3} />
+      <Footer className="footer__wallOfDwich" />
     </div>
   );
 };

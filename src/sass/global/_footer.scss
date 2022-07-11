@@ -1,3 +1,18 @@
+.footer__wallOfDwich {
+  color: $secondary;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  margin-right: 2rem;
+
+  @media only screen and (min-width: $breakpoint-smallest) {
+    font-size: 2.5vh;
+  }
+}
+
 .footer__burger {
   color: $secondary;
   display: flex;
@@ -5,6 +20,7 @@
   flex-direction: column;
   align-items: center;
   margin-top: 1rem;
+
   @media only screen and (min-width: $breakpoint-smallest) {
     font-size: 2.5vh;
   }
@@ -17,24 +33,29 @@
       flex-direction: column;
       margin-bottom: 1.5rem;
     }
+
     &__opening {
       &__openingdays {
         text-align: left;
         font-size: 0.5rem;
         margin-right: 2rem;
+
         @media only screen and (min-width: $breakpoint-smallest) {
           font-size: 1.7vh;
         }
       }
+
       &__openinghours {
         text-align: right;
         font-size: 0.5rem;
+
         @media only screen and (min-width: $breakpoint-smallest) {
           font-size: 1.7vh;
         }
       }
     }
   }
+
   &__instalogo {
     display: none;
   }
@@ -64,19 +85,6 @@
   }
 }
 
-<<<<<<< HEAD
-.footer__gallery {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  color: $secondary;
-  margin-right: 1rem;
-  transform: translateY(-15rem) translateX(-13rem);
-  z-index: 70;
-}
-
-=======
->>>>>>> 2679225931ea4eb11cb77fd3e8fe3aa7a3a18e1e
 .footer {
   width: 100vw;
   display: flex;
@@ -133,6 +141,7 @@
           align-items: center;
           margin-bottom: 1.6rem;
         }
+
         @media only screen and (min-width: 820px) and (max-width: 1025px) {
           flex-direction: column;
           align-items: center;
@@ -187,6 +196,7 @@
     flex-direction: column;
     width: 1.5rem;
     height: 1.5rem;
+
     &--instagram {
       margin-left: 0.5rem;
       color: $secondary;

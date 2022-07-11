@@ -1,24 +1,23 @@
 import React from 'react';
 
+import IPage from '../../interfaces/IPage';
+
 interface Dwich {
   id: number;
-  img: string;
+  page: IPage;
 }
 
-interface GalleryProps {
-  dwichs: Dwich[];
-}
-
-const Gallery = ({ dwichs }: GalleryProps) => {
+const Gallery = ({ page }: Dwich) => {
   return (
     <>
       <div className="gallery__allGrid">
         <div className="gallery__allGrid__container">
-          {dwichs &&
-            dwichs.map((dwich, index) => (
+          {page &&
+            page.map((dwich, index) => (
               <div
-                className={`gallery__allGrid__container__div gallery__allGrid__container__div--${(index % 7) + 1
-                  }`}
+                className={`gallery__allGrid__container__div gallery__allGrid__container__div--${
+                  (index % 7) + 1
+                }`}
                 key={index}>
                 <div>
                   <h2>Chef Etchebest</h2>

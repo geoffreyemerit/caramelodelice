@@ -83,6 +83,46 @@ const dwich = [
     id: 21,
     img: '/assets/images/wallOfDwich/wallOfDwich2.jpeg',
   },
+  {
+    id: 22,
+    img: '/assets/images/dealers/fermeUrt.jpeg',
+  },
+  {
+    id: 23,
+    img: '/assets/images/dealers/drinks.jpeg',
+  },
+  {
+    id: 24,
+    img: '/assets/images/wallOfDwich/wallOfDwich2.jpeg',
+  },
+  {
+    id: 25,
+    img: '/assets/images/wallOfDwich/wallOfDwich1.jpeg',
+  },
+  {
+    id: 26,
+    img: '/assets/images/dealers/cheeseBg.jpeg',
+  },
+  {
+    id: 27,
+    img: '/assets/images/dealers/orangerie.jpeg',
+  },
+  {
+    id: 28,
+    img: '/assets/images/dealers/onaGaria.png',
+  },
+  {
+    id: 29,
+    img: '/assets/images/dealers/fermeUrt.jpeg',
+  },
+  {
+    id: 30,
+    img: '/assets/images/dealers/drinks.jpeg',
+  },
+  {
+    id: 31,
+    img: '/assets/images/wallOfDwich/wallOfDwich2.jpeg',
+  },
 ];
 
 export default dwich;
