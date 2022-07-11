@@ -42,13 +42,15 @@ const Footer = ({ className }: FooterProps) => {
         <div className="footer__info__sup">
           <div className={`${className}__info__sup__address`}>
             <span className={`${className}__info__sup__address__street`}>
-              {address?.address}
+              {address?.address.toUpperCase()}
             </span>
             <span className="footer__info__sup__address__zipcode">
               {address?.zipCode}
             </span>
 
-            <span className="footer__info__sup__address__city">{address?.city}</span>
+            <span className="footer__info__sup__address__city">
+              {address?.city.toUpperCase()}
+            </span>
           </div>
           <div className="footer__info__sup__opening">
             <div className={`${className}__info__sup__opening__openingdays`}>

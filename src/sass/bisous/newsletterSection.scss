@@ -33,20 +33,52 @@
   &__form__group {
     display: flex;
     padding: 15px 0 0;
-    width: 50%;
+    width: 100%;
+
+    &__buttonNewsletter {
+      cursor: pointer;
+      background: transparent;
+      font-family: 'Made-Medium';
+      width: 80%;
+      color: $secondary;
+      border-color: $secondary;
+      border: 1;
+      margin-left: 1rem;
+      font-size: 1.3rem;
+      padding: 7px 0;
+    }
   }
 
-  &__form__field {
+  &__form__field1 {
+    font-family: 'Made-Medium';
+    width: 80%;
+    border: 0;
+    border-bottom: 2px solid grey;
+    outline: 0;
+    font-size: 1.3rem;
+    color: $secondary;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+    margin-right: 1rem;
+
+    &::placeholder {
+      color: grey;
+    }
+  }
+
+  &__form__field2 {
     font-family: 'Made-Medium';
     width: 100%;
     border: 0;
     border-bottom: 2px solid grey;
     outline: 0;
     font-size: 1.3rem;
-    color: white;
+    color: $secondary;
     padding: 7px 0;
     background: transparent;
     transition: border-color 0.2s;
+    margin-right: 1rem;
 
     &::placeholder {
       color: grey;
