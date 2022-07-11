@@ -25,7 +25,7 @@ const GalleryList = ({ idPageType }: WallOfDwichProps) => {
     const pages = await axios.get<IPage[]>(
       `http://localhost:3000/api/pageTypes/${pageType.data.id}/pages`,
     );
-    console.log(pages);
+    console.log(pages.data);
     setPages(pages.data);
 
     // AU CHARGEMENT DU COMPOSANT, J'EXÉCUTE LA FONCTION GETCONTENT
@@ -39,6 +39,7 @@ const GalleryList = ({ idPageType }: WallOfDwichProps) => {
         const tempoArray = pages.data.slice(i, i + 7);
         tempo7.push(tempoArray);
       }
+      console.log(tempo7)
       setImages7by7(tempo7);
     }, []);
   };
@@ -56,7 +57,7 @@ const GalleryList = ({ idPageType }: WallOfDwichProps) => {
       {pages && (
         <div className="gallery__allGrid">
           {images7by7 &&
-            images7by7.map((images7, index) => <Gallery page={images7} key={index} />)}
+            images7by7.map((images7, index) => <Gallery data={images7} id={index} key={index} />)}
         </div>
       )}
     </div>
