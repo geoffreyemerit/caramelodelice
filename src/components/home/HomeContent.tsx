@@ -2,9 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
 import IPage from '../../interfaces/IPage';
-
 import IconSvg from '../global/IconSvg';
-
 import Navbar from '../global/Navbar';
 
 interface HomeContentProps {
@@ -17,7 +15,7 @@ const HomeContent = ({ id }: HomeContentProps) => {
 
   // APPEL API AXIOS
   const getContent = async () => {
-    const url: string = `http://localhost:3000/api/pages/${id}`;
+    const url: string = `${import.meta.env.VITE_API_URL}/api/pages/${id}`;
     const { data } = await axios.get<IPage>(url);
     setContent(data);
   };
@@ -31,7 +29,7 @@ const HomeContent = ({ id }: HomeContentProps) => {
     <>
       <div className="homeContent">
         <IconSvg myStyle="homeContent__iconCS" icon="logos-club-sandwich-logo" />
-        <div className="homeContent__subTitle">{content?.subTitle.toUpperCase()}</div>
+        <div className="homeContent__subTitle">{content?.subTitle?.toUpperCase}</div>
         <div className="homeContent__title">
           CLUB <br /> SANDWICH.
         </div>
@@ -41,7 +39,6 @@ const HomeContent = ({ id }: HomeContentProps) => {
       <Navbar className="homeContent__navbar" />
       <div className="homeContent__description">
         <div className="homeContent__description__club">{content?.description}</div>
-
       </div>
     </>
   );

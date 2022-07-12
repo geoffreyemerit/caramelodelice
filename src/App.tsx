@@ -37,7 +37,7 @@ const App = () => {
   const [content, setContent] = useState<IPage>();
 
   const getContent = async () => {
-    const url: string = `http://localhost:3000/api/pages/41`;
+    const url: string = `${import.meta.env.VITE_API_URL}/api/pages/41`;
     const { data } = await axios.get<IPage>(url);
     setContent(data);
   };

@@ -11,7 +11,7 @@ const ShoppingList = () => {
   // APPEL API AXIOS
   const getContent = async () => {
     //APPEL PROMESSE DE NEWSPAGE AXIOS.GET DE L'INTERFACE DE L'URL
-    const items = await axios.get<IItem[]>(`http://localhost:3000/api/items`);
+    const items = await axios.get<IItem[]>(`${import.meta.env.VITE_API_URL}/api/items`);
 
     // JE FAIS APPEL A MON USESTATE ET A SA DATA GRACE AU SET
     setItems(items.data);

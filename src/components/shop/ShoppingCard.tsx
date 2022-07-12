@@ -19,7 +19,9 @@ const ShoppingCard = ({ id }: ShoppingCardProps) => {
   // APPEL API AXIOS
   const getContent = async () => {
     //APPEL PROMESSE DE NEWSPAGE AXIOS.GET DE L'INTERFACE DE L'URL
-    const itemsPage = await axios.get<IItem>(`http://localhost:3000/api/items/${id}`);
+    const itemsPage = await axios.get<IItem>(
+      `${import.meta.env.VITE_API_URL}/api/items/${id}`,
+    );
 
     // JE FAIS APPEL A MON USESTATE ET A SA DATA GRACE AU SET
     setItem(itemsPage.data);

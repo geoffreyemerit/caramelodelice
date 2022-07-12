@@ -2,9 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
-
-import IPageTypes from '../../interfaces/IPageType';
-
+import IPageType from '../../interfaces/IPageType';
 import Footer from './Footer';
 import IconSvg from './IconSvg';
 
@@ -20,7 +18,9 @@ const Navbar = ({ className }: NavbarProps) => {
   // APPEL API AXIOS
   const getContent = async () => {
     //APPEL PROMESSE DE NEWSPAGE AXIOS.GET DE L'INTERFACE DE L'URL
-    const pageTypes = await axios.get<IPageType[]>(`http://localhost:3000/api/pageTypes`);
+    const pageTypes = await axios.get<IPageType[]>(
+      `${import.meta.env.VITE_API_URL}/api/pageTypes`,
+    );
 
     // JE FAIS APPEL A MON USESTATE ET A SA DATA GRACE AU SET
     setPageTypes(pageTypes.data);
@@ -36,7 +36,6 @@ const Navbar = ({ className }: NavbarProps) => {
       {/* :DESKTOP MENU */}
 
       <nav className={`${className}__desktop`}>
-
         {pageTypes &&
           pageTypes.map((pageType) => (
             <NavLink
@@ -45,10 +44,8 @@ const Navbar = ({ className }: NavbarProps) => {
               // }
               className={(navData) =>
                 navData.isActive
-
                   ? `${className}__desktop__link ${className}__desktop__link--active`
                   : `${className}__desktop__link`
-
               }
               key={pageType.path}
               to={pageType.path}>

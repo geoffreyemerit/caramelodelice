@@ -19,12 +19,12 @@ const GalleryList = ({ idPageType }: WallOfDwichProps) => {
     // APPEL API AXIOS
     const getContent = async () => {
       const pageType = await axios.get<IPageType>(
-        `http://localhost:3000/api/pageTypes/${idPageType}`,
+        `${import.meta.env.VITE_API_URL}/api/pageTypes/${idPageType}`,
       );
 
       //APPEL PROMESSE DE PAGE AXIOS.GET DE L'INTERFACE DE L'URL
       const { data } = await axios.get<IPage[]>(
-        `http://localhost:3000/api/pageTypes/${pageType.data.id}/pages`,
+        `${import.meta.env.VITE_API_URL}/api/pageTypes/${pageType.data.id}/pages`,
       );
 
       const tempo7 = [];
