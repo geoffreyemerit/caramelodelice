@@ -13,7 +13,7 @@
   }
 
   &__content {
-    font-family: 'Made-bold';
+    font-family: 'Made-Bold';
     color: $secondary;
 
     &__title1 {
@@ -27,26 +27,54 @@
     &__title2 {
       font-size: 3.5rem;
       line-height: 3.5rem;
-      @media only screen and (min-width: $breakpoint-largest) and (max-width: $breakpoint-extralarge) {
-        font-size: 3rem;
-        line-height: 3rem;
-      }
-    }
-    &__title3 {
-      font-size: 3.5rem;
-      line-height: 3.5rem;
-      color: $tertiary;
       margin-bottom: 1rem;
+
+      @media only screen and (max-width: $breakpoint-small) {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+      }
+      @media only screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-medium) {
+        font-size: 2.8rem;
+        line-height: 2.8rem;
+      }
+
       @media only screen and (min-width: $breakpoint-largest) and (max-width: $breakpoint-extralarge) {
-        font-size: 3rem;
-        line-height: 3rem;
+        font-size: 3.4rem;
+        line-height: 3.4rem;
       }
     }
+    // &__title3 {
+    //   font-size: 3.5rem;
+    //   line-height: 3.5rem;
+    //   color: $tertiary;
+    //   margin-bottom: 1rem;
+    //   @media only screen and (min-width: $breakpoint-largest) and (max-width: $breakpoint-extralarge) {
+    //     font-size: 3rem;
+    //     line-height: 3rem;
+    //   }
+    // }
+
     &__text1 {
-      margin-bottom: 1rem;
+      font-family: 'Made-Bold';
+      margin-bottom: 2rem;
+      line-height: 1.5rem;
+      @media only screen and (max-width: $breakpoint-small) {
+        line-height: 1.3rem;
+      }
+      @media only screen and (min-width: $breakpoint-extralarge) {
+        line-height: 1.3rem;
+      }
     }
     &__text2 {
+      font-family: 'Made-Bold';
       margin-bottom: 2rem;
+      line-height: 1.7rem;
+      @media only screen and (max-width: $breakpoint-small) {
+        line-height: 1.3rem;
+      }
+      @media only screen and (min-width: $breakpoint-extralarge) {
+        line-height: 1.3rem;
+      }
     }
   }
 
@@ -70,6 +98,9 @@
       margin-left: 1rem;
       font-size: 1.2rem;
       padding: 8px 0;
+      &:hover {
+        color: $tertiary;
+      }
 
       @media only screen and (max-width: $breakpoint-small) {
         width: 50%;
