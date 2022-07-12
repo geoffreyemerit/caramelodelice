@@ -244,6 +244,7 @@
       }
       //Bouton retour pour fermer modale sur mobile/tablette
       &__button--mobile {
+        cursor: pointer;
         display: flex;
         align-self: center;
         justify-content: center;
