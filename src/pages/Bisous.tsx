@@ -7,7 +7,7 @@ const Bisous = () => {
   return (
     <div className="newsletter">
       <Newsletter />
-      <Footer className="footer__absolute" />
+      <Footer className="footer" />
     </div>
   );
 };

@@ -1,8 +1,16 @@
 .newsletterSection {
-  height: 50vh;
   width: 60vw;
+  height: 100vh;
   margin-top: 6rem;
   margin-right: 4rem;
+  @media only screen and (max-width: $breakpoint-largest) {
+    width: 75vw;
+  }
+  @media only screen and (min-width: $breakpoint-largest) and (max-width: $breakpoint-extralarge) {
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    width: 59vw;
+  }
 
   &__content {
     font-family: 'Made-bold';
@@ -11,19 +19,31 @@
     &__title1 {
       font-size: 1.5rem;
       line-height: 1.5rem;
+      @media only screen and (min-width: $breakpoint-largest) and (max-width: $breakpoint-extralarge) {
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+      }
     }
     &__title2 {
       font-size: 3.5rem;
       line-height: 3.5rem;
+      @media only screen and (min-width: $breakpoint-largest) and (max-width: $breakpoint-extralarge) {
+        font-size: 3rem;
+        line-height: 3rem;
+      }
     }
     &__title3 {
       font-size: 3.5rem;
       line-height: 3.5rem;
       color: $tertiary;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
+      @media only screen and (min-width: $breakpoint-largest) and (max-width: $breakpoint-extralarge) {
+        font-size: 3rem;
+        line-height: 3rem;
+      }
     }
     &__text1 {
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
     }
     &__text2 {
       margin-bottom: 2rem;
@@ -32,26 +52,35 @@
 
   &__form__group {
     display: flex;
-    padding: 15px 0 0;
     width: 100%;
+
+    @media only screen and (max-width: $breakpoint-small) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
     &__buttonNewsletter {
       cursor: pointer;
       background: transparent;
       font-family: 'Made-Medium';
-      width: 80%;
+      width: 60%;
       color: $secondary;
       border-color: $secondary;
       border: 1;
       margin-left: 1rem;
-      font-size: 1.3rem;
-      padding: 7px 0;
+      font-size: 1.2rem;
+      padding: 8px 0;
+
+      @media only screen and (max-width: $breakpoint-small) {
+        width: 50%;
+        margin-top: 1rem;
+      }
     }
   }
 
-  &__form__field1 {
+  &__form__field {
     font-family: 'Made-Medium';
-    width: 80%;
+    width: 90%;
     border: 0;
     border-bottom: 2px solid grey;
     outline: 0;
@@ -62,23 +91,9 @@
     transition: border-color 0.2s;
     margin-right: 1rem;
 
-    &::placeholder {
-      color: grey;
+    @media only screen and (max-width: $breakpoint-small) {
+      width: 100%;
     }
-  }
-
-  &__form__field2 {
-    font-family: 'Made-Medium';
-    width: 100%;
-    border: 0;
-    border-bottom: 2px solid grey;
-    outline: 0;
-    font-size: 1.3rem;
-    color: $secondary;
-    padding: 7px 0;
-    background: transparent;
-    transition: border-color 0.2s;
-    margin-right: 1rem;
 
     &::placeholder {
       color: grey;
