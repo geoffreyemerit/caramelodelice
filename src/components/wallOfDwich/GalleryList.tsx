@@ -10,43 +10,43 @@ interface WallOfDwichProps {
 }
 
 const GalleryList = ({ idPageType }: WallOfDwichProps) => {
-  const [pages, setPages] = useState<IPage[]>();
   const [images7by7, setImages7by7] = useState<IPage[][]>();
 
   // todo : add wallofdwich axios here and splits after
 
-  // APPEL API AXIOS
-  const getContent = async () => {
-    const pageType = await axios.get<IPageType>(
-      `http://localhost:3000/api/pageTypes/${idPageType}`,
-    );
 
-    //APPEL PROMESSE DE pageType AXIOS.GET DE L'INTERFACE DE L'URL
-    const pages = await axios.get<IPage[]>(
-      `http://localhost:3000/api/pageTypes/${pageType.data.id}/pages`,
-    );
 
-    setPages(pages.data);
-    console.log(pages.data);
+  // AU CHARGEMENT DU COMPOSANT, J'EXÉCUTE LA FONCTION GETCONTENT
+  useEffect(() => {
 
-    // AU CHARGEMENT DU COMPOSANT, J'EXÉCUTE LA FONCTION GETCONTENT
-    useEffect(() => {
-      getContent();
+
+    // APPEL API AXIOS
+    const getContent = async () => {
+      const pageType = await axios.get<IPageType>(
+        `http://localhost:3000/api/pageTypes/${idPageType}`,
+      );
+
+      //APPEL PROMESSE DE PAGE AXIOS.GET DE L'INTERFACE DE L'URL
+      const { data } = await axios.get<IPage[]>(
+        `http://localhost:3000/api/pageTypes/${pageType.data.id}/pages`);
+
       const tempo7 = [];
 
       // takes all images from wallOfDwich and splits them into array of 7 images
-      for (let i = 0; i < pages.data.length; i += 7) {
+      for (let i = 0; i < data.sort((a, b) => b.id - a.id).length; i += 7) {
         // loops every 7n elements
-        const tempoArray = pages.data.slice(i, i + 7);
+        const tempoArray = data.sort((a, b) => b.id - a.id).slice(i, i + 7);
         tempo7.push(tempoArray);
+        console.log(tempoArray);
       }
-      console.log(tempo7);
-      setImages7by7(tempo7);
-    }, []);
-  };
 
-  useEffect(() => {
-    getContent();
+      setImages7by7(tempo7);
+
+
+      console.log(images7by7);
+
+    }
+    getContent()
   }, []);
 
   return (
@@ -55,14 +55,12 @@ const GalleryList = ({ idPageType }: WallOfDwichProps) => {
         SAY <span className="gallery__h1__span">HELLO TO </span>
         <span className="gallery__h1__span2">MASTERPIECES</span>
       </h1>
-      {pages && (
-        <div className="gallery__allGrid">
-          {images7by7 &&
-            images7by7.map((images7, index) => (
-              <Gallery data={images7} id={index} key={index} />
-            ))}
-        </div>
-      )}
+      <div className="gallery__allGrid">
+        {images7by7 &&
+          images7by7.map((images7, index) => (
+            <Gallery data={images7} key={index} />
+          ))}
+      </div>
     </div>
   );
 };
