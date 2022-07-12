@@ -1,18 +1,11 @@
-// $breakpoint-huge: 1824px;
-// $breakpoint-extralarge: 1224px;
-// $breakpoint-largest: 1024px;
-// $breakpoint-medium: 768px;
-// $breakpoint-small: 480px;
-// $breakpoint-smallest: 320px;
 
-.nav__container {
+// NAVBAR CLASSIQUE
+.navbar {
   width: 100vw;
   min-height: 10vh;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  position: absolute;
-
   @media only screen and (min-width: $breakpoint-largest) {
     display: flex;
     justify-content: flex-start;
@@ -20,235 +13,443 @@
     height: 0;
     min-height: 0;
   }
-}
-
-.navbar {
-  flex-direction: column;
-  font-family: 'Made-Bold';
-  justify-content: space-around;
-  text-decoration: none;
-  margin-top: 2rem;
-  z-index: 50;
-
-  @media only screen and (max-width: $breakpoint-medium) {
-    justify-content: center;
-  }
-
-  @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
-    display: none;
-  }
-
-  @media only screen and (min-width: $breakpoint-largest) and (max-width: $breakpoint-extralarge) {
-    height: 20rem;
-    display: flex;
-    position: fixed;
-    top: 25%;
-    transform: translateX(5rem);
-  }
-
-  @media only screen and (min-width: $breakpoint-extralarge) {
-    height: 20rem;
-    display: flex;
-    position: fixed;
-    top: 20%;
-    transform: translateX(5rem);
-  }
-
-  &__link {
-    display: flex;
-    justify-content: center;
-    font-size: 1.3rem;
+  &__desktop {
+    flex-direction: column;
+    font-family: 'Made-Bold';
+    justify-content: space-around;
     text-decoration: none;
-    cursor: pointer;
-    color: $secondary;
-    padding-bottom: 0.3rem;
-    background-repeat: repeat-x;
-
-    @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-small) {
-      font-size: 2.4rem;
-      margin: 0.4rem;
+    margin-top: 2rem;
+    z-index: 50;
+    @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-largest) {
+      display: none;
     }
-
-    @media only screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-largest) {
-      align-self: flex-start;
-      margin-left: 8rem;
-      font-size: 2rem;
-    }
-
     @media only screen and (min-width: $breakpoint-largest) and (max-width: $breakpoint-extralarge) {
-      align-self: flex-start;
-      margin-left: 8rem;
-      font-size: 1.9rem;
+      height: 20rem;
+      display: flex;
+      position: fixed;
+      top: 25%;
     }
-
     @media only screen and (min-width: $breakpoint-extralarge) {
-      align-self: flex-start;
-      margin-left: 8rem;
-      font-size: 1.8rem;
+      height: 20rem;
+      display: flex;
+      position: fixed;
+      top: 20%;
+      transform: translateX(2rem);
     }
 
-    &:hover,
-    &--active {
-      background-image: url('../../../public/assets/wave.svg');
-      background-position: 0 1.2em;
-      background-size: 4rem 10px;
-      align-self: center;
-      z-index: 999;
-      color: $tertiary;
+    &__link {
+      display: flex;
+      justify-content: center;
+      font-size: 1.3rem;
+      text-decoration: none;
+      cursor: pointer;
+      color: $secondary;
+      padding-bottom: 0.3rem;
+      background-repeat: repeat-x;
 
-      @media only screen and (min-width: 320px) and (max-width: 480px) {
-        align-self: center;
+      @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-small) {
+        font-size: 2.4rem;
+        margin: 0.4rem;
       }
 
-      @media only screen and (min-width: 481px) and (max-width: 820px) {
-        align-self: center;
-      }
-
-      @media only screen and (min-width: 821px) and (max-width: 1024px) {
+      @media only screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-largest) {
         align-self: flex-start;
-        background: linear-gradient(
-          180deg,
-          rgb(28 28 28/ 20%) 0%,
-          rgb(25 25 25/ 70%) 100%
-        );
+        margin-left: 8rem;
+        font-size: 2rem;
       }
 
-      @media only screen and (min-width: 1025px) and (max-width: 1224px) {
+      @media only screen and (min-width: $breakpoint-largest) and (max-width: $breakpoint-extralarge) {
         align-self: flex-start;
+        margin-left: 8rem;
+        font-size: 1.9rem;
       }
 
-      @media only screen and (min-width: 1225px) and (max-width: 1824px) {
+      @media only screen and (min-width: $breakpoint-extralarge) {
         align-self: flex-start;
+        margin-left: 8rem;
+        font-size: 1.8rem;
+      }
+
+      &:hover,
+      &--active {
+        background-image: url('../../../public/assets/wave.svg');
+        background-position: 0 1.2em;
+        background-size: 4rem 10px;
+        align-self: flex-start;
+        z-index: 999;
+        color: $tertiary;
       }
     }
   }
-}
 
-//MENU BURGER CONTAINER
-.hamburger {
-  display: flex;
-  overflow: scroll;
-  flex-direction: column;
-  height: 100vh;
-  width: 100vw;
-  background-color: $primary;
-  z-index: 200;
-  position: fixed;
-  top: 0%;
-  left: 0%;
-  @media only screen and (min-width: $breakpoint-largest) {
-    display: none;
-  }
-  //MENU BURGER PARTIE HAUTE
-  &__up {
+  //MENU BURGER CONTAINER
+  &__mobile {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background-color: $secondary;
-    height: 75vh;
+    height: 100vh;
     width: 100vw;
-    border-radius: 0 0 70px 0;
-    &__icon {
-      width: 2rem;
-      height: 2rem;
-      transition: 0.2s ease-in-out;
-      cursor: pointer;
-      @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-largest) {
-        width: 3rem;
-        height: 3rem;
-      }
-      @media only screen and (min-width: $breakpoint-largest) {
-        display: none;
-      }
-      &--logo {
-        width: 5.5rem;
-        height: 5.5rem;
-        color: $primary;
-        margin-top: 2rem;
-        @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-medium) {
-          width: 30vw;
-          height: 30vh;
-          min-height: 100px;
-          max-height: 120px;
-          margin-top: 3rem;
-        }
-        @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
-          width: 19vw;
-          height: 19vh;
-          min-height: 120px;
-          max-height: 170px;
-        }
-      }
+    background-color: $primary;
+    z-index: 200;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    @media only screen and (min-width: $breakpoint-largest) {
+      display: none;
     }
-    &__nav {
-      overflow: auto;
-      width: 100%;
-      height: 100%;
+    //MENU BURGER PARTIE HAUTE
+    &__up {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      &--link {
-        display: flex;
-        font-family: 'Made-Bold';
-        justify-content: center;
-        font-size: 1.5rem;
-        padding: 0.1rem;
-        text-decoration: none;
+      align-items: center;
+      background-color: $secondary;
+      height: 75vh;
+      width: 100vw;
+      border-radius: 0 0 70px 0;
+      &__icon {
+        width: 2rem;
+        height: 2rem;
+        transition: 0.2s ease-in-out;
         cursor: pointer;
+        @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-largest) {
+          width: 3rem;
+          height: 3rem;
+        }
+        @media only screen and (min-width: $breakpoint-largest) {
+          display: none;
+        }
+        &--cs {
+          width: 5.5rem;
+          height: 5.5rem;
+          color: $primary;
+          margin-top: 2rem;
+          @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-medium) {
+            width: 30vw;
+            height: 30vh;
+            min-height: 100px;
+            max-height: 120px;
+            margin-top: 3rem;
+          }
+          @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
+            width: 19vw;
+            height: 19vh;
+            min-height: 120px;
+            max-height: 170px;
+          }
+        }
+      }
+      &__nav {
+        overflow: auto;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        &--link {
+          display: flex;
+          font-family: 'Made-Bold';
+          justify-content: center;
+          font-size: 1.5rem;
+          padding: 0.1rem;
+          text-decoration: none;
+          cursor: pointer;
+          color: $primary;
+          text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
+          @media only screen and (min-width: $breakpoint-smallest) {
+            font-size: 3.5vh;
+          }
+        }
+      }
+      &--text {
+        font-size: 1.4rem;
+        font-family: 'Made-Medium';
+        text-transform: uppercase;
         color: $primary;
-        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
         @media only screen and (min-width: $breakpoint-smallest) {
           font-size: 3.5vh;
         }
       }
     }
-    &--text {
-      font-size: 1.4rem;
-      font-family: 'Made-Medium';
-      text-transform: uppercase;
-      color: $primary;
+    //MENU BURGER PARTIE BASSE
+    &__down {
       display: flex;
-      justify-content: center;
-      align-items: flex-end;
-
-      @media only screen and (min-width: $breakpoint-smallest) {
-        font-size: 3.5vh;
-      }
-    }
-  }
-  //MENU BURGER PARTIE BASSE
-  &__down {
-    display: flex;
-    z-index: 2000;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    height: 25vh;
-    width: 100vw;
-    background-color: $primary;
-    &--text {
-      font-size: 1.6rem;
-      font-family: 'Made-Medium';
-      text-transform: uppercase;
-      color: $secondary;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      @media only screen and (min-width: $breakpoint-smallest) {
-        font-size: 3.5vh;
+      z-index: 2000;
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
+      height: 25vh;
+      width: 100vw;
+      background-color: $primary;
+      &--text {
+        font-size: 1.6rem;
+        font-family: 'Made-Medium';
+        text-transform: uppercase;
+        color: $secondary;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        @media only screen and (min-width: $breakpoint-smallest) {
+          font-size: 3.5vh;
+        }
       }
     }
   }
 }
-
-.button--burger {
+.navbar__button--burger {
   color: $secondary;
   margin: 0.5rem;
   position: fixed;
+  z-index: 2010;
 }
-.button--cross {
+.navbar__button--cross {
   position: fixed;
   color: $primary;
   z-index: 201;
   margin: 0.5rem;
+}
+
+//-----------------------------------------//
+/// NAVBAR PARTICULIERE POUR LA PAGE HOME ///
+//-----------------------------------------//
+
+.homeContent__navbar {
+  &__button {
+    &--burger {
+      width: 4rem;
+      height: 4rem;
+      color: $secondary;
+      position: fixed;
+      top: 2%;
+      left: 94%;
+    }
+    &--cross {
+      width: 4rem;
+      height: 4rem;
+      color: $primary;
+      position: fixed;
+      z-index: 2000;
+      top: 2%;
+      left: 94%;
+    }
+  }
+  &__desktop {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Made-Bold';
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    z-index: 50;
+    @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
+      display: none;
+    }
+    @media only screen and (min-width: $breakpoint-largest) and (max-width: $breakpoint-extralarge) {
+      height: 20rem;
+      display: flex;
+      position: fixed;
+      justify-content: space-around;
+      top: 25%;
+    }
+    @media only screen and (min-width: $breakpoint-extralarge) {
+      height: 18rem;
+      display: flex;
+      position: fixed;
+      justify-content: space-around;
+      margin-top: 2rem;
+      top: 23%;
+    }
+    &__link {
+      display: flex;
+      justify-content: center;
+      font-size: 1.5rem;
+      text-decoration: none;
+      cursor: pointer;
+      color: $secondary;
+      background-repeat: repeat-x;
+      @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-largest) {
+        font-size: 3.5vh;
+
+      }
+
+      @media only screen and (min-width: $breakpoint-largest) and (max-width: $breakpoint-extralarge) {
+        align-self: flex-start;
+        margin-left: 8rem;
+        font-size: 1.9rem;
+        padding-bottom: 0.3rem;
+      }
+
+      @media only screen and (min-width: $breakpoint-extralarge) {
+        align-self: flex-start;
+        margin-left: 8rem;
+        font-size: 1.6rem;
+        padding-bottom: 0.3rem;
+      }
+      &:hover,
+      &--active {
+        background-image: url('../../../public/assets/wave.svg');
+        background-position: 0 1.2em;
+        background-size: 4rem 10px;
+        z-index: 999;
+        color: $tertiary;
+      }
+
+    }
+  }
+
+  &__mobile {
+    display: none;
+    @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      width: 100vw;
+      background-color: $primary;
+      z-index: 200;
+      position: fixed;
+      top: 0%;
+      left: 0%;
+    }
+    &__up {
+      display: none;
+      @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $secondary;
+        height: 75vh;
+        width: 100vw;
+        border-radius: 0 0 70px 0;
+      }
+      &__icon {
+        display: none;
+        @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
+          display: initial;
+          transition: 0.2s ease-in-out;
+          cursor: pointer;
+          width: 3rem;
+          height: 3rem;
+        }
+        &--cs {
+          @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
+            margin-top: 2rem;
+            width: 19vw;
+            height: 19vh;
+            min-height: 120px;
+            max-height: 170px;
+          }
+        }
+      }
+      &__nav {
+        display: none;
+        @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
+          overflow: auto;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+        &--link {
+          display: none;
+          @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
+            display: flex;
+            font-family: 'Made-Bold';
+            justify-content: center;
+            font-size: 3.5vh;
+            padding: 0.1rem;
+            text-decoration: none;
+            cursor: pointer;
+            color: $primary;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
+          }
+        }
+      }
+      &--text {
+        display: none;
+        @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
+          font-size: 3.5vh;
+          font-family: 'Made-Medium';
+          text-transform: uppercase;
+          color: $primary;
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
+        }
+      }
+    }
+    &__down {
+      display: none;
+      @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
+        display: flex;
+        z-index: 2000;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        height: 25vh;
+        width: 100vw;
+        background-color: $primary;
+      }
+      &--text {
+        display: none;
+        @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
+          font-size: 3.5vh;
+          font-family: 'Made-Medium';
+          text-transform: uppercase;
+          color: $secondary;
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+        }
+      }
+      &__footer__burger {
+        display: none;
+        @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
+          color: $secondary;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+          text-transform: uppercase;
+          margin-top: 1rem;
+          font-size: 2.5vh;
+        }
+        &__info__sup {
+          &__address {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 1.5rem;
+            &__bis {
+              display: flex;
+            }
+          }
+          &__opening {
+            &__openingdays {
+              text-align: left;
+              font-size: 0.5rem;
+              margin-right: 2rem;
+              @media only screen and (min-width: $breakpoint-smallest) {
+                font-size: 1.7vh;
+              }
+            }
+            &__openinghours {
+              text-align: right;
+              font-size: 0.5rem;
+              @media only screen and (min-width: $breakpoint-smallest) {
+                font-size: 1.7vh;
+              }
+            }
+          }
+        }
+        &__instalogo {
+          display: none;
+        }
+      }
+    }
+  }
 }

@@ -6,7 +6,6 @@ import React, { useEffect, useState } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 
 import IPage from '../src/interfaces/IPage';
-// import Footer from './components/global/Footer';
 import Loader from './components/global/Loader';
 import Logo from './components/global/Logo';
 import Navbar from './components/global/Navbar';
@@ -73,8 +72,9 @@ const App = () => {
       }>
       <Sound />
       <Logo />
-      {/* {!homePage && <Navbar />}  */}
-      <Navbar className="navbar" />
+
+      {!homePage && <Navbar className="navbar" />}
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/news" element={<News />} />
@@ -86,7 +86,6 @@ const App = () => {
         <Route path="/bisous" element={<Bisous />} />
         <Route path="*" element={<Home />} />
       </Routes>
-      {/* <Footer /> */}
     </div>
   );
 };

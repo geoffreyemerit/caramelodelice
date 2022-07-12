@@ -2,6 +2,9 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
 import IPage from '../../interfaces/IPage';
+
+import IconSvg from '../global/IconSvg';
+
 import Navbar from '../global/Navbar';
 
 interface HomeContentProps {
@@ -27,14 +30,18 @@ const HomeContent = ({ id }: HomeContentProps) => {
   return (
     <>
       <div className="homeContent">
+        <IconSvg myStyle="homeContent__iconCS" icon="logos-club-sandwich-logo" />
         <div className="homeContent__subTitle">{content?.subTitle.toUpperCase()}</div>
         <div className="homeContent__title">
           CLUB <br /> SANDWICH.
         </div>
+        <div className="homeContent__title__mobile">THE CLUB.</div>
       </div>
-      <div className="home__description">
-        <Navbar className="navbar__home" />
-        <div className="home__description__club">{content?.description}</div>
+
+      <Navbar className="homeContent__navbar" />
+      <div className="homeContent__description">
+        <div className="homeContent__description__club">{content?.description}</div>
+
       </div>
     </>
   );
