@@ -30,7 +30,7 @@ const Navbar = ({ className }: NavbarProps) => {
   useEffect(() => {
     getContent();
   }, []);
-  console.log(className);
+
   return (
     <header className={className}>
       {/* :DESKTOP MENU */}
