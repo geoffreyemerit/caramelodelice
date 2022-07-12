@@ -11,11 +11,7 @@ interface InfosContentProps {
   idTypeMusic: number;
 }
 
-const InfosContent = ({
-  idPage,
-  idTypeKitchen,
-  idTypeMusic
-}: InfosContentProps) => {
+const InfosContent = ({ idPage, idTypeKitchen, idTypeMusic }: InfosContentProps) => {
   // JE CRÉE UN USESTATE AFIN DE STOCKER LA DATA ISSU DE L'APPEL AXIOS
   const [page, setPage] = useState<IPage>();
   const [typeKitchen, seTypeKitchen] = useState<INewsType>();
