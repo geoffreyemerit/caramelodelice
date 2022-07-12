@@ -14,12 +14,8 @@ const GalleryList = ({ idPageType }: WallOfDwichProps) => {
 
   // todo : add wallofdwich axios here and splits after
 
-
-
   // AU CHARGEMENT DU COMPOSANT, J'EXÉCUTE LA FONCTION GETCONTENT
   useEffect(() => {
-
-
     // APPEL API AXIOS
     const getContent = async () => {
       const pageType = await axios.get<IPageType>(
@@ -28,7 +24,8 @@ const GalleryList = ({ idPageType }: WallOfDwichProps) => {
 
       //APPEL PROMESSE DE PAGE AXIOS.GET DE L'INTERFACE DE L'URL
       const { data } = await axios.get<IPage[]>(
-        `http://localhost:3000/api/pageTypes/${pageType.data.id}/pages`);
+        `http://localhost:3000/api/pageTypes/${pageType.data.id}/pages`,
+      );
 
       const tempo7 = [];
 
@@ -42,11 +39,9 @@ const GalleryList = ({ idPageType }: WallOfDwichProps) => {
 
       setImages7by7(tempo7);
 
-
       console.log(images7by7);
-
-    }
-    getContent()
+    };
+    getContent();
   }, []);
 
   return (
@@ -57,9 +52,7 @@ const GalleryList = ({ idPageType }: WallOfDwichProps) => {
       </h1>
       <div className="gallery__allGrid">
         {images7by7 &&
-          images7by7.map((images7, index) => (
-            <Gallery data={images7} key={index} />
-          ))}
+          images7by7.map((images7, index) => <Gallery data={images7} key={index} />)}
       </div>
     </div>
   );

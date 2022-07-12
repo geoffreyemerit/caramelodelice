@@ -14,14 +14,13 @@ const Gallery = ({ data }: GalleryProps) => {
           {data &&
             data.sort().map((image, index) => (
               <div
-                className={`gallery__allGrid__container__div gallery__allGrid__container__div--${(index % 7) + 1
-                  }`}
+                className={`gallery__allGrid__container__div gallery__allGrid__container__div--${
+                  (index % 7) + 1
+                }`}
                 key={image.id}>
                 <div>
                   <h2>{image.author}</h2>
-                  <p>
-                    {image.description}
-                  </p>
+                  <p>{image.description}</p>
                 </div>
                 <img src={image.image1} alt="imm1" />
               </div>
