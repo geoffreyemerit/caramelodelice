@@ -19,12 +19,14 @@ const Footer = ({ className }: FooterProps) => {
   const getContent = async () => {
     //APPEL PROMESSE // AXIOS.GET DE L'INTERFACE DE L'URL
     const openingDays = await axios.get<IOpeningDay[]>(
-      `http://localhost:3000/api/openingDays`,
+      `${import.meta.env.VITE_API_URL}/api/openingDays`,
     );
     const openingHours = await axios.get<IOpeningHour[]>(
-      `http://localhost:3000/api/openingHours`,
+      `${import.meta.env.VITE_API_URL}/api/openingHours`,
     );
-    const addresses = await axios.get<IAddress[]>(`http://localhost:3000/api/addresses`);
+    const addresses = await axios.get<IAddress[]>(
+      `${import.meta.env.VITE_API_URL}/api/addresses`,
+    );
 
     // JE FAIS APPEL A MON USESTATE ET A SA DATA GRACE AU SET
     setOpeningDays(openingDays.data);

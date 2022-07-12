@@ -18,7 +18,7 @@ const DealersMobileSection = () => {
   // APPEL API AXIOS POUR TOUS LES SUPPLIERS
   const getSupplierList = async () => {
     const supplierContentList = await axios.get<ISupplier[]>(
-      `http://localhost:3000/api/suppliers/`,
+      `${import.meta.env.VITE_API_URL}/api/suppliers/`,
     );
     setSupplierList(supplierContentList.data);
   };
