@@ -6,7 +6,7 @@ import Footer from '../components/global/Footer';
 const Bisous = () => {
   return (
     <div className="newsletter">
-      <Newsletter />
+      <Newsletter id={241} />
       <Footer className="footer" />
     </div>
   );
