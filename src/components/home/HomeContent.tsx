@@ -29,7 +29,7 @@ const HomeContent = ({ id }: HomeContentProps) => {
     <>
       <div className="homeContent">
         <IconSvg myStyle="homeContent__iconCS" icon="logos-club-sandwich-logo" />
-        <div className="homeContent__subTitle">{content?.subTitle?.toUpperCase}</div>
+        <div className="homeContent__subTitle">{content?.subTitle?.toUpperCase()}</div>
         <div className="homeContent__title">
           CLUB <br /> SANDWICH.
         </div>
