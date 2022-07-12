@@ -1,13 +1,16 @@
 .dealersSection {
   height: 100vh;
   width: 100vw;
+  z-index: 10;
 
   @media only screen and (min-width: 320px) and (max-width: 479px) {
     font-size: 10px;
     overflow: hidden;
+
     &__supplier {
       display: flex;
       margin-top: 16rem;
+
       &__infos {
         color: $secondary;
         font-family: 'Made-Bold';
@@ -23,18 +26,22 @@
         background-color: rgba(39, 39, 39, 0.6);
         border-radius: 0 0 10px 10px;
       }
+
       &__imageCaroussel {
         height: 70vh;
         width: auto;
-        margin: auto; /* Magic! */
+        margin: auto;
+        /* Magic! */
         max-width: 100%;
         max-height: 100%;
         object-fit: cover;
         border-radius: 20px;
       }
     }
+
     &__text {
-      z-index: 999;
+      z-index: 40;
+
       &__sectionTitle {
         visibility: visible;
         font-family: 'Made-Bold';
@@ -43,6 +50,7 @@
         position: absolute;
         margin-left: 2.4rem;
       }
+
       &__outLine {
         visibility: visible;
         font-family: 'Made-Outline-Bold';
@@ -51,29 +59,35 @@
         margin-left: 50%;
         padding-top: 12%;
       }
+
       &__subTitle {
         visibility: hidden;
       }
+
       &__title {
         visibility: hidden;
       }
     }
+
     .swiper-pagination-bullet {
       border: 1px solid white;
       padding: 0.4rem 0.4rem;
       --swiper-theme-color: white;
       transform: translateY(-40px);
-      z-index: 999;
+      z-index: 41;
       --swiper-pagination-bullet-width: 0.6rem;
       --swiper-pagination-bullet-height: 0.6rem;
     }
   }
+
   @media only screen and (min-width: 480px) and (max-width: 767px) {
     font-size: 12px;
     overflow: hidden;
+
     &__supplier {
       display: flex;
       margin-top: 10rem;
+
       &__infos {
         color: $secondary;
         font-family: 'Made-Bold';
@@ -89,18 +103,22 @@
         background-color: rgba(39, 39, 39, 0.6);
         border-radius: 0 0 10px 10px;
       }
+
       &__imageCaroussel {
         height: 70vh;
         width: auto;
-        margin: auto; /* Magic! */
+        margin: auto;
+        /* Magic! */
         max-width: 100%;
         max-height: 100%;
         object-fit: cover;
         border-radius: 20px;
       }
     }
+
     &__text {
-      z-index: 999;
+      z-index: 41;
+
       &__sectionTitle {
         visibility: visible;
         font-family: 'Made-Bold';
@@ -109,6 +127,7 @@
         position: absolute;
         margin-left: 2.4rem;
       }
+
       &__outLine {
         visibility: visible;
         font-family: 'Made-Outline-Bold';
@@ -117,30 +136,36 @@
         margin-left: 50%;
         padding-top: 12%;
       }
+
       &__subTitle {
         visibility: hidden;
       }
+
       &__title {
         visibility: hidden;
       }
     }
+
     .swiper-pagination-bullet {
       border: 1px solid white;
       padding: 0.4rem 0.4rem;
       --swiper-theme-color: white;
       transform: translateY(-40px);
-      z-index: 999;
+      z-index: 41;
       --swiper-pagination-bullet-width: 0.6rem;
       --swiper-pagination-bullet-height: 0.6rem;
     }
   }
+
   @media only screen and (min-width: 768px) and (max-width: 1023px) {
     font-size: 14px;
     overflow: hidden;
+
     &__supplier {
       display: flex;
       // object-position: bottom;
       margin-top: 4rem;
+
       &__infos {
         color: $secondary;
         font-family: 'Made-Bold';
@@ -156,18 +181,22 @@
         background-color: rgba(39, 39, 39, 0.6);
         border-radius: 0 0 10px 10px;
       }
+
       &__imageCaroussel {
         height: 70vh;
         width: auto;
-        margin: auto; /* Magic! */
+        margin: auto;
+        /* Magic! */
         max-width: 100%;
         max-height: 100%;
         object-fit: cover;
         border-radius: 20px;
       }
     }
+
     &__text {
-      z-index: 999;
+      z-index: 41;
+
       &__sectionTitle {
         visibility: visible;
         font-family: 'Made-Bold';
@@ -176,6 +205,7 @@
         position: absolute;
         margin-left: 2.4rem;
       }
+
       &__outLine {
         visibility: visible;
         font-family: 'Made-Outline-Bold';
@@ -185,45 +215,54 @@
         padding-top: 12%;
         padding-bottom: 1%;
       }
+
       &__subTitle {
         visibility: hidden;
       }
+
       &__title {
         visibility: hidden;
       }
     }
+
     .swiper-pagination-bullet {
       border: 1px solid white;
       padding: 0.4rem 0.4rem;
       --swiper-theme-color: white;
       transform: translateY(-20px);
-      z-index: 999;
+      z-index: 41;
       --swiper-pagination-bullet-width: 0.6rem;
       --swiper-pagination-bullet-height: 0.6rem;
     }
   }
+
   @media only screen and (min-width: 1024px) and (max-width: 1223px) {
     font-size: 16px;
     position: relative;
     left: 33%;
     margin-top: 3rem;
+
     &__text {
       top: 5%;
       right: 3%;
       position: relative;
-      z-index: 999;
+      z-index: 41;
+
       &__sectionTitle {
         visibility: hidden;
       }
+
       &__outLine {
         visibility: hidden;
       }
+
       &__subTitle {
         font-family: 'Made-Medium';
         color: $secondary;
         position: absolute;
         font-size: 2.5rem;
       }
+
       &__title {
         font-family: 'Made-Bold';
         color: $secondary;
@@ -232,12 +271,14 @@
         margin-top: -1.5rem;
       }
     }
+
     &__supplier {
       top: 10%;
       right: 23%;
       width: 100vw;
       position: relative;
       z-index: 10;
+
       &__image1 {
         height: 60%;
         width: 60%;
@@ -248,14 +289,16 @@
         &:hover {
           filter: grayscale(60%);
         }
-        &:hover + .dealersSection__supplier__infos {
+
+        &:hover+.dealersSection__supplier__infos {
           visibility: visible;
         }
       }
+
       &__infos {
         visibility: hidden;
         position: absolute;
-        z-index: 100;
+        z-index: 42;
         left: 20.1%;
         bottom: 3%;
 
@@ -264,6 +307,7 @@
           color: $secondary;
           font-size: 2.5rem;
         }
+
         &__location {
           font-family: 'Made-Medium';
           color: $secondary;
@@ -272,27 +316,33 @@
       }
     }
   }
+
   @media only screen and (min-width: 1224px) {
     font-size: 18px;
     position: relative;
     left: 35%;
+
     &__text {
       top: 5%;
       right: 3%;
       position: relative;
-      z-index: 999;
+      z-index: 45;
+
       &__sectionTitle {
         visibility: hidden;
       }
+
       &__outLine {
         visibility: hidden;
       }
+
       &__subTitle {
         font-family: 'Made-Medium';
         color: $secondary;
         position: absolute;
         font-size: 2.5rem;
       }
+
       &__title {
         font-family: 'Made-Bold';
         color: $secondary;
@@ -301,12 +351,14 @@
         margin-top: -1.5rem;
       }
     }
+
     &__supplier {
       top: 10%;
       right: 23%;
       width: 100vw;
       position: relative;
       z-index: 10;
+
       &__image1 {
         height: 60%;
         width: 60%;
@@ -317,14 +369,16 @@
         &:hover {
           filter: grayscale(60%);
         }
-        &:hover + .dealersSection__supplier__infos {
+
+        &:hover+.dealersSection__supplier__infos {
           visibility: visible;
         }
       }
+
       &__infos {
         visibility: hidden;
         position: absolute;
-        z-index: 100;
+        z-index: 47;
         left: 20.1%;
         bottom: 3%;
 
@@ -333,6 +387,7 @@
           color: $secondary;
           font-size: 2.5rem;
         }
+
         &__location {
           font-family: 'Made-Medium';
           color: $secondary;
