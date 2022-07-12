@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import React, { useState } from 'react';
 
 import IUser from '../../interfaces/IUser';
-import axios from 'axios';
 
 const Newsletter = () => {
   // Defining the form inputs variables and functions and intializing them to blank
-  const [userName, setUserName] = useState('');
   const [userMail, setUserMail] = useState('');
   const [status, setStatus] = useState('');
 
@@ -15,17 +14,15 @@ const Newsletter = () => {
     try {
       setStatus('Pending');
       await axios.post<IUser>(
-        'https://club-sandwich64.herokuapp.com/api/newsletterSubscribers',
-        { firstName: userName, email: userMail },
+        `${import.meta.env.VITE_API_URL}/api/newsletterSubscribers`,
+        { email: userMail },
       );
-      setUserName('');
       setUserMail('');
       setStatus('OK');
     } catch (err) {
       setStatus('Error');
     }
   };
-  console.log(status);
 
   return (
     <>
@@ -52,21 +49,8 @@ const Newsletter = () => {
           autoComplete="off"
           onSubmit={(e) => handleSubmitMail(e)}>
           <input
-            type="text"
-            className="newsletterSection__form__field1"
-            placeholder="Ci-après ton prénom"
-            name="email"
-            id="name"
-            required
-            autoComplete="false"
-            value={userName}
-            onChange={(e) => {
-              setUserName(e.target.value);
-            }}
-          />
-          <input
             type="input"
-            className="newsletterSection__form__field2"
+            className="newsletterSection__form__field"
             placeholder="Ci-gît ton adresse mail"
             name="email"
             id="email"
@@ -80,7 +64,6 @@ const Newsletter = () => {
           <button
             type="submit"
             className="newsletterSection__form__group__buttonNewsletter"
-            role="button"
             area-hidden="true">
             JE VEUX LA NEWSLETTER
           </button>
