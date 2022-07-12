@@ -10,13 +10,12 @@ import IconSvg from './IconSvg';
 interface NavbarProps {
   className: string;
 }
-
 const Navbar = ({ className }: NavbarProps) => {
+  const title = window.location.pathname;
   // I CREATE A USESTATE TO OPEN OR EXIT THE MENU BURGER //
   const [isOpened, setIsOpened] = useState(false);
   // I CREATE A USESTATE TO STORE THE DATA FROM THE AXIOS CALL //
-  const [pageTypes, setPageTypes] = useState<IPageType[]>();
-
+  const [pageType, setPageType] = useState<IPageType[]>();
   // CALL API AXIOS //
   const getContent = async () => {
     // CALL PAGETYPES AXIOS.GET FROM THE URL INTERFACE //
@@ -25,7 +24,7 @@ const Navbar = ({ className }: NavbarProps) => {
     );
 
     // I USE MY USESTATE AND ITS DATA WITH THE SET //
-    setPageTypes(pageTypes.data);
+    setPageType(pageTypes.data);
   };
 
   // WHEN LOADING THE COMPONENT, I EXECUTE THE GETCONTENT FUNCTION //
@@ -36,9 +35,12 @@ const Navbar = ({ className }: NavbarProps) => {
   return (
     <header className={className}>
       {/* :DESKTOP MENU */}
+
+      {title !== '/home' && <div className={`${className}__title`}>{title.slice(1)}</div>}
+
       <nav className={`${className}__desktop`}>
-        {pageTypes &&
-          pageTypes.map((pageType) => (
+        {pageType &&
+          pageType.map((pageType) => (
             <NavLink
               className={(navData) =>
                 navData.isActive
@@ -85,8 +87,8 @@ const Navbar = ({ className }: NavbarProps) => {
               icon="logos-club-sandwich-logo"
             />
             <nav className={`${className}__mobile__up__nav`}>
-              {pageTypes &&
-                pageTypes.map((pageType) => (
+              {pageType &&
+                pageType.map((pageType) => (
                   <NavLink
                     className={`${className}__mobile__up__nav--link`}
                     key={pageType.path}

@@ -13,6 +13,21 @@
     min-height: 0;
   }
   // NAVBAR IN DESKTOP FORMAT //
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: $secondary;
+    width: 100vw;
+    font-size: 3rem;
+    padding-left: 2rem;
+    margin: 0.5rem;
+    font-family: 'Made-Bold';
+    text-decoration: wavy;
+    @media only screen and (min-width: $breakpoint-largest) {
+      display: none;
+    }
+  }
   &__desktop {
     display: flex;
     flex-direction: column;
@@ -29,7 +44,7 @@
       display: flex;
       position: fixed;
       justify-content: space-around;
-      top: 25%;
+      top: 20%;
     }
     @media only screen and (min-width: $breakpoint-extralarge) {
       height: 18rem;
@@ -37,7 +52,7 @@
       position: fixed;
       justify-content: space-around;
       margin-top: 2rem;
-      top: 23%;
+      top: 22%;
     }
     // LINK TO NAVIGATE TO OTHER PAGES //
     &__link {
@@ -292,7 +307,7 @@
       display: flex;
       position: fixed;
       justify-content: space-around;
-      top: 25%;
+      top: 20%;
     }
     @media only screen and (min-width: $breakpoint-extralarge) {
       height: 18rem;
@@ -300,7 +315,7 @@
       position: fixed;
       justify-content: space-around;
       margin-top: 2rem;
-      top: 23%;
+      top: 22%;
     }
     // LINK TO NAVIGATE TO OTHER PAGES //
     &__link {
