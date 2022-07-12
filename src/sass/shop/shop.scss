@@ -1,10 +1,5 @@
-// $breakpoint-extralarge: 1224px;
-// $breakpoint-largest: 1024px;
-// $breakpoint-medium: 768px;
-// $breakpoint-small: 480px;
-// $breakpoint-smallest: 320px;
-//-----------------------------------
 // PAGE SHOP //
+// INTEGRAL PAGE CONTAINER //
 .shop {
   height: 100%;
   min-height: 90vh;
@@ -13,37 +8,42 @@
   @media only screen and (min-width: $breakpoint-small) {
     height: 100vh;
     min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
+  // CONTAINER TITLE & SHOPPING LIST //
   &__item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    // Texte qui apparait au format desktop uniquement //
+    // TEXT THAT APPEARS IN DESKTOP ONLY //
     &__h1 {
       font-family: 'Made-Bold';
       display: none;
       color: $secondary;
       @media only screen and (min-width: $breakpoint-largest) {
         margin-left: 15rem;
+        padding-top: 4rem;
         font-size: 1.5rem;
         display: flex;
         flex-direction: column;
       }
-      // Deuxième ligne qui apparait au format desktop uniquement //
+      // SECOND LINE THAT APPEARS IN DESKTOP ONLY //
       &__line2 {
         display: none;
         @media only screen and (min-width: $breakpoint-largest) {
           font-size: 3.5rem;
           display: flex;
         }
-        // "coucou" qui apparait au format desktop uniquement //
+        // "coucou" THAT APPEARS IN DESKTOP ONLY //
         &--green {
           color: $tertiary;
           padding-left: 1rem;
         }
       }
     }
-    // Texte qui apparait au format mobile et tablette //
+    // TEXT THAT APPEARS IN MOBILE/TABLET ONLY //
     &__h2 {
       width: 90%;
       height: 4rem;
@@ -74,7 +74,7 @@
       @media only screen and (min-width: $breakpoint-largest) {
         display: none;
       }
-      // Deuxième ligne qui apparait au format mobile et tablette //
+      // SECOND LINE THAT APPEARS IN MOBILE/TABLET ONLY //
       &__line2 {
         font-size: 0.4rem;
         color: $secondary;

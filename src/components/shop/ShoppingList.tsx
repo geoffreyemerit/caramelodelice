@@ -5,24 +5,25 @@ import IItem from '../../interfaces/IItem';
 import ShoppingCard from './ShoppingCard';
 
 const ShoppingList = () => {
-  // JE CRÉE UN USESTATE AFIN DE STOCKER LA DATA ISSU DE L'APPEL AXIOS
+  // I CREATE A USESTATE TO STORE THE DATA FROM THE AXIOS CALL //
   const [items, setItems] = useState<IItem[]>();
 
-  // APPEL API AXIOS
+  // CALL API AXIOS //
   const getContent = async () => {
-    //APPEL PROMESSE DE NEWSPAGE AXIOS.GET DE L'INTERFACE DE L'URL
+    // CALL ITEM AXIOS.GET FROM THE URL INTERFACE //
     const items = await axios.get<IItem[]>(`${import.meta.env.VITE_API_URL}/api/items`);
 
-    // JE FAIS APPEL A MON USESTATE ET A SA DATA GRACE AU SET
+    // I USE MY USESTATE AND ITS DATA WITH THE SET //
     setItems(items.data);
   };
 
-  // AU CHARGEMENT DU COMPOSANT, J'EXÉCUTE LA FONCTION GETCONTENT
+  // WHEN LOADING THE COMPONENT, I EXECUTE THE GETCONTENT FUNCTION //
   useEffect(() => {
     getContent();
   }, []);
 
-  // je récupère tous les produits (route get api/items) et pour chaque produit de ma liste je vais mapper le composant shoppingCard et lui passer le produit à afficher
+  //I get all the products (route get api/items) and for each product of my list //
+  //I will map the shoppingCard component and pass it the product to display //
   return (
     <div className="list">
       {items && items.map((item) => <ShoppingCard id={item.id} key={item.id} />)}

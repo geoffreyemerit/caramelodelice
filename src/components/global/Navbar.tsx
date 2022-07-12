@@ -6,27 +6,29 @@ import IPageType from '../../interfaces/IPageType';
 import Footer from './Footer';
 import IconSvg from './IconSvg';
 
+// FRONT-END INTERFACE REQUIRED //
 interface NavbarProps {
   className: string;
 }
 
 const Navbar = ({ className }: NavbarProps) => {
+  // I CREATE A USESTATE TO OPEN OR EXIT THE MENU BURGER //
   const [isOpened, setIsOpened] = useState(false);
-  // JE CRÉE UN USESTATE AFIN DE STOCKER LA DATA ISSU DE L'APPEL AXIOS
+  // I CREATE A USESTATE TO STORE THE DATA FROM THE AXIOS CALL //
   const [pageTypes, setPageTypes] = useState<IPageType[]>();
 
-  // APPEL API AXIOS
+  // CALL API AXIOS //
   const getContent = async () => {
-    //APPEL PROMESSE DE NEWSPAGE AXIOS.GET DE L'INTERFACE DE L'URL
+    // CALL PAGETYPES AXIOS.GET FROM THE URL INTERFACE //
     const pageTypes = await axios.get<IPageType[]>(
       `${import.meta.env.VITE_API_URL}/api/pageTypes`,
     );
 
-    // JE FAIS APPEL A MON USESTATE ET A SA DATA GRACE AU SET
+    // I USE MY USESTATE AND ITS DATA WITH THE SET //
     setPageTypes(pageTypes.data);
   };
 
-  // AU CHARGEMENT DU COMPOSANT, J'EXÉCUTE LA FONCTION GETCONTENT
+  // WHEN LOADING THE COMPONENT, I EXECUTE THE GETCONTENT FUNCTION //
   useEffect(() => {
     getContent();
   }, []);
@@ -34,14 +36,10 @@ const Navbar = ({ className }: NavbarProps) => {
   return (
     <header className={className}>
       {/* :DESKTOP MENU */}
-
       <nav className={`${className}__desktop`}>
         {pageTypes &&
           pageTypes.map((pageType) => (
             <NavLink
-              // className={(navData) =>
-              //   navData.isActive ? 'navbar__link navbar__link--active' : 'navbar__link'
-              // }
               className={(navData) =>
                 navData.isActive
                   ? `${className}__desktop__link ${className}__desktop__link--active`
@@ -56,7 +54,6 @@ const Navbar = ({ className }: NavbarProps) => {
       {/* >> Menu Burger Icon */}
       {!isOpened ? (
         <div
-          // className="button--burger"
           className={`${className}__button--burger`}
           role="button"
           tabIndex={0}
@@ -79,10 +76,9 @@ const Navbar = ({ className }: NavbarProps) => {
         </div>
       )}
       {/* :MOBILE MENU */}
-
       {isOpened && (
         <div className={`${className}__mobile`}>
-          {/* >> Partie haute // Logo // Menu */}
+          {/* >> Part Up // Logo // Menu */}
           <div className={`${className}__mobile__up`}>
             <IconSvg
               myStyle={`${className}__mobile__up__icon ${className}__mobile__up__icon--cs`}
@@ -104,7 +100,7 @@ const Navbar = ({ className }: NavbarProps) => {
             </nav>
             <div className={`${className}__mobile__up--text`}>on vous</div>
           </div>
-          {/* >> Partie basse // Addresse */}
+          {/* >> Part Down // Address */}
           <div className={`${className}__mobile__down`}>
             <p className={`${className}__mobile__down--text`}>
               <span className={`${className}__mobile__down--text--animated`}>
@@ -115,7 +111,7 @@ const Navbar = ({ className }: NavbarProps) => {
                 veut <br />
               </span>
             </p>
-
+            {/* >> Footer */}
             <Footer className={`${className}__mobile__down__footer__burger`} />
           </div>
         </div>
