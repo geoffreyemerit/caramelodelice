@@ -53,8 +53,8 @@ const DealersMobileSection = () => {
                 supplierList.map((supplier, index) => {
                   <SwiperSlide>
                     <div className="dealersSection__supplier__infos">
-                      <div key={index}>{supplierList[0].name}</div>
-                      <div key={index}>{supplierList[0].location}</div>
+                      <div key={index}>{supplierList[index].name}</div>
+                      <div key={index}>{supplierList[index].location}</div>
                     </div>
                     <img
                       key={index}
