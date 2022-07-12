@@ -9,20 +9,13 @@ interface InfosContentProps {
   idPage: number;
   idTypeKitchen: number;
   idTypeMusic: number;
-  idTypeAll: number;
 }
 
-const InfosContent = ({
-  idPage,
-  idTypeKitchen,
-  idTypeMusic,
-  idTypeAll,
-}: InfosContentProps) => {
+const InfosContent = ({ idPage, idTypeKitchen, idTypeMusic }: InfosContentProps) => {
   // JE CRÉE UN USESTATE AFIN DE STOCKER LA DATA ISSU DE L'APPEL AXIOS
   const [page, setPage] = useState<IPage>();
   const [typeKitchen, seTypeKitchen] = useState<INewsType>();
   const [typeMusic, setTypeMusic] = useState<INewsType>();
-  const [typeAll, setTypeAll] = useState<INewsType>();
 
   // APPEL API AXIOS
   const getContent = async () => {
@@ -39,14 +32,9 @@ const InfosContent = ({
       `${import.meta.env.VITE_API_URL}/api/newsTypes/${idTypeMusic}`,
     );
 
-    const typeAll = await axios.get<INewsType>(
-      `${import.meta.env.VITE_API_URL}/api/newsTypes/${idTypeAll}`,
-    );
-
     setPage(page.data);
     seTypeKitchen(typeKitchen.data);
     setTypeMusic(typeMusic.data);
-    setTypeAll(typeAll.data);
   };
 
   // AU CHARGEMENT DU COMPOSANT, J'EXÉCUTE LA FONCTION GETCONTENT
@@ -63,7 +51,7 @@ const InfosContent = ({
         src="/assets/Perso-08_1.svg"
         alt="logo_club_sandwich"
       />
-      {page && typeKitchen && typeMusic && typeAll && (
+      {page && typeKitchen && typeMusic && (
         <>
           <div className="infosContent__container">
             <h2 className="infosContent__container__h2">
@@ -130,12 +118,6 @@ const InfosContent = ({
                   </h2>
                 </>
               )}
-
-              <a
-                className="infosContent__container__boxContainer__a"
-                href={typeAll.pdfFile}>
-                {page.subTitle}
-              </a>
               <img
                 className="infosContent__container__boxContainer__logo"
                 src="/assets/Perso-08_1.svg"
