@@ -34,12 +34,9 @@ const GalleryList = ({ idPageType }: WallOfDwichProps) => {
         // loops every 7n elements
         const tempoArray = data.sort((a, b) => b.id - a.id).slice(i, i + 7);
         tempo7.push(tempoArray);
-        console.log(tempoArray);
       }
 
       setImages7by7(tempo7);
-
-      console.log(images7by7);
     };
     getContent();
   }, []);
