@@ -28,8 +28,6 @@ const DealersMobileSection = () => {
     getSupplierList();
   }, []);
 
-  console.log(supplierList);
-
   return (
     <div className="dealersSection">
       {supplierList && (
