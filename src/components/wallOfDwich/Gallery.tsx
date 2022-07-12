@@ -1,4 +1,5 @@
 import React from 'react';
+
 import IPage from '../../interfaces/IPage';
 
 interface GalleryProps {
@@ -14,8 +15,9 @@ const Gallery = ({ data, id }: GalleryProps) => {
           {data &&
             data.map((image, index) => (
               <div
-                className={`gallery__allGrid__container__div gallery__allGrid__container__div--${(index % 7) + 1
-                  }`}
+                className={`gallery__allGrid__container__div gallery__allGrid__container__div--${
+                  (index % 7) + 1
+                }`}
                 key={id}>
                 <div>
                   <h2>Chef Etchebest</h2>
