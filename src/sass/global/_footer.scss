@@ -1,5 +1,23 @@
+
+.footer__wallOfDwich {
+  color: $secondary;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  margin-right: 2rem;
+
+  @media only screen and (min-width: $breakpoint-smallest) {
+    font-size: 2.5vh;
+  }
+}
+
+
 //FOOTER DU MENU BURGER
 .navbar__mobile__down__footer__burger {
+
   color: $secondary;
   display: flex;
   justify-content: center;
@@ -7,6 +25,7 @@
   align-items: center;
   text-transform: uppercase;
   margin-top: 1rem;
+
   @media only screen and (min-width: $breakpoint-smallest) {
     font-size: 2.5vh;
   }
@@ -21,24 +40,29 @@
         display: flex;
       }
     }
+
     &__opening {
       &__openingdays {
         text-align: left;
         font-size: 0.5rem;
         margin-right: 2rem;
+
         @media only screen and (min-width: $breakpoint-smallest) {
           font-size: 1.7vh;
         }
       }
+
       &__openinghours {
         text-align: right;
         font-size: 0.5rem;
+
         @media only screen and (min-width: $breakpoint-smallest) {
           font-size: 1.7vh;
         }
       }
     }
   }
+
   &__instalogo {
     display: none;
   }
@@ -146,12 +170,15 @@
 }
 
 .footer {
+  width: 100vw;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
   color: $secondary;
+
   margin-right: 2rem;
   margin-bottom: 1.5rem;
+
 
   @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-medium) {
     // display: flex;
@@ -192,7 +219,9 @@
           align-items: center;
           margin-bottom: 1.6rem;
         }
+
         @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
+
           flex-direction: column;
           align-items: center;
           margin-bottom: 1.6rem;
@@ -246,11 +275,13 @@
     flex-direction: column;
     width: 1.5rem;
     height: 1.5rem;
+
     &--instagram {
       margin-left: 0.5rem;
       color: $secondary;
     }
   }
+
 }
 
 //FOOTER DE LA PAGE HOME
@@ -313,3 +344,4 @@
     }
   }
 }
+

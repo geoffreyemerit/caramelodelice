@@ -2,7 +2,9 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
 import IPage from '../../interfaces/IPage';
+
 import IconSvg from '../global/IconSvg';
+
 import Navbar from '../global/Navbar';
 
 interface HomeContentProps {
@@ -35,9 +37,11 @@ const HomeContent = ({ id }: HomeContentProps) => {
         </div>
         <div className="homeContent__title__mobile">THE CLUB.</div>
       </div>
+
       <Navbar className="homeContent__navbar" />
       <div className="homeContent__description">
         <div className="homeContent__description__club">{content?.description}</div>
+
       </div>
     </>
   );
