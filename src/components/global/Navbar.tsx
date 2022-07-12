@@ -106,7 +106,16 @@ const Navbar = ({ className }: NavbarProps) => {
           </div>
           {/* >> Partie basse // Addresse */}
           <div className={`${className}__mobile__down`}>
-            <div className={`${className}__mobile__down--text`}>attend</div>
+            <p className={`${className}__mobile__down--text`}>
+              <span className={`${className}__mobile__down--text--animated`}>
+                aime <br />
+                embrasse <br />
+                adore <br />
+                attend <br />
+                veut <br />
+              </span>
+            </p>
+
             <Footer className={`${className}__mobile__down__footer__burger`} />
           </div>
         </div>
