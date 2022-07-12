@@ -439,7 +439,7 @@
           display: flex;
           text-align: center;
           color: $secondary;
-          animation: slide 6s ease infinite;
+          animation: slide 6s infinite;
         }
         @keyframes slide {
           0% {
