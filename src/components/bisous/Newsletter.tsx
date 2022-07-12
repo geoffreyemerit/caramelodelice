@@ -1,8 +1,8 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
-import IUser from '../../interfaces/IUser';
 import IPage from '../../interfaces/IPage';
+import IUser from '../../interfaces/IUser';
 
 interface NewsletterProps {
   id: number;
@@ -53,9 +53,9 @@ const Newsletter = ({ id }: NewsletterProps) => {
           {/* <h3 className="newsletterSection__content__title3">ET VOUS.</h3> */}
           <p className="newsletterSection__content__text1">{content?.description}</p>
           <p className="newsletterSection__content__text2">
-            Pour une dose mensuelle de news de Club Sandwich, on t'invite à saisir ta plus
-            belle adresse mail ci-dessous. Promis, on ne spam pas et ton mail ne sera
-            utilisé que pour cela (t'as vu ça rime). On t'embrasse !
+            Pour une dose mensuelle de news de Club Sandwich, on t&apos;invite à saisir ta
+            plus belle adresse mail ci-dessous. Promis, on ne spam pas et ton mail ne sera
+            utilisé que pour cela (t&apos;as vu ça rime). On t&apos;embrasse !
           </p>
         </div>
         <form
