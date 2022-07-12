@@ -7,7 +7,7 @@ const Newsletter = () => {
   // Defining the form inputs variables and functions and intializing them to blank
   const [userMail, setUserMail] = useState('');
   const [status, setStatus] = useState('');
-  console.log(status)
+  console.log(status);
 
   // Appel API Axios pour ajouter le newsletter subscriber
   const handleSubmitMail = async (e) => {
