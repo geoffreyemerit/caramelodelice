@@ -1,7 +1,8 @@
+
 // NAVBAR CLASSIQUE
 .navbar {
   width: 100vw;
-  min-height: 8vh;
+  min-height: 10vh;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -27,14 +28,13 @@
       display: flex;
       position: fixed;
       top: 25%;
-      transform: translateX(5rem);
     }
     @media only screen and (min-width: $breakpoint-extralarge) {
       height: 20rem;
       display: flex;
       position: fixed;
       top: 20%;
-      transform: translateX(5rem);
+      transform: translateX(2rem);
     }
 
     &__link {
@@ -198,13 +198,13 @@
     }
   }
 }
-.button--burger {
+.navbar__button--burger {
   color: $secondary;
   margin: 0.5rem;
   position: fixed;
   z-index: 2010;
 }
-.button--cross {
+.navbar__button--cross {
   position: fixed;
   color: $primary;
   z-index: 201;
@@ -216,6 +216,25 @@
 //-----------------------------------------//
 
 .homeContent__navbar {
+  &__button {
+    &--burger {
+      width: 4rem;
+      height: 4rem;
+      color: $secondary;
+      position: fixed;
+      top: 2%;
+      left: 94%;
+    }
+    &--cross {
+      width: 4rem;
+      height: 4rem;
+      color: $primary;
+      position: fixed;
+      z-index: 2000;
+      top: 2%;
+      left: 94%;
+    }
+  }
   &__desktop {
     display: flex;
     flex-direction: column;
@@ -233,41 +252,40 @@
       position: fixed;
       justify-content: space-around;
       top: 25%;
-      transform: translateX(5rem);
     }
     @media only screen and (min-width: $breakpoint-extralarge) {
-      height: 20rem;
+      height: 18rem;
       display: flex;
       position: fixed;
       justify-content: space-around;
-      top: 20%;
-      transform: translateX(5rem);
+      margin-top: 2rem;
+      top: 23%;
     }
     &__link {
       display: flex;
       justify-content: center;
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       text-decoration: none;
       cursor: pointer;
       color: $secondary;
       background-repeat: repeat-x;
-      @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-small) {
-        font-size: 1.8rem;
-      }
-
-      @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
-        font-size: 1.7rem;
+      @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-largest) {
+        font-size: 3.5vh;
 
       }
+
       @media only screen and (min-width: $breakpoint-largest) and (max-width: $breakpoint-extralarge) {
         align-self: flex-start;
         margin-left: 8rem;
         font-size: 1.9rem;
+        padding-bottom: 0.3rem;
       }
+
       @media only screen and (min-width: $breakpoint-extralarge) {
         align-self: flex-start;
         margin-left: 8rem;
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+        padding-bottom: 0.3rem;
       }
       &:hover,
       &--active {
@@ -276,51 +294,161 @@
         background-size: 4rem 10px;
         z-index: 999;
         color: $tertiary;
-        @media only screen and (min-width: $breakpoint-largest) {
-          align-self: flex-start;
-        }
       }
+
     }
   }
-  &__button--burger {
-    display: none;
-  }
-  &__button--cross {
-    display: none;
-  }
+
   &__mobile {
     display: none;
+    @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      width: 100vw;
+      background-color: $primary;
+      z-index: 200;
+      position: fixed;
+      top: 0%;
+      left: 0%;
+    }
     &__up {
       display: none;
+      @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $secondary;
+        height: 75vh;
+        width: 100vw;
+        border-radius: 0 0 70px 0;
+      }
       &__icon {
         display: none;
-        &--burger {
-          display: none;
+        @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
+          display: initial;
+          transition: 0.2s ease-in-out;
+          cursor: pointer;
+          width: 3rem;
+          height: 3rem;
         }
-        &--cross {
-          display: none;
+        &--cs {
+          @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
+            margin-top: 2rem;
+            width: 19vw;
+            height: 19vh;
+            min-height: 120px;
+            max-height: 170px;
+          }
         }
       }
       &__nav {
         display: none;
+        @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
+          overflow: auto;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
         &--link {
           display: none;
+          @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
+            display: flex;
+            font-family: 'Made-Bold';
+            justify-content: center;
+            font-size: 3.5vh;
+            padding: 0.1rem;
+            text-decoration: none;
+            cursor: pointer;
+            color: $primary;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
+          }
         }
-        &--text {
-          display: none;
+      }
+      &--text {
+        display: none;
+        @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
+          font-size: 3.5vh;
+          font-family: 'Made-Medium';
+          text-transform: uppercase;
+          color: $primary;
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
         }
       }
     }
     &__down {
       display: none;
-      &__nav {
+      @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
+        display: flex;
+        z-index: 2000;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        height: 25vh;
+        width: 100vw;
+        background-color: $primary;
+      }
+      &--text {
         display: none;
-        &--text {
-          display: none;
+        @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
+          font-size: 3.5vh;
+          font-family: 'Made-Medium';
+          text-transform: uppercase;
+          color: $secondary;
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
         }
       }
       &__footer__burger {
         display: none;
+        @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
+          color: $secondary;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+          text-transform: uppercase;
+          margin-top: 1rem;
+          font-size: 2.5vh;
+        }
+        &__info__sup {
+          &__address {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 1.5rem;
+            &__bis {
+              display: flex;
+            }
+          }
+          &__opening {
+            &__openingdays {
+              text-align: left;
+              font-size: 0.5rem;
+              margin-right: 2rem;
+              @media only screen and (min-width: $breakpoint-smallest) {
+                font-size: 1.7vh;
+              }
+            }
+            &__openinghours {
+              text-align: right;
+              font-size: 0.5rem;
+              @media only screen and (min-width: $breakpoint-smallest) {
+                font-size: 1.7vh;
+              }
+            }
+          }
+        }
+        &__instalogo {
+          display: none;
+        }
       }
     }
   }

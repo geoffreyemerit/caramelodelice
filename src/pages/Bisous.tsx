@@ -5,11 +5,9 @@ import Footer from '../components/global/Footer';
 
 const Bisous = () => {
   return (
-    <div>
-      <h1>BISOUS SUR LES FESSES</h1>
-      <p>blablabla</p>
+    <div className="newsletter">
       <Newsletter />
-      <Footer className="footer__absolute" />
+      <Footer className="footer" />
     </div>
   );
 };

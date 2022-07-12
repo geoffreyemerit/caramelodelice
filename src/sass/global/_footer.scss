@@ -1,15 +1,34 @@
+
+.footer__wallOfDwich {
+  color: $secondary;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  margin-right: 2rem;
+
+  @media only screen and (min-width: $breakpoint-smallest) {
+    font-size: 2.5vh;
+  }
+}
+
+
 //FOOTER DU MENU BURGER
 .navbar__mobile__down__footer__burger {
+
   color: $secondary;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  text-transform: uppercase;
   margin-top: 1rem;
+
   @media only screen and (min-width: $breakpoint-smallest) {
     font-size: 2.5vh;
   }
-
   &__info__sup {
     &__address {
       width: 100%;
@@ -17,25 +36,33 @@
       align-items: center;
       flex-direction: column;
       margin-bottom: 1.5rem;
+      &__bis {
+        display: flex;
+      }
     }
+
     &__opening {
       &__openingdays {
         text-align: left;
         font-size: 0.5rem;
         margin-right: 2rem;
+
         @media only screen and (min-width: $breakpoint-smallest) {
           font-size: 1.7vh;
         }
       }
+
       &__openinghours {
         text-align: right;
         font-size: 0.5rem;
+
         @media only screen and (min-width: $breakpoint-smallest) {
           font-size: 1.7vh;
         }
       }
     }
   }
+
   &__instalogo {
     display: none;
   }
@@ -47,7 +74,7 @@
   justify-content: flex-end;
   align-items: flex-end;
   color: $secondary;
-  margin-right: 1rem;
+  margin-right: 2rem;
   margin-bottom: 2.3rem;
   bottom: 0;
   right: 0;
@@ -63,28 +90,6 @@
   @media only screen and (min-width: 820px) and (max-width: 1025px) {
     display: none;
   }
-}
-
-.footer {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  color: $secondary;
-  margin-right: 1rem;
-  margin-bottom: 2.3rem;
-
-  @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-medium) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 1rem;
-  }
 
   &__info {
     display: flex;
@@ -98,7 +103,6 @@
 
       &__address {
         display: flex;
-        text-transform: uppercase;
 
         @media screen and (max-width: $breakpoint-medium) {
           flex-direction: column;
@@ -111,8 +115,8 @@
           margin-bottom: 1.6rem;
         }
 
-        &__zipcode {
-          margin: 0 0.6rem;
+        &__street {
+          margin-right: 0.6rem;
         }
       }
 
@@ -165,45 +169,179 @@
   }
 }
 
-// //FOOTER DE LA PAGE HOME
-// .homefooter {
-//   color: $secondary;
-//   display: flex;
-//   justify-content: center;
-//   flex-direction: column;
-//   align-items: center;
-//   margin-top: 1rem;
-//   @media only screen and (min-width: $breakpoint-smallest) {
-//     font-size: 1rem;
-//     margin: 2rem 0 1rem;
-//   }
-//   &infosup {
-//     &address {
-//       width: 100%;
-//       display: flex;
-//       align-items: center;
-//       flex-direction: column;
-//       margin-bottom: 1.5rem;
-//       @media only screen and (min-width: $breakpoint-smallest) {
-//         font-size: 1.2rem;
-//       }
-//     }
-//     &opening {
-//       &openingdays {
-//         text-align: left;
-//         font-size: 0.5rem;
-//         margin-right: 2rem;
-//         @media only screen and (min-width: $breakpoint-smallest) {
-//           font-size: 1rem;
-//         }
-//       }
-//       &__openinghours {
-//         text-align: right;
-//         font-size: 0.5rem;
-//         @media only screen and (min-width: $breakpoint-smallest) {
-//           font-size: 1rem;
-//         }
-//       }
-//     }
-//   }
-// }
+.footer {
+  width: 100vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  color: $secondary;
+
+  margin-right: 2rem;
+  margin-bottom: 1.5rem;
+
+
+  @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-medium) {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+
+    // ce composant doit etre en display none car en format mobile/tablette
+    // le footer n'apparait que dans la navbar et non chaque page.
+    display: none;
+  }
+
+  @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // margin-left: 1rem;
+    // ce composant doit etre en display none car en format mobile/tablette
+    // le footer n'apparait que dans la navbar et non chaque page.
+    display: none;
+  }
+
+  &__info {
+    display: flex;
+    font-family: 'Made-Bold';
+    align-items: flex-end;
+
+    &__sup {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+
+      &__address {
+        display: flex;
+        text-transform: uppercase;
+
+        @media screen and (max-width: $breakpoint-medium) {
+          flex-direction: column;
+          align-items: center;
+          margin-bottom: 1.6rem;
+        }
+
+        @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
+
+          flex-direction: column;
+          align-items: center;
+          margin-bottom: 1.6rem;
+        }
+        &__bis {
+          &__zipcode {
+            margin: 0 0.6rem;
+          }
+        }
+      }
+
+      &__opening {
+        display: flex;
+        justify-content: flex-end;
+        font-size: 16px;
+
+        @media screen and (max-width: $breakpoint-extralarge) {
+          font-size: 14px;
+        }
+
+        @media screen and (max-width: $breakpoint-largest) {
+          font-size: 12px;
+        }
+
+        @media screen and (max-width: $breakpoint-medium) {
+          font-size: 10px;
+        }
+
+        @media screen and (max-width: $breakpoint-small) {
+          font-size: 8px;
+        }
+
+        @media screen and (max-width: $breakpoint-smallest) {
+          font-size: 6px;
+        }
+
+        &__openingdays {
+          margin-right: 2.05rem;
+          text-align: left;
+        }
+
+        &__openinghours {
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  &__instalogo {
+    display: flex;
+    flex-direction: column;
+    width: 1.5rem;
+    height: 1.5rem;
+
+    &--instagram {
+      margin-left: 0.5rem;
+      color: $secondary;
+    }
+  }
+
+}
+
+//FOOTER DE LA PAGE HOME
+.home__footer {
+  color: $secondary;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-transform: uppercase;
+  margin-top: 1rem;
+  @media only screen and (min-width: $breakpoint-smallest) {
+    margin: 1rem 0;
+  }
+  @media only screen and (min-width: $breakpoint-largest) {
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 1rem;
+  }
+
+  &__info__sup {
+    &__address {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      @media only screen and (min-width: $breakpoint-smallest) {
+        font-size: 2vh;
+      }
+      @media only screen and (min-width: $breakpoint-largest) {
+        font-size: 2vh;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 0.2rem;
+      }
+      &__bis {
+        &__zipcode {
+          margin: 0 0.6rem;
+        }
+      }
+    }
+    &__opening {
+      &__openingdays {
+        text-align: left;
+        font-size: 0.5rem;
+        margin-right: 2rem;
+        @media only screen and (min-width: $breakpoint-smallest) {
+          font-size: 1.4vh;
+        }
+      }
+      &__openinghours {
+        text-align: right;
+        font-size: 0.5rem;
+        @media only screen and (min-width: $breakpoint-smallest) {
+          font-size: 1.4vh;
+        }
+      }
+    }
+  }
+}
+

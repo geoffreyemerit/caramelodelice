@@ -19,12 +19,12 @@ const NewsContent = ({ id }: NewsContentProps) => {
   const getContent = async () => {
     //APPEL PROMESSE DE NEWSPAGE AXIOS.GET DE L'INTERFACE DE L'URL
     const newsPage = await axios.get<INewsPage>(
-      `http://localhost:3000/api/newsPages/${id}`,
+      `${import.meta.env.VITE_API_URL}/api/newsPages/${id}`,
     );
 
     //APPEL PROMESSE DE NEWSTYPE AXIOS.GET DE L'INTERFACE DE L'URL
     const newsType = await axios.get<INewsType>(
-      `http://localhost:3000/api/newsTypes/${newsPage.data.idNewsType}`,
+      `${import.meta.env.VITE_API_URL}/api/newsTypes/${newsPage.data.idNewsType}`,
     );
 
     setPage(newsPage.data);

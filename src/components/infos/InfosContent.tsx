@@ -27,18 +27,20 @@ const InfosContent = ({
   // APPEL API AXIOS
   const getContent = async () => {
     //APPEL PROMESSE DE NEWSPAGE AXIOS.GET DE L'INTERFACE DE L'URL
-    const page = await axios.get<IPage>(`http://localhost:3000/api/pages/${idPage}`);
+    const page = await axios.get<IPage>(
+      `${import.meta.env.VITE_API_URL}/api/pages/${idPage}`,
+    );
 
     const typeKitchen = await axios.get<INewsType>(
-      `http://localhost:3000/api/newsTypes/${idTypeKitchen}`,
+      `${import.meta.env.VITE_API_URL}/api/newsTypes/${idTypeKitchen}`,
     );
 
     const typeMusic = await axios.get<INewsType>(
-      `http://localhost:3000/api/newsTypes/${idTypeMusic}`,
+      `${import.meta.env.VITE_API_URL}/api/newsTypes/${idTypeMusic}`,
     );
 
     const typeAll = await axios.get<INewsType>(
-      `http://localhost:3000/api/newsTypes/${idTypeAll}`,
+      `${import.meta.env.VITE_API_URL}/api/newsTypes/${idTypeAll}`,
     );
 
     setPage(page.data);

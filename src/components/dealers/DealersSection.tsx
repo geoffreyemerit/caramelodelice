@@ -16,14 +16,16 @@ const DealersSection = ({ id, idSupplier }: DealersSectionProps) => {
 
   // APPEL API AXIOS POUR 1 SECTION
   const getPage = async () => {
-    const dealersPage = await axios.get<IPage>(`http://localhost:3000/api/pages/${id}`);
+    const dealersPage = await axios.get<IPage>(
+      `${import.meta.env.VITE_API_URL}/api/pages/${id}`,
+    );
     setPage(dealersPage.data);
   };
 
   // APPEL API AXIOS POUR 1 SUPPLIER RELIÉ À 1 SECTION
   const getSupplier = async () => {
     const supplierContent = await axios.get<ISupplier>(
-      `http://localhost:3000/api/suppliers/${idSupplier}`,
+      `${import.meta.env.VITE_API_URL}/api/suppliers/${idSupplier}`,
     );
     setSupplier(supplierContent.data);
   };

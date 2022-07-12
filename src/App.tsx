@@ -6,7 +6,6 @@ import React, { useEffect, useState } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 
 import IPage from '../src/interfaces/IPage';
-// import Footer from './components/global/Footer';
 import Loader from './components/global/Loader';
 import Logo from './components/global/Logo';
 import Navbar from './components/global/Navbar';
@@ -38,7 +37,7 @@ const App = () => {
   const [content, setContent] = useState<IPage>();
 
   const getContent = async () => {
-    const url: string = `http://localhost:3000/api/pages/41`;
+    const url: string = `${import.meta.env.VITE_API_URL}/api/pages/41`;
     const { data } = await axios.get<IPage>(url);
     setContent(data);
   };
@@ -73,7 +72,9 @@ const App = () => {
       }>
       <Sound />
       <Logo />
+
       {!homePage && <Navbar className="navbar" />}
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/news" element={<News />} />
@@ -85,7 +86,6 @@ const App = () => {
         <Route path="/bisous" element={<Bisous />} />
         <Route path="*" element={<Home />} />
       </Routes>
-      {/* <Footer /> */}
     </div>
   );
 };

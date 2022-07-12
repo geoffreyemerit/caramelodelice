@@ -19,12 +19,14 @@ const Footer = ({ className }: FooterProps) => {
   const getContent = async () => {
     //APPEL PROMESSE // AXIOS.GET DE L'INTERFACE DE L'URL
     const openingDays = await axios.get<IOpeningDay[]>(
-      `http://localhost:3000/api/openingDays`,
+      `${import.meta.env.VITE_API_URL}/api/openingDays`,
     );
     const openingHours = await axios.get<IOpeningHour[]>(
-      `http://localhost:3000/api/openingHours`,
+      `${import.meta.env.VITE_API_URL}/api/openingHours`,
     );
-    const addresses = await axios.get<IAddress[]>(`http://localhost:3000/api/addresses`);
+    const addresses = await axios.get<IAddress[]>(
+      `${import.meta.env.VITE_API_URL}/api/addresses`,
+    );
 
     // JE FAIS APPEL A MON USESTATE ET A SA DATA GRACE AU SET
     setOpeningDays(openingDays.data);
@@ -42,13 +44,16 @@ const Footer = ({ className }: FooterProps) => {
         <div className="footer__info__sup">
           <div className={`${className}__info__sup__address`}>
             <span className={`${className}__info__sup__address__street`}>
-              {address?.address}
+              {address?.address.toUpperCase()}
             </span>
-            <span className="footer__info__sup__address__zipcode">
-              {address?.zipCode}
-            </span>
-
-            <span className="footer__info__sup__address__city">{address?.city}</span>
+            <div className={`${className}__info__sup__address__bis`}>
+              <span className="footer__info__sup__address__bis__zipcode">
+                {address?.zipCode}
+              </span>
+              <span className="footer__info__sup__address__bis__city">
+                {address?.city}
+              </span>
+            </div>
           </div>
           <div className="footer__info__sup__opening">
             <div className={`${className}__info__sup__opening__openingdays`}>
