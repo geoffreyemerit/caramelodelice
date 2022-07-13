@@ -159,6 +159,10 @@
           position: absolute;
           transition: 1s;
 
+          @media only screen and (min-width: 0px) and (max-width: 1024px) {
+            display: none;
+          }
+
           & h2 {
             font-family: 'Made-Medium';
             color: white;
@@ -202,6 +206,11 @@
         &:hover img {
           filter: brightness(0.5);
           transition: 1s;
+
+          @media only screen and (min-width: 0px) and (max-width: 1024px) {
+            filter: none;
+            transition: none;
+          }
         }
       }
     }
