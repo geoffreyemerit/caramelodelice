@@ -9,7 +9,7 @@
 
     &__supplier {
       display: flex;
-      margin-top: 16rem;
+      margin-top: 7rem;
 
       &__infos {
         color: $secondary;
@@ -28,7 +28,7 @@
       }
 
       &__imageCaroussel {
-        height: 70vh;
+        height: 65vh;
         width: auto;
         margin: auto;
         /* Magic! */
@@ -56,8 +56,8 @@
         font-family: 'Made-Outline-Bold';
         color: $secondary;
         font-size: 3rem;
-        margin-left: 50%;
-        padding-top: 12%;
+        margin-left: 15%;
+        padding-top: 1%;
       }
 
       &__subTitle {
@@ -86,7 +86,7 @@
 
     &__supplier {
       display: flex;
-      margin-top: 10rem;
+      margin-top: 5rem;
 
       &__infos {
         color: $secondary;
@@ -133,8 +133,8 @@
         font-family: 'Made-Outline-Bold';
         color: $secondary;
         font-size: 4rem;
-        margin-left: 50%;
-        padding-top: 12%;
+        margin-left: 20%;
+        padding-top: 2%;
       }
 
       &__subTitle {
@@ -211,8 +211,8 @@
         font-family: 'Made-Outline-Bold';
         color: $secondary;
         font-size: 4rem;
-        margin-left: 50%;
-        padding-top: 12%;
+        margin-left: 35%;
+        padding-top: 2%;
         padding-bottom: 1%;
       }
 

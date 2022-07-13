@@ -23,19 +23,35 @@ const DealersMobileSection = () => {
     setSupplierList(supplierContentList.data);
   };
 
-  // AU CHARGEMENT DU COMPOSANT, J'EXÉCUTE LA FONCTION GETPAGE
+  // AU CHARGEMENT DU COMPOSANT, J'EXÉCUTE LA FONCTION GETSUPPLIERLIST
   useEffect(() => {
     getSupplierList();
   }, []);
+
+  console.log(supplierList);
 
   return (
     <div className="dealersSection">
       {supplierList && (
         <>
           <div className="dealersSection__text">
-            <h2 className="dealersSection__text__sectionTitle">dealers</h2>
-            <h2 className="dealersSection__text__outLine">LOCALS</h2>
+            {/* <h2 className="dealersSection__text__sectionTitle">dealers</h2> */}
+            <h2 className="dealersSection__text__outLine">LOCALS ONLY</h2>
           </div>
+          {/* {supplierList &&
+            supplierList.map((supplier, index) => {
+              {
+                console.log(supplier.name);
+              }
+              <div key={index}>
+                <div>
+                  <div>{supplier.name}</div>
+                  <div>{supplier.location}</div>
+                </div>
+                <img src={supplier.logo} alt={supplier.name} />
+              </div>;
+            })} */}
+
           <div className="dealersSection__supplier">
             <Swiper
               slidesPerView={1.07}
@@ -50,16 +66,17 @@ const DealersMobileSection = () => {
               {/* {supplierList &&
                 supplierList.map((supplier, index) => {
                   <SwiperSlide>
-                    <div className="dealersSection__supplier__infos">
-                      <div key={index}>{supplierList[index].name}</div>
-                      <div key={index}>{supplierList[index].location}</div>
+                    <div key={index}>
+                      <div className="dealersSection__supplier__infos">
+                        <div>{supplier.name}</div>
+                        <div>{supplier.location}</div>
+                      </div>
+                      <img
+                        className="dealersSection__supplier__imageCaroussel"
+                        src={supplier.logo}
+                        alt={supplier.name}
+                      />
                     </div>
-                    <img
-                      key={index}
-                      className="dealersSection__supplier__imageCaroussel"
-                      src={supplier.logo}
-                      alt={supplier.name}
-                    />
                   </SwiperSlide>;
                 })} */}
               <SwiperSlide>
