@@ -40,7 +40,7 @@
     }
 
     &__text {
-      z-index: 40;
+      z-index: 20;
 
       &__sectionTitle {
         visibility: visible;
@@ -74,7 +74,7 @@
       padding: 0.4rem 0.4rem;
       --swiper-theme-color: white;
       transform: translateY(-40px);
-      z-index: 41;
+      z-index: 21;
       --swiper-pagination-bullet-width: 0.6rem;
       --swiper-pagination-bullet-height: 0.6rem;
     }
@@ -117,7 +117,7 @@
     }
 
     &__text {
-      z-index: 41;
+      z-index: 21;
 
       &__sectionTitle {
         visibility: visible;
@@ -151,7 +151,7 @@
       padding: 0.4rem 0.4rem;
       --swiper-theme-color: white;
       transform: translateY(-40px);
-      z-index: 41;
+      z-index: 21;
       --swiper-pagination-bullet-width: 0.6rem;
       --swiper-pagination-bullet-height: 0.6rem;
     }
@@ -195,7 +195,7 @@
     }
 
     &__text {
-      z-index: 41;
+      z-index: 21;
 
       &__sectionTitle {
         visibility: visible;
@@ -230,7 +230,7 @@
       padding: 0.4rem 0.4rem;
       --swiper-theme-color: white;
       transform: translateY(-20px);
-      z-index: 41;
+      z-index: 21;
       --swiper-pagination-bullet-width: 0.6rem;
       --swiper-pagination-bullet-height: 0.6rem;
     }
@@ -246,7 +246,7 @@
       top: 5%;
       right: 3%;
       position: relative;
-      z-index: 41;
+      z-index: 21;
 
       &__sectionTitle {
         visibility: hidden;
@@ -290,7 +290,7 @@
           filter: grayscale(60%);
         }
 
-        &:hover+.dealersSection__supplier__infos {
+        &:hover + .dealersSection__supplier__infos {
           visibility: visible;
         }
       }
@@ -298,7 +298,7 @@
       &__infos {
         visibility: hidden;
         position: absolute;
-        z-index: 42;
+        z-index: 22;
         left: 20.1%;
         bottom: 3%;
 
@@ -326,7 +326,7 @@
       top: 5%;
       right: 3%;
       position: relative;
-      z-index: 45;
+      z-index: 25;
 
       &__sectionTitle {
         visibility: hidden;
@@ -370,7 +370,7 @@
           filter: grayscale(60%);
         }
 
-        &:hover+.dealersSection__supplier__infos {
+        &:hover + .dealersSection__supplier__infos {
           visibility: visible;
         }
       }
@@ -378,7 +378,7 @@
       &__infos {
         visibility: hidden;
         position: absolute;
-        z-index: 47;
+        z-index: 27;
         left: 20.1%;
         bottom: 3%;
 

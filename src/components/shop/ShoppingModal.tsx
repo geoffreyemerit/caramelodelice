@@ -10,7 +10,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import IItem from '../../interfaces/IItem';
 import IconSvg from '../global/IconSvg';
 
-//INTERFACE D'APPEL FRONT NÉCESSAIRE
+// FRONT-END INTERFACE REQUIRED //
 interface ShoppingModalProps {
   item: IItem;
   setModalToOpen: React.Dispatch<React.SetStateAction<number>>;
@@ -64,7 +64,7 @@ const ShoppingModal = ({ item, setModalToOpen }: ShoppingModalProps) => {
               />
             </SwiperSlide>
           </Swiper>
-          {/* >> Description item */}
+          {/* >> Item Description  */}
           <p className="shoppingModal__containt__down__desc">{item?.description}</p>
           {/* >> Exit --> MOBILE */}
           <div

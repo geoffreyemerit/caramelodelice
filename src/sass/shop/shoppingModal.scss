@@ -1,23 +1,16 @@
-// $breakpoint-huge: 1824px;
-// $breakpoint-extralarge: 1224px;
-// $breakpoint-largest: 1024px;
-// $breakpoint-medium: 768px;
-// $breakpoint-small: 480px;
-// $breakpoint-smallest: 320px;
-//-----------------------------------
 //SHOPPING MODALE
-//Modale décoration // Blur sur desktop // 100% Gris sur mobile //
+// MODAL DECORATION // BLUR ON DESKTOP // 100% GREY ON MOBILE //
 .shoppingModal {
   background-color: $primary;
   width: 100vw;
   height: 100vh;
   position: fixed;
-  z-index: 56;
+  z-index: 20;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   @media only screen and (min-width: $breakpoint-largest) {
-    z-index: 56;
+    z-index: 10;
     width: 150vw;
     height: 100vh;
     display: flex;
@@ -30,7 +23,7 @@
     left: 60%;
     transform: translateX(-50%) translateY(-50%);
   }
-  //Modale conteneur
+  // MODAL CONTAINER //
   &__containt {
     position: fixed;
     height: 100%;
@@ -48,7 +41,7 @@
       border-radius: 30px 0 30px 30px;
       border: 1px solid $secondary;
     }
-    //Titre page sur mobile gris contouré blanc
+    // TITLE GREY AND WHITE ON MOBILE //
     &--mobile {
       width: 95%;
       height: 4rem;
@@ -80,7 +73,7 @@
         display: none;
       }
     }
-    //Modale partie haute
+    // MODAL PART UP //
     &__up {
       height: 10%;
       font-family: 'Made-Bold';
@@ -97,7 +90,7 @@
         width: 100%;
         border-radius: 30px 0 0 0;
       }
-      //Titre complet de l'item
+      // ITEM FULL TITLE //
       &__title {
         display: flex;
         flex-direction: column;
@@ -108,7 +101,7 @@
         @media only screen and (min-width: $breakpoint-largest) {
           padding-left: 1.5rem;
         }
-        //Titre de l'item
+        // ITEM TITLE //
         &--h1 {
           text-transform: uppercase;
           color: $secondary;
@@ -124,7 +117,7 @@
             transform: translateY(-2.5rem);
           }
         }
-        //Sous-titre de l'item
+        // ITEM SUBTITLE //
         &--h2 {
           color: $tertiary;
           font-size: 1.5rem;
@@ -138,7 +131,7 @@
           }
         }
       }
-      //Croix pour fermer la modale
+      // CROSS FOR EXIT MODAL //
       &__button--desktop {
         display: none;
         @media only screen and (min-width: $breakpoint-largest) {
@@ -158,7 +151,7 @@
         }
       }
     }
-    //Modale partie basse//
+    // MODAL PART DOWN //
     &__down {
       display: flex;
       height: 75%;
@@ -176,7 +169,7 @@
         display: flex;
         flex-direction: row;
       }
-      //Carousel de l'item avec 2 images
+      // ITEM CAROUSEL WITH 2 IMAGES //
       &__carousel {
         height: 10rem;
         width: 8.5rem;
@@ -202,7 +195,7 @@
           width: 100%;
         }
       }
-      //Description de l'item
+      // ITEM DESCRIPTION //
       &__desc {
         display: flex;
         color: $secondary;
@@ -242,7 +235,7 @@
           border-radius: 0 0 30px 0;
         }
       }
-      //Bouton retour pour fermer modale sur mobile/tablette
+      // BUTTON RETURN FOR EXIT MODAL ON MOBILE/TABLET //
       &__button--mobile {
         cursor: pointer;
         display: flex;
@@ -272,6 +265,8 @@
     }
   }
 }
+
+// DESIGN PACKAGE SWIPER //
 .swiper-pagination-bullet {
   border: 1px solid white;
   --swiper-theme-color: white;
