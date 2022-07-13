@@ -73,7 +73,9 @@ const NewsContent = ({ id }: NewsContentProps) => {
                 <h4 className="newsContent__container__header__infosContainer__h4">
                   {page.title}
                 </h4>
-                <p className="newsContent__container__header__infosContainer__p">{page.description}</p>
+                <p className="newsContent__container__header__infosContainer__p">
+                  {page.description}
+                </p>
                 {isClicked ? (
                   <div className="newsContent__mobileContainer">
                     <p className="newsContent__mobileContainer__pMobile">
