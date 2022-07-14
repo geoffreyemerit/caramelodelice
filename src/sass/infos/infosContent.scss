@@ -1,3 +1,6 @@
+//continuer le responsive et la page blanche en bas de infos
+//good luck
+
 .infosContent {
   height: 84vh;
 
@@ -22,26 +25,28 @@
       transform: inherit;
       align-items: center;
       background-color: $primary;
+      transform: translateY(-4rem);
     }
 
     @media only screen and (min-width: 480px) and (max-width: 820px) {
       transform: inherit;
       align-items: center;
       background-color: $primary;
+      transform: translateY(-4rem);
     }
 
     @media only screen and (min-width: 820px) and (max-width: 1025px) {
       transform: inherit;
       align-items: center;
       background-color: $primary;
+      transform: translateY(-4rem);
     }
 
     @media only screen and (min-width: 1025px) and (max-width: 1224px) {
       transform: translateX(-9rem);
     }
 
-    @media only screen and (min-width: 1224px) {
-    }
+    @media only screen and (min-width: 1224px) {}
 
     &__h2 {
       font-size: 1.9rem;
@@ -110,11 +115,9 @@
         font-family: 'Made-Medium';
         color: $tertiary;
 
-        @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-small) {
-        }
+        @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-small) {}
 
-        @media only screen and (min-width: 480px) and (max-width: 820px) {
-        }
+        @media only screen and (min-width: 480px) and (max-width: 820px) {}
 
         @media only screen and (min-width: 820px) and (max-width: 1025px) {
           font-size: 3.7rem;
@@ -141,7 +144,7 @@
         flex-direction: column;
         align-items: center;
         margin-top: 12rem;
-        transform: inherit;
+        transform: translateY(-19rem);
       }
 
       @media only screen and (min-width: 480px) and (max-width: 820px) {
@@ -149,7 +152,7 @@
         flex-direction: column;
         align-items: center;
         margin-top: 12rem;
-        transform: inherit;
+        transform: translateY(-19rem);
       }
 
       @media only screen and (min-width: 820px) and (max-width: 1025px) {
@@ -157,7 +160,7 @@
         flex-direction: column;
         align-items: center;
         margin-top: 12rem;
-        transform: inherit;
+        transform: translateY(-19rem);
       }
 
       @media only screen and (min-width: 1025px) and (max-width: 1224px) {
@@ -281,11 +284,9 @@
           margin-top: 4rem;
         }
 
-        @media only screen and (min-width: 1025px) and (max-width: 1224px) {
-        }
+        @media only screen and (min-width: 1025px) and (max-width: 1224px) {}
 
-        @media only screen and (min-width: 1224px) {
-        }
+        @media only screen and (min-width: 1224px) {}
 
         &--active {
           margin-top: 1.8rem;
@@ -300,20 +301,15 @@
           cursor: pointer;
           z-index: 30;
 
-          @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-small) {
-          }
+          @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-small) {}
 
-          @media only screen and (min-width: 480px) and (max-width: 820px) {
-          }
+          @media only screen and (min-width: 480px) and (max-width: 820px) {}
 
-          @media only screen and (min-width: 820px) and (max-width: 1025px) {
-          }
+          @media only screen and (min-width: 820px) and (max-width: 1025px) {}
 
-          @media only screen and (min-width: 1025px) and (max-width: 1224px) {
-          }
+          @media only screen and (min-width: 1025px) and (max-width: 1224px) {}
 
-          @media only screen and (min-width: 1224px) {
-          }
+          @media only screen and (min-width: 1224px) {}
         }
 
         &__type {
@@ -321,20 +317,15 @@
           font-family: 'Made-Medium';
           color: rgba(255, 255, 255, 0.605);
 
-          @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-small) {
-          }
+          @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-small) {}
 
-          @media only screen and (min-width: 480px) and (max-width: 820px) {
-          }
+          @media only screen and (min-width: 480px) and (max-width: 820px) {}
 
-          @media only screen and (min-width: 820px) and (max-width: 1025px) {
-          }
+          @media only screen and (min-width: 820px) and (max-width: 1025px) {}
 
-          @media only screen and (min-width: 1025px) and (max-width: 1224px) {
-          }
+          @media only screen and (min-width: 1025px) and (max-width: 1224px) {}
 
-          @media only screen and (min-width: 1224px) {
-          }
+          @media only screen and (min-width: 1224px) {}
         }
 
         &__arrow {
@@ -343,20 +334,15 @@
           font-family: 'Made-Medium';
           color: $secondary;
 
-          @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-small) {
-          }
+          @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-small) {}
 
-          @media only screen and (min-width: 480px) and (max-width: 820px) {
-          }
+          @media only screen and (min-width: 480px) and (max-width: 820px) {}
 
-          @media only screen and (min-width: 820px) and (max-width: 1025px) {
-          }
+          @media only screen and (min-width: 820px) and (max-width: 1025px) {}
 
-          @media only screen and (min-width: 1025px) and (max-width: 1224px) {
-          }
+          @media only screen and (min-width: 1025px) and (max-width: 1224px) {}
 
-          @media only screen and (min-width: 1224px) {
-          }
+          @media only screen and (min-width: 1224px) {}
         }
       }
 
@@ -374,40 +360,30 @@
         cursor: pointer;
         background-color: $primary;
 
-        @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-small) {
-        }
+        @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-small) {}
 
-        @media only screen and (min-width: 480px) and (max-width: 820px) {
-        }
+        @media only screen and (min-width: 480px) and (max-width: 820px) {}
 
-        @media only screen and (min-width: 820px) and (max-width: 1025px) {
-        }
+        @media only screen and (min-width: 820px) and (max-width: 1025px) {}
 
-        @media only screen and (min-width: 1025px) and (max-width: 1224px) {
-        }
+        @media only screen and (min-width: 1025px) and (max-width: 1224px) {}
 
-        @media only screen and (min-width: 1224px) {
-        }
+        @media only screen and (min-width: 1224px) {}
 
         &__a {
           text-decoration: none;
           color: $secondary;
           font-family: 'Made-Medium';
 
-          @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-small) {
-          }
+          @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-small) {}
 
-          @media only screen and (min-width: 480px) and (max-width: 820px) {
-          }
+          @media only screen and (min-width: 480px) and (max-width: 820px) {}
 
-          @media only screen and (min-width: 820px) and (max-width: 1025px) {
-          }
+          @media only screen and (min-width: 820px) and (max-width: 1025px) {}
 
-          @media only screen and (min-width: 1025px) and (max-width: 1224px) {
-          }
+          @media only screen and (min-width: 1025px) and (max-width: 1224px) {}
 
-          @media only screen and (min-width: 1224px) {
-          }
+          @media only screen and (min-width: 1224px) {}
         }
 
         &:hover {
@@ -428,20 +404,15 @@
         cursor: pointer;
         background-color: $primary;
 
-        @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-small) {
-        }
+        @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-small) {}
 
-        @media only screen and (min-width: 480px) and (max-width: 820px) {
-        }
+        @media only screen and (min-width: 480px) and (max-width: 820px) {}
 
-        @media only screen and (min-width: 820px) and (max-width: 1025px) {
-        }
+        @media only screen and (min-width: 820px) and (max-width: 1025px) {}
 
-        @media only screen and (min-width: 1025px) and (max-width: 1224px) {
-        }
+        @media only screen and (min-width: 1025px) and (max-width: 1224px) {}
 
-        @media only screen and (min-width: 1224px) {
-        }
+        @media only screen and (min-width: 1224px) {}
 
         &__a {
           text-decoration: none;
