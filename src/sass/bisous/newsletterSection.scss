@@ -16,6 +16,17 @@
     font-family: 'Made-Bold';
     color: $secondary;
 
+    &__outLine {
+      visibility: visible;
+      font-family: 'Made-Outline-Bold';
+      color: $secondary;
+      font-size: 3rem;
+      text-align: end;
+      padding-bottom: 12%;
+      @media only screen and (min-width: $breakpoint-largest) {
+        display: none;
+      }
+    }
     &__title1 {
       font-size: 1.5rem;
       line-height: 1.5rem;
@@ -43,16 +54,16 @@
         line-height: 3.4rem;
       }
     }
-    // &__title3 {
-    //   font-size: 3.5rem;
-    //   line-height: 3.5rem;
-    //   color: $tertiary;
-    //   margin-bottom: 1rem;
-    //   @media only screen and (min-width: $breakpoint-largest) and (max-width: $breakpoint-extralarge) {
-    //     font-size: 3rem;
-    //     line-height: 3rem;
-    //   }
-    // }
+    &__title3 {
+      font-size: 3.5rem;
+      line-height: 3rem;
+      color: $tertiary;
+      margin-bottom: 1rem;
+      @media only screen and (min-width: $breakpoint-largest) and (max-width: $breakpoint-extralarge) {
+        font-size: 3rem;
+        line-height: 2rem;
+      }
+    }
 
     &__text1 {
       font-family: 'Made-Bold';
@@ -60,6 +71,7 @@
       line-height: 1.5rem;
       @media only screen and (max-width: $breakpoint-small) {
         line-height: 1.3rem;
+        text-align: justify;
       }
       @media only screen and (min-width: $breakpoint-extralarge) {
         line-height: 1.3rem;
@@ -71,6 +83,7 @@
       line-height: 1.7rem;
       @media only screen and (max-width: $breakpoint-small) {
         line-height: 1.3rem;
+        text-align: justify;
       }
       @media only screen and (min-width: $breakpoint-extralarge) {
         line-height: 1.3rem;
@@ -98,9 +111,6 @@
       margin-left: 1rem;
       font-size: 1.2rem;
       padding: 8px 0;
-      &:hover {
-        color: $tertiary;
-      }
 
       @media only screen and (max-width: $breakpoint-small) {
         width: 50%;
@@ -128,6 +138,9 @@
 
     &::placeholder {
       color: grey;
+    }
+    @media only screen and (max-width: $breakpoint-small) {
+      text-align: center;
     }
   }
 
