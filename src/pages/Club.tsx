@@ -1,9 +1,9 @@
 import React from 'react';
 
-import ScrollDown from '../components/global/ScrollDown';
 import ClubSection from '../components/club/ClubSection';
 import Footer from '../components/global/Footer';
 import GoToTop from '../components/global/GoToTop';
+import ScrollDown from '../components/global/ScrollDown';
 
 const Club = () => {
   return (

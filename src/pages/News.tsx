@@ -13,7 +13,9 @@ const News = () => {
   // CALL API AXIOS //
   const getContent = async () => {
     // CALL ITEM AXIOS.GET FROM THE URL INTERFACE //
-    const pages = await axios.get<IPage[]>(`${import.meta.env.VITE_API_URL}/api/pageTypes/3/pages`);
+    const pages = await axios.get<IPage[]>(
+      `${import.meta.env.VITE_API_URL}/api/pageTypes/3/pages`,
+    );
 
     // I USE MY USESTATE AND ITS DATA WITH THE SET //
     setPage(pages.data);

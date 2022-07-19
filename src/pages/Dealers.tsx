@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 
-import ScrollDown from '../components/global/ScrollDown';
 import DealersMobileSection from '../components/dealers/DealersMobileSection';
 import DealersSection from '../components/dealers/DealersSection';
 import Footer from '../components/global/Footer';
 import GoToTop from '../components/global/GoToTop';
+import ScrollDown from '../components/global/ScrollDown';
 
 const Dealers = () => {
   // CREATING USESTATE TO DETECT WINDOW WIDTH (ABOUT MOBILE CAROUSSEL)
