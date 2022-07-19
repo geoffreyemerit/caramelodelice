@@ -52,7 +52,6 @@ const NewsContent = ({ id }: NewsContentProps) => {
           ) : (
             <img className="newsContent__img" src={page.image} alt={page.title} />
           )}
-
           <div className="newsContent__container">
             <div className="newsContent__container__header">
               <div className="newsContent__container__header__titleContainer">
