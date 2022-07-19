@@ -1,7 +1,7 @@
 import React from 'react';
 
-import ScrollDown from '../components/global/ScrollDown';
 import Footer from '../components/global/Footer';
+import ScrollDown from '../components/global/ScrollDown';
 import GalleryList from '../components/wallOfDwich/GalleryList';
 
 const WallOfDwich = () => {
