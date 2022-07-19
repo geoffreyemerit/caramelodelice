@@ -20,7 +20,6 @@ const Gallery = ({ data }: GalleryProps) => {
                 key={image.id}>
                 <div>
                   <h2>{image.author}</h2>
-                  <p>{image.description}</p>
                 </div>
                 <img src={image.image1} alt="imm1" />
               </div>

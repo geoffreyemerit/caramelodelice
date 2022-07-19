@@ -47,6 +47,8 @@ const GalleryList = ({ idPageType }: WallOfDwichProps) => {
         SAY <span className="gallery__h1__span">HELLO TO </span>
         <span className="gallery__h1__span2">MASTERPIECES</span>
       </h1>
+      <h2 className="gallery__h2Mobile">in dwich</h2>
+      <h2 className="gallery__h2Mobile">we trust</h2>
       <div className="gallery__allGrid">
         {images7by7 &&
           images7by7.map((images7, index) => <Gallery data={images7} key={index} />)}
