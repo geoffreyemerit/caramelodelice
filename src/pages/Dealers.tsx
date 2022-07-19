@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
+import ScrollDown from '../components/global/ScrollDown';
 import DealersMobileSection from '../components/dealers/DealersMobileSection';
 import DealersSection from '../components/dealers/DealersSection';
 import Footer from '../components/global/Footer';
@@ -34,7 +35,7 @@ const Dealers = () => {
     <div className="dealers">
       {/* MAP de chaque dealers section */}
       {/* usestate.map((element)=>{DealersSection}) */}
-
+      <ScrollDown />
       <DealersSection id={51} idSupplier={1} />
       <DealersSection id={61} idSupplier={11} />
       <DealersSection id={71} idSupplier={21} />
