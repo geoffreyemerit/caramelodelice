@@ -1,10 +1,11 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import IPage from '../../interfaces/IPage';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import { toast, ToastContainer } from 'react-toastify';
+
 import INewsletterSubscriber from '../../interfaces/INewsletterSubscriber';
+import IPage from '../../interfaces/IPage';
 
 interface NewsletterProps {
   id: number;
