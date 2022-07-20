@@ -5,7 +5,6 @@ import React from 'react';
 import Footer from '../components/global/Footer';
 import GoToTop from '../components/global/GoToTop';
 import ScrollDown from '../components/global/ScrollDown';
-// import IPage from '../interfaces/IPage';
 
 const Club = () => {
   // JE CRÉE UN USESTATE AFIN DE STOCKER LA DATA ISSU DE L'APPEL AXIOS DANS CONTENT
