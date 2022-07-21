@@ -1,32 +1,35 @@
-// import axios from 'axios';
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 
-// import ClubSection from '../components/club/ClubSection';
+import ClubSection from '../components/club/ClubSection';
 import Footer from '../components/global/Footer';
 import GoToTop from '../components/global/GoToTop';
 import ScrollDown from '../components/global/ScrollDown';
+import IPage from '../interfaces/IPage';
 
 const Club = () => {
-  // JE CRÉE UN USESTATE AFIN DE STOCKER LA DATA ISSU DE L'APPEL AXIOS DANS CONTENT
-  // const [content, setContent] = useState<IPage>();
+  const [pages, setPage] = useState<IPage[]>();
 
-  // // APPEL API AXIOS
-  // const getContent = async () => {
-  //   const url: string = `${import.meta.env.VITE_API_URL}/api/pageTypes/2`;
-  //   const { data } = await axios.get<IPage>(url);
-  //   setContent(data);
-  // };
+  // CALL API AXIOS //
+  const getContent = async () => {
+    // CALL ITEM AXIOS.GET FROM THE URL INTERFACE //
+    const pages = await axios.get<IPage[]>(
+      `${import.meta.env.VITE_API_URL}/api/pageTypes/3/pages`,
+    );
 
-  // // AU CHARGEMENT DU COMPOSANT, J'EXÉCUTE LA FONCTION GETCONTENT
-  // useEffect(() => {
-  //   getContent();
-  // }, []);
+    // I USE MY USESTATE AND ITS DATA WITH THE SET //
+    setPage(pages.data);
+  };
+
+  // WHEN LOADING THE COMPONENT, I EXECUTE THE GETCONTENT FUNCTION //
+  useEffect(() => {
+    getContent();
+  }, []);
 
   return (
     <div className="club">
       <ScrollDown />
-      {/* {content &&
-        content.map((section) => <ClubSection id={section.id} key={content.id} />)} */}
+      {pages && pages.map((section) => <ClubSection id={section.id} key={section.id} />)}
       <Footer className="footer" />
       <GoToTop />
     </div>
