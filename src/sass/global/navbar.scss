@@ -6,6 +6,7 @@
   justify-content: flex-end;
   align-items: center;
   text-transform: lowercase;
+
   @media only screen and (min-width: $breakpoint-largest) {
     display: flex;
     justify-content: flex-start;
@@ -13,6 +14,7 @@
     height: 0;
     min-height: 0;
   }
+
   // NAVBAR IN DESKTOP FORMAT //
   &__title {
     display: flex;
@@ -25,10 +27,12 @@
     margin: 0.5rem;
     font-family: 'Made-Bold';
     text-decoration: wavy;
+
     @media only screen and (min-width: $breakpoint-largest) {
       display: none;
     }
   }
+
   &__desktop {
     display: flex;
     flex-direction: column;
@@ -37,9 +41,11 @@
     align-items: center;
     text-decoration: none;
     z-index: 30;
+
     @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-largest) {
       display: none;
     }
+
     @media only screen and (min-width: $breakpoint-largest) and (max-width: $breakpoint-extralarge) {
       height: 20rem;
       display: flex;
@@ -47,6 +53,7 @@
       justify-content: space-around;
       top: 20%;
     }
+
     @media only screen and (min-width: $breakpoint-extralarge) {
       height: 18rem;
       display: flex;
@@ -55,6 +62,7 @@
       margin-top: 2rem;
       top: 22%;
     }
+
     // LINK TO NAVIGATE TO OTHER PAGES //
     &__link {
       display: flex;
@@ -65,25 +73,30 @@
       color: $secondary;
       padding-bottom: 0.3rem;
       background-repeat: repeat-x;
+
       @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-small) {
         font-size: 2.4rem;
         margin: 0.4rem;
       }
+
       @media only screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-largest) {
         align-self: flex-start;
         margin-left: 8rem;
         font-size: 2rem;
       }
+
       @media only screen and (min-width: $breakpoint-largest) and (max-width: $breakpoint-extralarge) {
         align-self: flex-start;
         margin-left: 8rem;
         font-size: 1.9rem;
       }
+
       @media only screen and (min-width: $breakpoint-extralarge) {
         align-self: flex-start;
         margin-left: 8rem;
         font-size: 1.6rem;
       }
+
       // TO DISPLAY THE CLICKED PAGE & ON HOVER TO DISPLAY WAVES //
       &:hover,
       &--active {
@@ -108,9 +121,11 @@
     position: fixed;
     top: 0%;
     left: 0%;
+
     @media only screen and (min-width: $breakpoint-largest) {
       display: none;
     }
+
     // MENU BURGER PART UP //
     &__up {
       display: flex;
@@ -120,25 +135,30 @@
       height: 75vh;
       width: 100vw;
       border-radius: 0 0 70px 0;
+
       // STYLE ALL ICONS //
       &__icon {
         width: 2rem;
         height: 2rem;
         transition: 0.2s ease-in-out;
         cursor: pointer;
+
         @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-largest) {
           width: 3rem;
           height: 3rem;
         }
+
         @media only screen and (min-width: $breakpoint-largest) {
           display: none;
         }
+
         // ICON CLUB SANDWICH //
         &--cs {
           width: 5.5rem;
           height: 5.5rem;
           color: $primary;
           margin-top: 2rem;
+
           @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-medium) {
             width: 30vw;
             height: 30vh;
@@ -146,6 +166,7 @@
             max-height: 120px;
             margin-top: 3rem;
           }
+
           @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
             width: 19vw;
             height: 19vh;
@@ -154,6 +175,7 @@
           }
         }
       }
+
       // NAV CONTAINER FOR ALL LINKS //
       &__nav {
         overflow: auto;
@@ -162,6 +184,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+
         // LINK TO NAVIGATE TO OTHER PAGES //
         &--link {
           display: flex;
@@ -173,11 +196,13 @@
           cursor: pointer;
           color: $primary;
           text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
+
           @media only screen and (min-width: $breakpoint-smallest) {
             font-size: 3.5vh;
           }
         }
       }
+
       // TEXT "WE ARE" //
       &--text {
         font-size: 1.4rem;
@@ -193,6 +218,7 @@
         }
       }
     }
+
     // MENU BURGER PART DOWN //
     &__down {
       display: flex;
@@ -203,6 +229,7 @@
       height: 25vh;
       width: 100vw;
       background-color: $primary;
+
       // TEXT "WAIT LOVE LIKE KISS" //
       &--text {
         font-size: 1.6rem;
@@ -217,9 +244,11 @@
         height: 2.5rem;
         margin-top: 0.5rem;
         position: relative;
+
         @media only screen and (min-width: $breakpoint-smallest) {
           font-size: 3.5vh;
         }
+
         // TEXT ANIMATION //
         &--animated {
           width: 100%;
@@ -229,19 +258,24 @@
           color: $secondary;
           animation: slide 6s ease infinite;
         }
+
         @keyframes slide {
           0% {
             top: 0;
           }
+
           25% {
             top: -2.5rem;
           }
+
           50% {
             top: -5rem;
           }
+
           75% {
             top: -7.5rem;
           }
+
           100% {
             top: -10rem;
           }
@@ -250,6 +284,7 @@
     }
   }
 }
+
 // BUTTON-ICON TO DISPLAY MENU BURGER
 .navbar__button--burger {
   color: $secondary;
@@ -257,6 +292,7 @@
   position: fixed;
   z-index: 30;
 }
+
 // BUTTON-ICON TO EXIT MENU BURGER
 .navbar__button--cross {
   position: fixed;
@@ -270,6 +306,7 @@
 //-----------------------------------------//
 
 .homeContent__navbar {
+
   // BUTTON-ICON TO DISPLAY MENU BURGER
   &__button {
     &--burger {
@@ -280,6 +317,7 @@
       top: 2%;
       left: 94%;
     }
+
     // BUTTON-ICON TO EXIT MENU BURGER
     &--cross {
       width: 4rem;
@@ -291,6 +329,7 @@
       left: 94%;
     }
   }
+
   // NAVBAR IN DESKTOP FORMAT //
   &__desktop {
     display: flex;
@@ -300,9 +339,12 @@
     align-items: center;
     text-decoration: none;
     z-index: 30;
+    text-transform: lowercase;
+
     @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
       display: none;
     }
+
     @media only screen and (min-width: $breakpoint-largest) and (max-width: $breakpoint-extralarge) {
       height: 20rem;
       display: flex;
@@ -310,6 +352,7 @@
       justify-content: space-around;
       top: 20%;
     }
+
     @media only screen and (min-width: $breakpoint-extralarge) {
       height: 18rem;
       display: flex;
@@ -318,6 +361,7 @@
       margin-top: 2rem;
       top: 22%;
     }
+
     // LINK TO NAVIGATE TO OTHER PAGES //
     &__link {
       display: flex;
@@ -328,19 +372,23 @@
       color: $secondary;
       padding-bottom: 0.3rem;
       background-repeat: repeat-x;
+
       @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-largest) {
         font-size: 3.5vh;
       }
+
       @media only screen and (min-width: $breakpoint-largest) and (max-width: $breakpoint-extralarge) {
         align-self: flex-start;
         margin-left: 8rem;
         font-size: 1.9rem;
       }
+
       @media only screen and (min-width: $breakpoint-extralarge) {
         align-self: flex-start;
         margin-left: 8rem;
         font-size: 1.6rem;
       }
+
       // TO DISPLAY THE CLICKED PAGE & ON HOVER TO DISPLAY WAVES //
       &:hover,
       &--active {
@@ -352,10 +400,12 @@
       }
     }
   }
+
   // MENU BURGER CONTAINER //
   // VISIBLE ONLY BETWEEN MEDIUM & LARGEST //
   &__mobile {
     display: none;
+
     @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
       display: flex;
       flex-direction: column;
@@ -367,9 +417,11 @@
       top: 0%;
       left: 0%;
     }
+
     // MENU BURGER PART UP //
     &__up {
       display: none;
+
       @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
         display: flex;
         flex-direction: column;
@@ -379,9 +431,11 @@
         width: 100vw;
         border-radius: 0 0 70px 0;
       }
+
       // STYLE ALL ICONS //
       &__icon {
         display: none;
+
         @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
           display: initial;
           transition: 0.2s ease-in-out;
@@ -389,6 +443,7 @@
           width: 3rem;
           height: 3rem;
         }
+
         // ICON CLUB SANDWICH //
         &--cs {
           @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
@@ -400,9 +455,11 @@
           }
         }
       }
+
       // NAV CONTAINER FOR ALL LINKS //
       &__nav {
         display: none;
+
         @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
           overflow: auto;
           width: 100%;
@@ -411,9 +468,11 @@
           flex-direction: column;
           justify-content: center;
         }
+
         // LINK TO NAVIGATE TO OTHER PAGES //
         &--link {
           display: none;
+
           @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
             display: flex;
             font-family: 'Made-Bold';
@@ -427,9 +486,11 @@
           }
         }
       }
+
       // TEXT "WE ARE" //
       &--text {
         display: none;
+
         @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
           font-size: 3.5vh;
           font-family: 'Made-Medium';
@@ -441,9 +502,11 @@
         }
       }
     }
+
     // MENU BURGER PART DOWN //
     &__down {
       display: none;
+
       @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
         display: flex;
         z-index: 30;
@@ -454,6 +517,7 @@
         width: 100vw;
         background-color: $primary;
       }
+
       // TEXT "WAIT LOVE LIKE KISS" //
       &--text {
         font-size: 1.6rem;
@@ -468,9 +532,11 @@
         height: 2.5rem;
         margin-top: 0.5rem;
         position: relative;
+
         @media only screen and (min-width: $breakpoint-smallest) {
           font-size: 3.5vh;
         }
+
         // TEXT ANIMATION //
         &--animated {
           width: 100%;
@@ -480,27 +546,34 @@
           color: $secondary;
           animation: slide 6s infinite;
         }
+
         @keyframes slide {
           0% {
             top: 0;
           }
+
           25% {
             top: -2.5rem;
           }
+
           50% {
             top: -5rem;
           }
+
           75% {
             top: -7.5rem;
           }
+
           100% {
             top: -10rem;
           }
         }
       }
+
       // FOOTER ON MENU BURGER //
       &__footer__burger {
         display: none;
+
         @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
           color: $secondary;
           width: 100%;
@@ -512,6 +585,7 @@
           margin-top: 1rem;
           font-size: 2.5vh;
         }
+
         &__info__sup {
           &__address {
             width: 100%;
@@ -519,28 +593,34 @@
             align-items: center;
             flex-direction: column;
             margin-bottom: 1.5rem;
+
             &__bis {
               display: flex;
             }
           }
+
           &__opening {
             &__openingdays {
               text-align: left;
               font-size: 0.5rem;
               margin-right: 2rem;
+
               @media only screen and (min-width: $breakpoint-smallest) {
                 font-size: 1.7vh;
               }
             }
+
             &__openinghours {
               text-align: right;
               font-size: 0.5rem;
+
               @media only screen and (min-width: $breakpoint-smallest) {
                 font-size: 1.7vh;
               }
             }
           }
         }
+
         &__instalogo {
           display: none;
         }
