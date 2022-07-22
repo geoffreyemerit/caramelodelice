@@ -25,14 +25,16 @@
       transform: inherit;
       align-items: center;
       background-color: $primary;
-      transform: translateY(-4rem);
+      transform: translateY(-10rem);
+      height: 50vh;
     }
 
     @media only screen and (min-width: 480px) and (max-width: 820px) {
       transform: inherit;
       align-items: center;
       background-color: $primary;
-      transform: translateY(-4rem);
+      transform: translateY(-8rem);
+      height: 150%;
     }
 
     @media only screen and (min-width: 820px) and (max-width: 1025px) {
@@ -40,6 +42,7 @@
       align-items: center;
       background-color: $primary;
       transform: translateY(-4rem);
+      height: 150%;
     }
 
     @media only screen and (min-width: 1025px) and (max-width: 1224px) {

@@ -3,9 +3,11 @@
   height: 100vh;
   margin-top: 6rem;
   margin-right: 4rem;
+
   @media only screen and (max-width: $breakpoint-largest) {
     width: 75vw;
   }
+
   @media only screen and (min-width: $breakpoint-largest) and (max-width: $breakpoint-extralarge) {
     margin-top: 5rem;
     margin-bottom: 1rem;
@@ -23,18 +25,22 @@
       font-size: 3rem;
       text-align: end;
       padding-bottom: 12%;
+
       @media only screen and (min-width: $breakpoint-largest) {
         display: none;
       }
     }
+
     &__title1 {
       font-size: 1.5rem;
       line-height: 1.5rem;
+
       @media only screen and (min-width: $breakpoint-largest) and (max-width: $breakpoint-extralarge) {
         font-size: 1.2rem;
         line-height: 1.2rem;
       }
     }
+
     &__title2 {
       font-size: 3.5rem;
       line-height: 3.5rem;
@@ -44,6 +50,7 @@
         font-size: 2.5rem;
         line-height: 2.5rem;
       }
+
       @media only screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-medium) {
         font-size: 2.8rem;
         line-height: 2.8rem;
@@ -54,11 +61,13 @@
         line-height: 3.4rem;
       }
     }
+
     &__title3 {
       font-size: 3.5rem;
       line-height: 3rem;
       color: $tertiary;
       margin-bottom: 1rem;
+
       @media only screen and (min-width: $breakpoint-largest) and (max-width: $breakpoint-extralarge) {
         font-size: 3rem;
         line-height: 2rem;
@@ -69,22 +78,27 @@
       font-family: 'Made-Bold';
       margin-bottom: 2rem;
       line-height: 1.5rem;
+
       @media only screen and (max-width: $breakpoint-small) {
         line-height: 1.3rem;
         text-align: justify;
       }
+
       @media only screen and (min-width: $breakpoint-extralarge) {
         line-height: 1.3rem;
       }
     }
+
     &__text2 {
       font-family: 'Made-Bold';
       margin-bottom: 2rem;
       line-height: 1.7rem;
+
       @media only screen and (max-width: $breakpoint-small) {
         line-height: 1.3rem;
         text-align: justify;
       }
+
       @media only screen and (min-width: $breakpoint-extralarge) {
         line-height: 1.3rem;
       }
@@ -139,6 +153,7 @@
     &::placeholder {
       color: grey;
     }
+
     @media only screen and (max-width: $breakpoint-small) {
       text-align: center;
     }
@@ -150,8 +165,10 @@
     border-width: 3px;
     border-image-slice: 1;
   }
+
   /* reset input */
   &__form__field {
+
     &:required,
     &:invalid {
       box-shadow: none;
