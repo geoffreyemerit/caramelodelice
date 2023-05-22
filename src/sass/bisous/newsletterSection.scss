@@ -1,6 +1,6 @@
 .newsletterSection {
   width: 60vw;
-  height: 100vh;
+  height: 75vh;
   margin-top: 6rem;
   margin-right: 4rem;
 
@@ -168,7 +168,6 @@
 
   /* reset input */
   &__form__field {
-
     &:required,
     &:invalid {
       box-shadow: none;

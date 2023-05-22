@@ -1,11 +1,10 @@
-import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
+import newsPagesData from '../../../data/newsPagesData';
 import INewsPage from '../../interfaces/INewsPage';
-import INewsType from '../../interfaces/INewsType';
 import Button from '../global/Button';
 
-//CALL INTERFACE FRONT NEEDED
+// CALL INTERFACE FRONT NEEDED
 interface NewsContentProps {
   id: number;
 }
@@ -13,30 +12,14 @@ interface NewsContentProps {
 const NewsContent = ({ id }: NewsContentProps) => {
   // JE CRÉE UN USESTATE AFIN DE STOCKER LA DATA ISSU DE L'APPEL AXIOS
   const [page, setPage] = useState<INewsPage>();
-  const [type, setType] = useState<INewsType>();
 
-  // APPEL API AXIOS
-  const getContent = async () => {
-    //APPEL PROMESSE DE NEWSPAGE AXIOS.GET DE L'INTERFACE DE L'URL
-    const newsPage = await axios.get<INewsPage>(
-      `${import.meta.env.VITE_API_URL}/api/newsPages/${id}`,
-    );
-
-    //APPEL PROMESSE DE NEWSTYPE AXIOS.GET DE L'INTERFACE DE L'URL
-    const newsType = await axios.get<INewsType>(
-      `${import.meta.env.VITE_API_URL}/api/newsTypes/${newsPage.data.idNewsType}`,
-    );
-
-    setPage(newsPage.data);
-    setType(newsType.data);
-  };
-
-  // AU CHARGEMENT DU COMPOSANT, J'EXÉCUTE LA FONCTION GETCONTENT
+  // RÉCUPÉRATION DES DONNÉES CORRESPONDANT À L'ID
   useEffect(() => {
-    getContent();
-  }, []);
+    const newsPage = newsPagesData.find((item) => item.id === id);
+    setPage(newsPage);
+  }, [id]);
 
-  //J'INITIALISE LE BOUTTON SUR FALSE AVEC UNE FUNC QUI LE PASSE A TRUE
+  // J'INITIALISE LE BOUTON SUR FALSE AVEC UNE FUNC QUI LE PASSE A TRUE
   const [isClicked, setIsClicked] = useState<boolean>(false);
   const handleClick = () => {
     setIsClicked(!isClicked);
@@ -45,7 +28,7 @@ const NewsContent = ({ id }: NewsContentProps) => {
   return (
     <div className="newsContent">
       {/* On fais un && des data reçus, si on l'a on envoi, sinon on continu */}
-      {page && type && (
+      {page && (
         <>
           {isClicked ? (
             <img className="newsContent__img--active" src={page.image} alt={page.title} />
@@ -64,7 +47,7 @@ const NewsContent = ({ id }: NewsContentProps) => {
               </div>
               <div className="newsContent__container__header__infosContainer">
                 <h2 className="newsContent__container__header__infosContainer__h2">
-                  {type.name}
+                  {page.subTitle}
                 </h2>
                 <h3 className="newsContent__container__header__infosContainer__h3">
                   {page.durationEvent}

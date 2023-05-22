@@ -1,6 +1,6 @@
-import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
+import pagesData from '../../../data/pagesData';
 import IPage from '../../interfaces/IPage';
 
 interface ClubSectionProps {
@@ -8,20 +8,12 @@ interface ClubSectionProps {
 }
 
 const ClubSection = ({ id }: ClubSectionProps) => {
-  // JE CRÉE UN USESTATE AFIN DE STOCKER LA DATA ISSU DE L'APPEL AXIOS DANS CONTENT
   const [content, setContent] = useState<IPage>();
 
-  // APPEL API AXIOS
-  const getContent = async () => {
-    const url: string = `${import.meta.env.VITE_API_URL}/api/pages/${id}`;
-    const { data } = await axios.get<IPage>(url);
-    setContent(data);
-  };
-
-  // AU CHARGEMENT DU COMPOSANT, J'EXÉCUTE LA FONCTION GETCONTENT
   useEffect(() => {
-    getContent();
-  }, []);
+    const pageData = pagesData.find((data) => data.id === id);
+    setContent(pageData);
+  }, [id]);
 
   return (
     <div className="clubSection">

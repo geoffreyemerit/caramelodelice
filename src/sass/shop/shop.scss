@@ -4,9 +4,9 @@
   height: 100%;
   min-height: 90vh;
   width: 100vw;
-  background-color: $primary;
+  background-color: $quartery;
   @media only screen and (min-width: $breakpoint-small) {
-    height: 100vh;
+    height: 100%;
     min-height: 90vh;
     display: flex;
     flex-direction: column;

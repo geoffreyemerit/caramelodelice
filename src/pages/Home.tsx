@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <>
       <div className="home">
-        <HomeContent id={41} />
+        <HomeContent />
         <Footer className="home__footer" />
       </div>
     </>

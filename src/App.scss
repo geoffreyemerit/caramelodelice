@@ -5,9 +5,7 @@
 //--------------GLOBAL---------------------------
 @import 'sass/global/logo';
 @import 'sass/global/footer';
-@import 'sass/global/loaderHome';
 @import 'sass/global/button';
-@import 'sass/global/sound';
 @import 'sass/global/scrollDown';
 @import 'sass/global/navbar';
 //--------------HOME-----------------------------
@@ -27,12 +25,6 @@
 //--------------INFOS----------------------------
 @import 'sass/infos/infos';
 @import 'sass/infos/infosContent';
-//--------------DEALERS--------------------------
-@import 'sass/dealers/dealers';
-@import 'sass/dealers/dealersSection';
-//--------------WALLOFDWHICH---------------------
-@import 'sass/wallOfDwich/wallOfDwich.scss';
-@import 'sass/wallOfDwich/gallery.scss';
 //--------------BISOUS---------------------------
 @import 'sass/bisous/newsletter';
 @import 'sass/bisous/newsletterSection';

@@ -51,14 +51,15 @@ const Newsletter = ({ id }: NewsletterProps) => {
           <h1 className="newsletterSection__content__outLine">TROP DE LOVE</h1>
           <h1 className="newsletterSection__content__title1">On aime</h1>
           <h2 className="newsletterSection__content__title2">
-            rigoler, le bon son, bien manger, boire
+            rigoler, patisser, déguster
           </h2>
           <h3 className="newsletterSection__content__title3">ET VOUS.</h3>
           <p className="newsletterSection__content__text1">{content?.description}</p>
           <p className="newsletterSection__content__text2">
-            Pour une dose mensuelle de news de Club Sandwich, on t&apos;invite à saisir ta
-            plus belle adresse mail ci-dessous. Promis, on ne spam pas et ton mail ne sera
-            utilisé que pour cela (t&apos;as vu ça rime). On t&apos;embrasse !
+            Pour une dose mensuelle de news de Caramel&apos;O&apos;Délice, on
+            t&apos;invite à saisir ta plus belle adresse mail ci-dessous. Promis, on ne
+            spam pas et ton mail ne sera utilisé que pour cela (t&apos;as vu ça rime). On
+            t&apos;embrasse !
           </p>
         </div>
         <form

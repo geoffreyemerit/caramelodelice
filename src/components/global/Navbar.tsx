@@ -1,7 +1,7 @@
-import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
+import pageTypesData from '../../../data/pageTypesData';
 import IPageType from '../../interfaces/IPageType';
 import Footer from './Footer';
 import IconSvg from './IconSvg';
@@ -15,21 +15,10 @@ const Navbar = ({ className }: NavbarProps) => {
   // I CREATE A USESTATE TO OPEN OR EXIT THE MENU BURGER //
   const [isOpened, setIsOpened] = useState(false);
   // I CREATE A USESTATE TO STORE THE DATA FROM THE AXIOS CALL //
-  const [pageType, setPageType] = useState<IPageType[]>();
-  // CALL API AXIOS //
-  const getContent = async () => {
-    // CALL PAGETYPES AXIOS.GET FROM THE URL INTERFACE //
-    const pageTypes = await axios.get<IPageType[]>(
-      `${import.meta.env.VITE_API_URL}/api/pageTypes`,
-    );
+  const [pageType, setPageType] = useState<IPageType[]>(pageTypesData);
 
-    // I USE MY USESTATE AND ITS DATA WITH THE SET //
-    setPageType(pageTypes.data);
-  };
-
-  // WHEN LOADING THE COMPONENT, I EXECUTE THE GETCONTENT FUNCTION //
   useEffect(() => {
-    getContent();
+    // No API call needed anymore
   }, []);
 
   return (
@@ -82,9 +71,10 @@ const Navbar = ({ className }: NavbarProps) => {
         <div className={`${className}__mobile`}>
           {/* >> Part Up // Logo // Menu */}
           <div className={`${className}__mobile__up`}>
-            <IconSvg
-              myStyle={`${className}__mobile__up__icon ${className}__mobile__up__icon--cs`}
-              icon="logos-club-sandwich-logo"
+            <img
+              className={`${className}__mobile__up__icon ${className}__mobile__up__icon--cs`}
+              src="./assets/logo.jpg"
+              alt="logo"
             />
             <nav className={`${className}__mobile__up__nav`}>
               {pageType &&

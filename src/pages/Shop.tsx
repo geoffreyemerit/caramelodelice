@@ -17,9 +17,9 @@ const Shop = () => {
         </h1>
         {/* >> Title mobil/tablet */}
         <h2 className="shop__item__h2">
-          DWICH STUFF*
+          CARAMELO STUFF*
           <span className="shop__item__h2__line2">
-            *Tous les achats se font directement chez Club Sandwich.
+            *Tous les achats se font directement chez Caramel&apos;O&apos;Délice.
           </span>
         </h2>
         {/* >> Component ShoppingList */}

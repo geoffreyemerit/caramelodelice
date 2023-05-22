@@ -16,26 +16,11 @@ const navLinks = [
   },
   {
     id: 4,
-    path: '/dealers',
-    title: 'dealers',
-  },
-  {
-    id: 5,
-    path: '/wallofdwich',
-    title: 'wall of dwich',
-  },
-  {
-    id: 6,
     path: '/shop',
     title: 'shop',
   },
   {
-    id: 7,
-    path: '/infos',
-    title: 'infos',
-  },
-  {
-    id: 8,
+    id: 5,
     path: '/bisous',
     title: 'bisous',
   },
