@@ -15,7 +15,7 @@ const Navbar = ({ className }: NavbarProps) => {
   // I CREATE A USESTATE TO OPEN OR EXIT THE MENU BURGER //
   const [isOpened, setIsOpened] = useState(false);
   // I CREATE A USESTATE TO STORE THE DATA FROM THE AXIOS CALL //
-  const [pageType, setPageType] = useState<IPageType[]>(pageTypesData);
+  const [pageType] = useState<IPageType[]>(pageTypesData);
 
   useEffect(() => {
     // No API call needed anymore

@@ -5,7 +5,7 @@ import IPage from '../../interfaces/IPage';
 import Navbar from '../global/Navbar';
 
 const HomeContent = () => {
-  const [content, setContent] = useState<IPage>(homeData[0]); // Use homeData as the initial state
+  const [content] = useState<IPage>(homeData[0]); // Use homeData as the initial state
 
   return (
     <>

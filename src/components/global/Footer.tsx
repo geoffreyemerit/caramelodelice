@@ -13,9 +13,9 @@ interface FooterProps {
 }
 
 const Footer = ({ className }: FooterProps) => {
-  const [openingDays, setOpeningDays] = useState<IOpeningDay[]>(openingDaysData);
-  const [openingHours, setOpeningHours] = useState<IOpeningHour[]>(openingHoursData);
-  const [address, setAddress] = useState<IAddress>(addressesData[0]);
+  const [openingDays] = useState<IOpeningDay[]>(openingDaysData);
+  const [openingHours] = useState<IOpeningHour[]>(openingHoursData);
+  const [address] = useState<IAddress>(addressesData[0]);
 
   useEffect(() => {
     // No API call needed anymore
