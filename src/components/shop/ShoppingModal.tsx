@@ -65,7 +65,12 @@ const ShoppingModal = ({ item, setModalToOpen }: ShoppingModalProps) => {
             </SwiperSlide>
           </Swiper>
           {/* >> Item Description  */}
-          <p className="shoppingModal__containt__down__desc">{item?.description}</p>
+          <div className="shoppingModal__containt__down__div">
+            <p className="shoppingModal__containt__down__div__desc">
+              {item?.description}
+            </p>
+            <p className="shoppingModal__containt__down__div__desc">{item?.price}</p>
+          </div>
           {/* >> Exit --> MOBILE */}
           <div
             role="button"

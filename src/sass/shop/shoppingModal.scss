@@ -121,18 +121,18 @@
         &--h1 {
           text-transform: uppercase;
           color: $secondary;
-          font-size: 2rem;
+          font-size: 1.8rem;
 
           @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-medium) {
-            font-size: 3rem;
+            font-size: 2.7rem;
           }
 
           @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
-            font-size: 3.5rem;
+            font-size: 3.2rem;
           }
 
           @media only screen and (min-width: $breakpoint-largest) {
-            font-size: 5rem;
+            font-size: 3.8rem;
             transform: translateY(-2.5rem);
           }
         }
@@ -230,53 +230,73 @@
           width: 100%;
         }
       }
-
-      // ITEM DESCRIPTION //
-      &__desc {
+      &__div {
         display: flex;
-        color: $secondary;
-        font-family: 'Made-Light';
-        text-align: justify;
+        flex-direction: column;
         width: 80%;
-        font-size: 0.8rem;
         align-self: center;
-        align-items: center;
-        margin: 2rem;
 
         @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-small) {
-          font-size: 1.2rem;
           width: 70%;
         }
 
         @media only screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-medium) {
-          font-size: 1.3rem;
           width: 80%;
-          margin: 1.5rem;
         }
 
         @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
-          font-size: 1.3rem;
           width: 90%;
-          margin: 1.5rem;
         }
 
         @media only screen and (min-width: $breakpoint-largest) and (max-width: $breakpoint-huge) {
           height: 90%;
           width: 60%;
-          font-size: 1.3rem;
-          padding: 0 2rem 0 0;
-          border-radius: 0 0 30px 0;
         }
 
         @media only screen and (min-width: $breakpoint-huge) {
           height: 90%;
           width: 60%;
-          font-size: 2rem;
-          padding: 0 2rem 0 0;
-          border-radius: 0 0 30px 0;
+        }
+        // ITEM DESCRIPTION //
+        &__desc {
+          display: flex;
+          color: $secondary;
+          font-family: 'Made-Light';
+          text-align: justify;
+          font-size: 0.6rem;
+          align-self: center;
+          align-items: center;
+          margin: 2rem;
+
+          @media only screen and (min-width: $breakpoint-smallest) and (max-width: $breakpoint-small) {
+            font-size: 0.9rem;
+          }
+
+          @media only screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-medium) {
+            font-size: 0.9rem;
+            margin: 1.5rem;
+          }
+
+          @media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-largest) {
+            font-size: 0.9rem;
+            margin: 1.5rem;
+          }
+
+          @media only screen and (min-width: $breakpoint-largest) and (max-width: $breakpoint-huge) {
+            height: 90%;
+            font-size: 0.9rem;
+            padding: 0 2rem 0 0;
+            border-radius: 0 0 30px 0;
+          }
+
+          @media only screen and (min-width: $breakpoint-huge) {
+            height: 90%;
+            font-size: 1.6rem;
+            padding: 0 2rem 0 0;
+            border-radius: 0 0 30px 0;
+          }
         }
       }
-
       // BUTTON RETURN FOR EXIT MODAL ON MOBILE/TABLET //
       &__button--mobile {
         cursor: pointer;

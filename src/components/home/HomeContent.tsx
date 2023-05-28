@@ -10,7 +10,7 @@ const HomeContent = () => {
   return (
     <>
       <div className="homeContent">
-        <img className="homeContent__iconCS" src="./assets/logo.jpg" alt="logo" />
+        <img className="homeContent__iconCS" src="./assets/logo1.jpeg" alt="logo" />
         <div className="homeContent__subTitle">{content?.subTitle?.toUpperCase()}</div>
         <div className="homeContent__title">
           CARAMELO <br />

@@ -10,7 +10,7 @@ const Logo = () => {
     <>
       <div className="logo">
         <NavLink to="/">
-          <img className="logo__logotype" src="./assets/logo.jpg" alt="logo" />
+          <img className="logo__logotype" src="./assets/logo1.jpeg" alt="logo" />
         </NavLink>
       </div>
     </>

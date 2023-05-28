@@ -11,8 +11,8 @@ const navLinks = [
   },
   {
     id: 3,
-    path: '/club',
-    title: 'club',
+    path: '/aboutUs',
+    title: 'about us',
   },
   {
     id: 4,

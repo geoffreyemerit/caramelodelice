@@ -73,7 +73,7 @@ const Navbar = ({ className }: NavbarProps) => {
           <div className={`${className}__mobile__up`}>
             <img
               className={`${className}__mobile__up__icon ${className}__mobile__up__icon--cs`}
-              src="./assets/logo.jpg"
+              src="./assets/logo1.jpeg"
               alt="logo"
             />
             <nav className={`${className}__mobile__up__nav`}>

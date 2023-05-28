@@ -26,7 +26,15 @@
         z-index: 10;
         width: 100%;
       }
-
+      &__subTitle2 {
+        font-family: 'Made-Medium';
+        color: $secondary;
+        position: relative;
+        font-size: 1.5rem;
+        text-align: center;
+        z-index: 10;
+        width: 100%;
+      }
       &__title {
         font-family: 'Made-Bold';
         color: $secondary;
@@ -63,7 +71,15 @@
         z-index: 10;
         width: 100%;
       }
-
+      &__subTitle2 {
+        font-family: 'Made-Medium';
+        color: $secondary;
+        position: relative;
+        font-size: 2rem;
+        text-align: center;
+        z-index: 10;
+        width: 100%;
+      }
       &__title {
         font-family: 'Made-Bold';
         color: $secondary;
@@ -96,6 +112,15 @@
         color: $secondary;
         position: relative;
         font-size: 4rem;
+        text-align: center;
+        z-index: 10;
+        width: 100%;
+      }
+      &__subTitle2 {
+        font-family: 'Made-Medium';
+        color: $secondary;
+        position: relative;
+        font-size: 2rem;
         text-align: center;
         z-index: 10;
         width: 100%;
@@ -139,7 +164,12 @@
         position: absolute;
         font-size: 4rem;
       }
-
+      &__subTitle {
+        font-family: 'Made-Medium';
+        color: $secondary;
+        position: absolute;
+        font-size: 2rem;
+      }
       &__title {
         font-family: 'Made-Bold';
         color: $secondary;
@@ -175,7 +205,13 @@
         position: absolute;
         font-size: 4rem;
       }
-
+      &__subTitle2 {
+        font-family: 'Made-Medium';
+        color: $secondary;
+        position: absolute;
+        font-size: 0.7rem;
+        width: 65vw;
+      }
       &__title {
         font-family: 'Made-Bold';
         color: $secondary;
